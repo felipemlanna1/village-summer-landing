@@ -2112,11 +2112,16 @@
             <div class="quiz-container">
                 <div class="quiz-header">
                     <h2 data-i18n="quizTitle">Descubra Seu Nível de Surf</h2>
-                    <p data-i18n="quizDesc">Responda 5 perguntas rápidas e receba uma recomendação personalizada</p>
+                    <p data-i18n="quizDesc">Responda 10 perguntas e descubra seu perfil completo de surfista</p>
                 </div>
 
                 <div class="quiz-progress" id="quizProgress">
                     <div class="quiz-progress-step active"></div>
+                    <div class="quiz-progress-step"></div>
+                    <div class="quiz-progress-step"></div>
+                    <div class="quiz-progress-step"></div>
+                    <div class="quiz-progress-step"></div>
+                    <div class="quiz-progress-step"></div>
                     <div class="quiz-progress-step"></div>
                     <div class="quiz-progress-step"></div>
                     <div class="quiz-progress-step"></div>
@@ -2255,6 +2260,141 @@
                                 <input type="radio" name="q5" value="variety">
                                 <span class="quiz-option-radio"></span>
                                 Gosto de variar - cada dia uma praia diferente
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 6 - Condição física e natação -->
+                    <div class="quiz-question" data-question="6">
+                        <h3>Como você avalia sua condição física e relação com a água?</h3>
+                        <div class="quiz-options">
+                            <label class="quiz-option" data-fitness="beginner" data-swimming="low">
+                                <input type="radio" name="q6" value="beginner">
+                                <span class="quiz-option-radio"></span>
+                                Sedentário(a) e não sei nadar bem - preciso de suporte total
+                            </label>
+                            <label class="quiz-option" data-fitness="basic" data-swimming="medium">
+                                <input type="radio" name="q6" value="basic">
+                                <span class="quiz-option-radio"></span>
+                                Ativo(a) casualmente, nado razoavelmente mas sem confiança no mar
+                            </label>
+                            <label class="quiz-option" data-fitness="good" data-swimming="good">
+                                <input type="radio" name="q6" value="good">
+                                <span class="quiz-option-radio"></span>
+                                Pratico exercícios regularmente e me sinto confortável nadando
+                            </label>
+                            <label class="quiz-option" data-fitness="athlete" data-swimming="excellent">
+                                <input type="radio" name="q6" value="athlete">
+                                <span class="quiz-option-radio"></span>
+                                Muito ativo(a), atleta ou ex-atleta, excelente nadador(a)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 7 - Medos e confiança -->
+                    <div class="quiz-question" data-question="7">
+                        <h3>Qual seu maior receio ou desafio em relação ao surf?</h3>
+                        <div class="quiz-options">
+                            <label class="quiz-option" data-fear="water" data-confidence="low">
+                                <input type="radio" name="q7" value="water">
+                                <span class="quiz-option-radio"></span>
+                                Tenho medo do mar, das ondas ou de me machucar
+                            </label>
+                            <label class="quiz-option" data-fear="failure" data-confidence="medium">
+                                <input type="radio" name="q7" value="failure">
+                                <span class="quiz-option-radio"></span>
+                                Medo de não conseguir, de parecer "ridículo" ou de frustração
+                            </label>
+                            <label class="quiz-option" data-fear="technique" data-confidence="good">
+                                <input type="radio" name="q7" value="technique">
+                                <span class="quiz-option-radio"></span>
+                                Não tenho medo, mas quero entender a técnica correta desde o início
+                            </label>
+                            <label class="quiz-option" data-fear="none" data-confidence="high">
+                                <input type="radio" name="q7" value="none">
+                                <span class="quiz-option-radio"></span>
+                                Sem receios - estou pronto(a) para o desafio, quero ir com tudo
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 8 - Disponibilidade de tempo -->
+                    <div class="quiz-question" data-question="8">
+                        <h3>Qual sua disponibilidade real para dedicar ao surf?</h3>
+                        <div class="quiz-options">
+                            <label class="quiz-option" data-time="limited" data-schedule="tight">
+                                <input type="radio" name="q8" value="limited">
+                                <span class="quiz-option-radio"></span>
+                                Muito ocupado(a) - só consigo em datas específicas (férias, feriados)
+                            </label>
+                            <label class="quiz-option" data-time="occasional" data-schedule="flexible">
+                                <input type="radio" name="q8" value="occasional">
+                                <span class="quiz-option-radio"></span>
+                                Agenda corrida, mas consigo encaixar 1-2 vezes por mês
+                            </label>
+                            <label class="quiz-option" data-time="regular" data-schedule="open">
+                                <input type="radio" name="q8" value="regular">
+                                <span class="quiz-option-radio"></span>
+                                Tenho flexibilidade para treinar semanalmente
+                            </label>
+                            <label class="quiz-option" data-time="full" data-schedule="free">
+                                <input type="radio" name="q8" value="full">
+                                <span class="quiz-option-radio"></span>
+                                Disponibilidade total - posso me dedicar intensivamente
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 9 - Estilo de aprendizado -->
+                    <div class="quiz-question" data-question="9">
+                        <h3>Como você prefere aprender coisas novas?</h3>
+                        <div class="quiz-options">
+                            <label class="quiz-option" data-learning="guided" data-independence="low">
+                                <input type="radio" name="q9" value="guided">
+                                <span class="quiz-option-radio"></span>
+                                Passo a passo, com muito acompanhamento e feedbacks constantes
+                            </label>
+                            <label class="quiz-option" data-learning="visual" data-independence="medium">
+                                <input type="radio" name="q9" value="visual">
+                                <span class="quiz-option-radio"></span>
+                                Preciso ver exemplos e vídeos - sou visual, aprendo observando
+                            </label>
+                            <label class="quiz-option" data-learning="practical" data-independence="good">
+                                <input type="radio" name="q9" value="practical">
+                                <span class="quiz-option-radio"></span>
+                                Na prática! Prefiro errar e corrigir do que muita teoria
+                            </label>
+                            <label class="quiz-option" data-learning="analytical" data-independence="high">
+                                <input type="radio" name="q9" value="analytical">
+                                <span class="quiz-option-radio"></span>
+                                Gosto de entender a mecânica por trás - análise técnica detalhada
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Question 10 - Objetivo de longo prazo -->
+                    <div class="quiz-question" data-question="10">
+                        <h3>Daqui a 1 ano, onde você se vê no surf?</h3>
+                        <div class="quiz-options">
+                            <label class="quiz-option" data-goal="memory" data-ambition="low">
+                                <input type="radio" name="q10" value="memory">
+                                <span class="quiz-option-radio"></span>
+                                Quero apenas experimentar - ter a memória de ter surfado
+                            </label>
+                            <label class="quiz-option" data-goal="hobby" data-ambition="medium">
+                                <input type="radio" name="q10" value="hobby">
+                                <span class="quiz-option-radio"></span>
+                                Surfando de forma independente quando vou à praia
+                            </label>
+                            <label class="quiz-option" data-goal="lifestyle" data-ambition="high">
+                                <input type="radio" name="q10" value="lifestyle">
+                                <span class="quiz-option-radio"></span>
+                                Com o surf como parte da minha rotina e identidade
+                            </label>
+                            <label class="quiz-option" data-goal="performance" data-ambition="very-high">
+                                <input type="radio" name="q10" value="performance">
+                                <span class="quiz-option-radio"></span>
+                                Fazendo manobras, participando de trips e talvez competindo
                             </label>
                         </div>
                     </div>
@@ -2856,6 +2996,21 @@
             if (selectedOption.dataset.budget) answers.budget = selectedOption.dataset.budget;
             if (selectedOption.dataset.profile) answers.profile = selectedOption.dataset.profile;
             if (selectedOption.dataset.beach) answers.beach = selectedOption.dataset.beach;
+            // Q6 - Condição física e natação
+            if (selectedOption.dataset.fitness) answers.fitness = selectedOption.dataset.fitness;
+            if (selectedOption.dataset.swimming) answers.swimming = selectedOption.dataset.swimming;
+            // Q7 - Medos e confiança
+            if (selectedOption.dataset.fear) answers.fear = selectedOption.dataset.fear;
+            if (selectedOption.dataset.confidence) answers.confidence = selectedOption.dataset.confidence;
+            // Q8 - Disponibilidade de tempo
+            if (selectedOption.dataset.time) answers.time = selectedOption.dataset.time;
+            if (selectedOption.dataset.schedule) answers.schedule = selectedOption.dataset.schedule;
+            // Q9 - Estilo de aprendizado
+            if (selectedOption.dataset.learning) answers.learning = selectedOption.dataset.learning;
+            if (selectedOption.dataset.independence) answers.independence = selectedOption.dataset.independence;
+            // Q10 - Objetivo de longo prazo
+            if (selectedOption.dataset.goal) answers.goal = selectedOption.dataset.goal;
+            if (selectedOption.dataset.ambition) answers.ambition = selectedOption.dataset.ambition;
 
             if (currentQuestion < questions.length - 1) {
                 currentQuestion++;
@@ -2890,69 +3045,156 @@
             document.querySelector('.quiz-progress').style.display = 'none';
             quizResult.classList.add('active');
 
-            // Determine level and package based on answers
+            // Collect all answers for comprehensive analysis
             const level = answers.level || 0;
             const commitment = answers.commitment || 'casual';
             const motivation = answers.motivation || 'experience';
+            const profile = answers.profile || 'explorer';
+            const fitness = answers.fitness || 'basic';
+            const fear = answers.fear || 'technique';
+            const confidence = answers.confidence || 'medium';
+            const time = answers.time || 'occasional';
+            const learning = answers.learning || 'practical';
+            const goal = answers.goal || 'hobby';
+            const ambition = answers.ambition || 'medium';
 
-            let resultData = {
-                emoji: '🏄',
-                title: 'Iniciante Explorador',
-                desc: 'Você está começando sua jornada no surf! Recomendamos uma experiência introdutória para descobrir essa paixão.',
-                package: 'Batismo do Surf',
-                packageDesc: '1 aula individual completa + teoria + equipamento + vídeo da sua primeira onda',
-                price: 'A partir de R$ 250'
-            };
+            // Calculate composite scores
+            let readinessScore = 0; // Physical + mental readiness
+            let commitmentScore = 0; // Time + dedication
+            let ambitionScore = 0; // Goals + motivation
 
-            if (level === 0 && commitment === 'casual') {
+            // Readiness (fitness + confidence + swimming)
+            if (fitness === 'athlete') readinessScore += 4;
+            else if (fitness === 'good') readinessScore += 3;
+            else if (fitness === 'basic') readinessScore += 2;
+            else readinessScore += 1;
+
+            if (confidence === 'high') readinessScore += 4;
+            else if (confidence === 'good') readinessScore += 3;
+            else if (confidence === 'medium') readinessScore += 2;
+            else readinessScore += 1;
+
+            // Commitment (time + schedule + commitment)
+            if (time === 'full') commitmentScore += 4;
+            else if (time === 'regular') commitmentScore += 3;
+            else if (time === 'occasional') commitmentScore += 2;
+            else commitmentScore += 1;
+
+            if (commitment === 'immersion') commitmentScore += 4;
+            else if (commitment === 'dedicated') commitmentScore += 3;
+            else if (commitment === 'regular') commitmentScore += 2;
+            else commitmentScore += 1;
+
+            // Ambition (goal + motivation)
+            if (goal === 'performance') ambitionScore += 4;
+            else if (goal === 'lifestyle') ambitionScore += 3;
+            else if (goal === 'hobby') ambitionScore += 2;
+            else ambitionScore += 1;
+
+            if (motivation === 'lifestyle' || motivation === 'evolution') ambitionScore += 2;
+            else ambitionScore += 1;
+
+            // Determine profile and package based on comprehensive analysis
+            let resultData;
+            const totalScore = readinessScore + commitmentScore + ambitionScore + (level * 2);
+
+            // Special cases first
+            if (fear === 'water' && level === 0) {
                 resultData = {
-                    emoji: '🌊',
-                    title: 'Primeiro Contato',
-                    desc: 'Uma experiência única te espera! Vamos te apresentar ao mundo do surf com toda segurança e diversão.',
+                    emoji: '🛡️',
+                    title: 'Primeiro Contato Seguro',
+                    desc: 'Entendemos seu receio - e ele é válido! Nossos instrutores salva-vidas vão te guiar com calma e segurança total. Vamos construir sua confiança passo a passo.',
+                    package: 'Batismo do Surf Premium',
+                    packageDesc: '1 aula individual estendida (2h) + teoria detalhada + exercícios de confiança na água + todo equipamento + vídeo da experiência',
+                    price: 'A partir de R$ 350',
+                    tags: ['Primeira vez', 'Suporte intensivo', 'Foco em segurança']
+                };
+            } else if (goal === 'memory' && commitment === 'casual') {
+                resultData = {
+                    emoji: '📸',
+                    title: 'Experiência Única',
+                    desc: 'Uma memória inesquecível te espera! Vamos garantir que você tenha a experiência perfeita de surfar, com fotos e vídeos para levar para sempre.',
                     package: 'Batismo do Surf',
-                    packageDesc: '1 aula individual + teoria completa + equipamento + foto/vídeo',
-                    price: 'A partir de R$ 250'
+                    packageDesc: '1 aula individual completa + teoria + equipamento + pacote de fotos e vídeos profissionais',
+                    price: 'A partir de R$ 250',
+                    tags: ['Experiência única', 'Fotos profissionais', 'Memória para sempre']
                 };
-            } else if (level <= 1 && (commitment === 'regular' || commitment === 'dedicated')) {
+            } else if (totalScore >= 20 || (level >= 3 && ambitionScore >= 5)) {
                 resultData = {
-                    emoji: '📈',
-                    title: 'Em Evolução',
-                    desc: 'Você tem potencial! Com acompanhamento estruturado, vai evoluir muito mais rápido.',
-                    package: 'Pacote Fundamentos',
-                    packageDesc: '5 aulas individuais + vídeo-análise + acompanhamento de evolução',
-                    price: 'A partir de R$ 1.100'
+                    emoji: '🏆',
+                    title: 'Surfista de Alta Performance',
+                    desc: 'Você tem todos os ingredientes para ir longe no surf! Com seu nível, condição física e dedicação, vamos construir um programa de elite focado em resultados.',
+                    package: 'Programa Elite',
+                    packageDesc: 'Coaching individual intensivo + vídeo-análise profissional + treino funcional específico + acompanhamento de atleta + acesso a trips exclusivas',
+                    price: 'Sob consulta',
+                    tags: ['Alta performance', 'Treino de atleta', 'Resultados acelerados']
                 };
-            } else if (level >= 2 || commitment === 'dedicated') {
-                resultData = {
-                    emoji: '🎯',
-                    title: 'Surfista em Desenvolvimento',
-                    desc: 'Você já tem base sólida! Hora de refinar técnica e começar a fazer manobras consistentes.',
-                    package: 'Programa Evolução',
-                    packageDesc: '10 aulas + vídeo-análise profissional + treino funcional + acompanhamento mensal',
-                    price: 'A partir de R$ 2.000'
-                };
-            }
-
-            if (commitment === 'immersion' || motivation === 'lifestyle') {
+            } else if (totalScore >= 15 || (commitment === 'immersion') || (goal === 'lifestyle' && commitmentScore >= 6)) {
                 resultData = {
                     emoji: '💎',
                     title: 'Lifestyle Surfer',
-                    desc: 'O surf vai fazer parte da sua vida! Vamos criar um programa completo para você.',
+                    desc: 'O surf está prestes a transformar sua vida! Com sua dedicação e objetivos claros, vamos criar um programa completo que integra o surf ao seu estilo de vida.',
                     package: 'Programa Premium',
-                    packageDesc: 'Coaching personalizado + trips exclusivas + acompanhamento contínuo',
-                    price: 'Sob consulta'
+                    packageDesc: 'Coaching personalizado mensal + vídeo-análise semanal + treino funcional + trips mensais + comunidade exclusiva + acompanhamento contínuo',
+                    price: 'A partir de R$ 1.500/mês',
+                    tags: ['Transformação', 'Estilo de vida', 'Comunidade']
+                };
+            } else if (totalScore >= 11 || (level >= 2) || (commitment === 'dedicated' && readinessScore >= 5)) {
+                resultData = {
+                    emoji: '🚀',
+                    title: 'Surfista em Evolução',
+                    desc: 'Você já tem uma base sólida e está pronto para o próximo nível! Hora de refinar técnica, ganhar consistência e começar a fazer manobras de verdade.',
+                    package: 'Programa Evolução',
+                    packageDesc: '10 aulas individuais + vídeo-análise profissional detalhada + treino funcional complementar + acompanhamento mensal de progresso',
+                    price: 'A partir de R$ 2.000',
+                    tags: ['Evolução técnica', 'Vídeo-análise', 'Manobras']
+                };
+            } else if (totalScore >= 7 || (level === 1 && commitment !== 'casual')) {
+                resultData = {
+                    emoji: '📈',
+                    title: 'Construindo Fundamentos',
+                    desc: 'O início da sua jornada de verdade no surf! Vamos construir uma base técnica sólida que vai te permitir evoluir de forma consistente e segura.',
+                    package: 'Pacote Fundamentos',
+                    packageDesc: '5 aulas individuais estruturadas + vídeo-análise básica + exercícios para praticar + acompanhamento de evolução',
+                    price: 'A partir de R$ 1.100',
+                    tags: ['Base sólida', 'Progressão estruturada', '5 aulas']
+                };
+            } else {
+                resultData = {
+                    emoji: '🌊',
+                    title: 'Primeiro Contato',
+                    desc: 'O oceano está te chamando! Vamos te apresentar ao mundo do surf com toda segurança, diversão e a garantia de que você vai pegar sua primeira onda.',
+                    package: 'Batismo do Surf',
+                    packageDesc: '1 aula individual completa + teoria do surf + todo equipamento incluso + foto/vídeo da sua primeira onda',
+                    price: 'A partir de R$ 250',
+                    tags: ['Primeira experiência', 'Segurança total', 'Diversão garantida']
                 };
             }
+
+            // Personalized insights based on learning style
+            let learningTip = '';
+            if (learning === 'guided') learningTip = 'Nossos instrutores vão te guiar em cada detalhe, com feedback constante.';
+            else if (learning === 'visual') learningTip = 'Você receberá vídeo-análise detalhada para visualizar sua evolução.';
+            else if (learning === 'practical') learningTip = 'Máximo tempo na água! Aprender fazendo é nosso lema também.';
+            else if (learning === 'analytical') learningTip = 'Análise biomecânica e técnica detalhada do seu surf.';
 
             document.getElementById('resultEmoji').textContent = resultData.emoji;
             document.getElementById('resultTitle').textContent = `Seu Perfil: ${resultData.title}`;
             document.getElementById('resultDesc').textContent = resultData.desc;
             document.getElementById('packageName').textContent = `Recomendação: ${resultData.package}`;
-            document.getElementById('packageDesc').textContent = resultData.packageDesc;
+            document.getElementById('packageDesc').textContent = resultData.packageDesc + (learningTip ? ` ${learningTip}` : '');
             document.querySelector('.result-package .price').textContent = resultData.price;
 
-            // Update WhatsApp link with context
-            const whatsappMsg = encodeURIComponent(`Olá! Fiz o quiz no site e meu perfil é "${resultData.title}". Gostaria de saber mais sobre o ${resultData.package}!`);
+            // Build comprehensive WhatsApp message with all profile data
+            const profileSummary = [
+                `Perfil: ${resultData.title}`,
+                `Nível atual: ${level === 0 ? 'Nunca surfou' : level === 1 ? 'Iniciante' : level === 2 ? 'Intermediário' : 'Avançado'}`,
+                `Objetivo: ${goal === 'memory' ? 'Experiência única' : goal === 'hobby' ? 'Hobby casual' : goal === 'lifestyle' ? 'Estilo de vida' : 'Alta performance'}`,
+                `Disponibilidade: ${time === 'limited' ? 'Limitada' : time === 'occasional' ? 'Ocasional' : time === 'regular' ? 'Regular' : 'Total'}`,
+                `Condição física: ${fitness === 'beginner' ? 'Iniciante' : fitness === 'basic' ? 'Básica' : fitness === 'good' ? 'Boa' : 'Atleta'}`
+            ].join(' | ');
+
+            const whatsappMsg = encodeURIComponent(`Olá! Fiz o quiz completo no site.\n\n${profileSummary}\n\nPacote recomendado: ${resultData.package}\n\nGostaria de mais informações!`);
             document.getElementById('resultCta').href = `https://wa.me/5548996271507?text=${whatsappMsg}`;
         }
 
