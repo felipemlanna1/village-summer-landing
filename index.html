@@ -2038,7 +2038,7 @@
         <div class="container">
             <div class="header-inner">
                 <a href="#" class="logo">
-                    <img src="logo-village-summer.jpeg" alt="Village Summer - Escola de Surf Florianópolis" class="logo-img">
+                    <img src="apple-touch-icon.png" alt="Village Summer - Escola de Surf Florianópolis" class="logo-img">
                 </a>
 
                 <nav class="nav">
@@ -3494,6 +3494,28 @@
 
             const whatsappMsg = encodeURIComponent(`Olá! Fiz o quiz completo no site.\n\n${profileSummary}\n\nPacote recomendado: ${resultData.package}\n\nGostaria de mais informações!`);
             document.getElementById('resultCta').href = `https://wa.me/5548996271507?text=${whatsappMsg}`;
+
+            // Send quiz results to email via FormSubmit
+            const formData = new FormData();
+            formData.append('_subject', 'Novo resultado do Quiz - Village Summer');
+            formData.append('Perfil', resultData.title);
+            formData.append('Nível', level === 0 ? 'Nunca surfou' : level === 1 ? 'Iniciante' : level === 2 ? 'Intermediário' : 'Avançado');
+            formData.append('Objetivo', goal === 'memory' ? 'Experiência única' : goal === 'hobby' ? 'Hobby casual' : goal === 'lifestyle' ? 'Estilo de vida' : 'Alta performance');
+            formData.append('Disponibilidade', time === 'limited' ? 'Limitada' : time === 'occasional' ? 'Ocasional' : time === 'regular' ? 'Regular' : 'Total');
+            formData.append('Condição Física', fitness === 'beginner' ? 'Iniciante' : fitness === 'basic' ? 'Básica' : fitness === 'good' ? 'Boa' : 'Atleta');
+            formData.append('Motivação', motivation);
+            formData.append('Compromisso', commitment);
+            formData.append('Confiança', confidence);
+            formData.append('Estilo de Aprendizado', learning);
+            formData.append('Medo Principal', fear);
+            formData.append('Pacote Recomendado', resultData.package);
+            formData.append('Preço Sugerido', resultData.price);
+            formData.append('_template', 'table');
+
+            fetch('https://formsubmit.co/ajax/villagesummersurfshop@gmail.com', {
+                method: 'POST',
+                body: formData
+            }).catch(err => console.log('Erro ao enviar email:', err));
         }
 
         // Restart quiz
