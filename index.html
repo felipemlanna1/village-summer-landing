@@ -12,6 +12,12 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://villagesummer.com.br">
 
+    <!-- Hreflang Tags para SEO Internacional -->
+    <link rel="alternate" hreflang="pt-BR" href="https://villagesummer.com.br">
+    <link rel="alternate" hreflang="en" href="https://villagesummer.com.br?lang=en">
+    <link rel="alternate" hreflang="es" href="https://villagesummer.com.br?lang=es">
+    <link rel="alternate" hreflang="x-default" href="https://villagesummer.com.br">
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://villagesummer.com.br">
@@ -68,6 +74,83 @@
         "sameAs": [
             "https://instagram.com/villagesummersurf"
         ]
+    }
+    </script>
+
+    <!-- FAQ Schema for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Quanto custa uma aula de surf individual em Florianópolis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Os valores variam de acordo com o pacote escolhido. Oferecemos desde aulas avulsas até pacotes de evolução contínua. Entre em contato para receber uma proposta personalizada para seu nível."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Preciso ter experiência prévia para fazer aula de surf?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Não! Na Village Summer atendemos desde pessoas que nunca surfaram até surfistas avançados. Nossa metodologia é adaptada para cada nível, garantindo evolução segura e eficiente."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Os instrutores são certificados?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim! Todos os nossos instrutores são certificados e possuem formação como salva-vidas, garantindo sua segurança total durante as aulas."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "O que está incluso na aula de surf?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Todas as aulas incluem equipamento completo (prancha, lycra, wetsuit se necessário), vídeo-análise da sua performance e acompanhamento personalizado da sua evolução."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Em quais praias de Florianópolis as aulas acontecem?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Atuamos nas melhores praias do Sul de Florianópolis: Campeche (nossa base principal), Armação e Matadeiro. A praia é escolhida de acordo com as condições do mar e seu nível."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Course Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Aula de Surf Individual - Village Summer",
+        "description": "Aulas de surf individuais com metodologia exclusiva, vídeo-análise profissional e instrutores certificados como salva-vidas.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Village Summer - Surf Experience",
+            "url": "https://villagesummer.com.br"
+        },
+        "courseMode": "Presencial",
+        "educationalLevel": "Todos os níveis",
+        "locationCreated": {
+            "@type": "Place",
+            "name": "Sul de Florianópolis",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Florianópolis",
+                "addressRegion": "SC",
+                "addressCountry": "BR"
+            }
+        }
     }
     </script>
 
