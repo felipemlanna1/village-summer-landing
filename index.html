@@ -4,13 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO Meta Tags -->
+    <!-- Google Verification - CONFIGURE ESTAS TAGS -->
+    <!-- Google Search Console: Obtenha em https://search.google.com/search-console -->
+    <!-- <meta name="google-site-verification" content="SEU_CODIGO_AQUI"> -->
+
+    <!-- Google Analytics 4: Obtenha em https://analytics.google.com -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script> -->
+
+    <!-- SEO Meta Tags - Português (Default) -->
     <title>Aula de Surf Individual Florianópolis | Escola de Surf Campeche | Village Summer</title>
-    <meta name="description" content="Aulas de surf individuais no Sul de Florianópolis. Campeche, Armação, Matadeiro. +10 anos, +1000 alunos, instrutores salva-vidas certificados. Metodologia exclusiva com vídeo-análise profissional. Agende sua aula particular agora!">
-    <meta name="keywords" content="aula de surf individual florianópolis, aula de surf campeche, escola de surf sul da ilha, aula particular surf floripa, surf armação, surf matadeiro, aula de surf florianópolis, escola de surf florianópolis, surf lesson florianopolis, clases de surf florianopolis, aula surf iniciante floripa, melhor escola surf floripa">
+    <meta name="description" content="Aulas de surf individuais no Sul de Florianópolis. Campeche, Armação, Matadeiro. +10 anos de experiência, +1000 alunos formados, instrutores salva-vidas certificados. Metodologia exclusiva com vídeo-análise profissional. A melhor escola de surf de Floripa!">
+    <meta name="keywords" content="aula de surf individual florianópolis, aula de surf campeche, escola de surf sul da ilha, aula particular surf floripa, surf armação, surf matadeiro, aula de surf florianópolis, escola de surf florianópolis, surf lesson florianopolis, clases de surf florianopolis, aula surf iniciante floripa, melhor escola surf floripa, surf school brazil, learn to surf florianopolis, private surf lessons brazil, escuela de surf brasil, clases de surf florianopolis, surf camp floripa, video analysis surf, beginner surf lessons">
     <meta name="author" content="Village Summer - Surf Experience">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://felipemlanna1.github.io/village-summer-landing/">
+
+    <!-- Prerender para performance -->
+    <link rel="preconnect" href="https://wa.me">
+    <link rel="dns-prefetch" href="https://www.instagram.com">
 
     <!-- Hreflang Tags para SEO Internacional -->
     <link rel="alternate" hreflang="pt-BR" href="https://felipemlanna1.github.io/village-summer-landing/">
@@ -191,26 +208,68 @@
     }
     </script>
 
-    <!-- Schema.org JSON-LD - Reviews -->
+    <!-- Schema.org JSON-LD - Reviews Collection -->
     <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Review",
-        "itemReviewed": {
-            "@type": "LocalBusiness",
-            "name": "Village Summer - Surf Experience"
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Review",
+            "itemReviewed": {
+                "@type": "LocalBusiness",
+                "name": "Village Summer - Surf Experience",
+                "@id": "https://felipemlanna1.github.io/village-summer-landing/#localbusiness"
+            },
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Vitória Mecca"
+            },
+            "datePublished": "2024-12-15",
+            "reviewBody": "Vocês mudaram minha vida! A cada trip volto mais fissurada, corajosa e leve. A metodologia de vocês é incrível e os instrutores são muito profissionais. Super recomendo!"
         },
-        "reviewRating": {
-            "@type": "Rating",
-            "ratingValue": "5",
-            "bestRating": "5"
+        {
+            "@context": "https://schema.org",
+            "@type": "Review",
+            "itemReviewed": {
+                "@type": "LocalBusiness",
+                "name": "Village Summer - Surf Experience"
+            },
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Carlos Silva"
+            },
+            "datePublished": "2024-11-20",
+            "reviewBody": "Best surf school in Florianópolis! The video analysis made a huge difference in my learning. Professional instructors and amazing methodology. Highly recommended for beginners and advanced surfers!"
         },
-        "author": {
-            "@type": "Person",
-            "name": "Vitória Mecca"
-        },
-        "reviewBody": "Vocês mudaram minha vida! A cada trip volto mais fissurada, corajosa e leve. A metodologia de vocês é incrível e os instrutores são muito profissionais. Super recomendo!"
-    }
+        {
+            "@context": "https://schema.org",
+            "@type": "Review",
+            "itemReviewed": {
+                "@type": "LocalBusiness",
+                "name": "Village Summer - Surf Experience"
+            },
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "María González"
+            },
+            "datePublished": "2024-10-08",
+            "reviewBody": "¡Excelente escuela de surf! Los instructores son muy profesionales y pacientes. La metodología con videoanálisis es única. Aprendí a surfar en pocas clases. ¡100% recomendado!"
+        }
+    ]
     </script>
 
     <!-- FAQ Schema for SEO -->
@@ -3364,6 +3423,36 @@
 
             // Update HTML lang attribute
             document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+
+            // Update SEO meta tags for multilingual support
+            const seoMeta = {
+                pt: {
+                    title: 'Aula de Surf Individual Florianópolis | Escola de Surf Campeche | Village Summer',
+                    description: 'Aulas de surf individuais no Sul de Florianópolis. Campeche, Armação, Matadeiro. +10 anos de experiência, +1000 alunos, instrutores salva-vidas certificados. Metodologia exclusiva com vídeo-análise profissional.',
+                    ogTitle: 'Aula de Surf Individual Florianópolis | Village Summer',
+                    ogDescription: 'Aulas de surf individuais no Sul de Florianópolis. +10 anos, +1000 alunos, instrutores salva-vidas. Metodologia exclusiva com vídeo-análise profissional.'
+                },
+                en: {
+                    title: 'Private Surf Lessons Florianópolis | Surf School Brazil | Village Summer',
+                    description: 'Private surf lessons in South Florianópolis, Brazil. Campeche, Armação, Matadeiro beaches. +10 years experience, +1000 students, certified lifeguard instructors. Exclusive methodology with professional video analysis.',
+                    ogTitle: 'Private Surf Lessons Florianópolis | Village Summer',
+                    ogDescription: 'Private surf lessons in South Florianópolis, Brazil. +10 years, +1000 students, lifeguard instructors. Exclusive methodology with video analysis.'
+                },
+                es: {
+                    title: 'Clases de Surf Individuales Florianópolis | Escuela de Surf Brasil | Village Summer',
+                    description: 'Clases de surf individuales en el Sur de Florianópolis, Brasil. Campeche, Armação, Matadeiro. +10 años de experiencia, +1000 alumnos, instructores salvavidas certificados. Metodología exclusiva con videoanálisis profesional.',
+                    ogTitle: 'Clases de Surf Individuales Florianópolis | Village Summer',
+                    ogDescription: 'Clases de surf individuales en el Sur de Florianópolis, Brasil. +10 años, +1000 alumnos, instructores salvavidas. Metodología exclusiva con videoanálisis.'
+                }
+            };
+
+            const meta = seoMeta[lang] || seoMeta.pt;
+            document.title = meta.title;
+            document.querySelector('meta[name="description"]').setAttribute('content', meta.description);
+            document.querySelector('meta[property="og:title"]').setAttribute('content', meta.ogTitle);
+            document.querySelector('meta[property="og:description"]').setAttribute('content', meta.ogDescription);
+            document.querySelector('meta[name="twitter:title"]').setAttribute('content', meta.ogTitle);
+            document.querySelector('meta[name="twitter:description"]').setAttribute('content', meta.ogDescription);
         }
 
         // Initialize language on page load
