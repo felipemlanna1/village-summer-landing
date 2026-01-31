@@ -352,7 +352,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=1920&q=80') center/cover;
+            background: url('https://images.unsplash.com/photo-1455729552865-3658a5d39692?w=1920&q=80') center/cover;
             opacity: 0.3;
         }
 
@@ -1223,18 +1223,18 @@
 
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="#aula-individual" class="nav-link">Aula Individual</a></li>
-                        <li><a href="#metodologia" class="nav-link">Metodologia</a></li>
-                        <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
-                        <li><a href="#trips" class="nav-link">Trips</a></li>
-                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                        <li><a href="#aula-individual" class="nav-link" data-i18n="navLesson">Aula Individual</a></li>
+                        <li><a href="#metodologia" class="nav-link" data-i18n="navMethod">Metodologia</a></li>
+                        <li><a href="#depoimentos" class="nav-link" data-i18n="navTestimonials">Depoimentos</a></li>
+                        <li><a href="#trips" class="nav-link" data-i18n="navTrips">Trips</a></li>
+                        <li><a href="#contato" class="nav-link" data-i18n="navContact">Contato</a></li>
                     </ul>
                 </nav>
 
                 <div class="lang-selector">
-                    <a href="#" class="active">PT</a>
-                    <a href="#">EN</a>
-                    <a href="#">ES</a>
+                    <a href="#" data-lang="pt" class="active">PT</a>
+                    <a href="#" data-lang="en">EN</a>
+                    <a href="#" data-lang="es">ES</a>
                 </div>
 
                 <a href="https://wa.me/5548996271507?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-primary header-cta" target="_blank" rel="noopener">
@@ -1256,12 +1256,17 @@
             <a href="#" class="logo">Village <span>Summer</span></a>
             <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fechar menu">&times;</button>
         </div>
+        <div class="mobile-lang-selector" style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+            <a href="#" data-lang="pt" class="active" style="padding: 0.5rem 1rem; border-radius: 4px; background: var(--gray-100);">PT</a>
+            <a href="#" data-lang="en" style="padding: 0.5rem 1rem; border-radius: 4px;">EN</a>
+            <a href="#" data-lang="es" style="padding: 0.5rem 1rem; border-radius: 4px;">ES</a>
+        </div>
         <ul class="mobile-nav-list">
-            <li><a href="#aula-individual">Aula Individual</a></li>
-            <li><a href="#metodologia">Metodologia</a></li>
-            <li><a href="#depoimentos">Depoimentos</a></li>
-            <li><a href="#trips">Trips</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="#aula-individual" data-i18n="navLesson">Aula Individual</a></li>
+            <li><a href="#metodologia" data-i18n="navMethod">Metodologia</a></li>
+            <li><a href="#depoimentos" data-i18n="navTestimonials">Depoimentos</a></li>
+            <li><a href="#trips" data-i18n="navTrips">Trips</a></li>
+            <li><a href="#contato" data-i18n="navContact">Contato</a></li>
         </ul>
         <div class="mobile-menu-cta">
             <a href="https://wa.me/5548996271507?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-whatsapp" target="_blank" rel="noopener">
@@ -1279,16 +1284,16 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badges">
-                    <span class="hero-badge">+10 Anos de Experiência</span>
-                    <span class="hero-badge">+1.000 Alunos</span>
-                    <span class="hero-badge">Sul de Florianópolis</span>
+                    <span class="hero-badge" data-i18n="badge1">+10 Anos de Experiência</span>
+                    <span class="hero-badge" data-i18n="badge2">+1.000 Alunos</span>
+                    <span class="hero-badge" data-i18n="badge3">Sul de Florianópolis</span>
                 </div>
 
-                <h1>Aula de Surf Individual<br>no Sul de Florianópolis</h1>
+                <h1 data-i18n="heroTitle">Aula de Surf Individual<br>no Sul de Florianópolis</h1>
 
-                <p class="hero-subtitle">Evolução técnica real com metodologia exclusiva e vídeo-análise profissional</p>
+                <p class="hero-subtitle" data-i18n="heroSubtitle">Evolução técnica real com metodologia exclusiva e vídeo-análise profissional</p>
 
-                <p class="hero-location">Aulas particulares em Campeche, Armação e Matadeiro</p>
+                <p class="hero-location" data-i18n="heroLocation">Aulas particulares em Campeche, Armação e Matadeiro</p>
 
                 <div class="hero-cta">
                     <a href="https://wa.me/5548996271507?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-primary" target="_blank" rel="noopener">
@@ -1309,15 +1314,15 @@
             <div class="stats-grid animate-on-scroll">
                 <div class="stat-item">
                     <div class="stat-number">+10</div>
-                    <div class="stat-label">Anos de Experiência</div>
+                    <div class="stat-label" data-i18n="stat1Label">Anos de Experiência</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">+1000</div>
-                    <div class="stat-label">Alunos Impactados</div>
+                    <div class="stat-label" data-i18n="stat2Label">Alunos Impactados</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">60%</div>
-                    <div class="stat-label">Crescimento Anual</div>
+                    <div class="stat-label" data-i18n="stat3Label">Crescimento Anual</div>
                 </div>
             </div>
         </div>
@@ -1328,26 +1333,26 @@
         <div class="container">
             <div class="lesson-grid">
                 <div class="lesson-image animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1455729552865-3658a5d39692?w=800&q=80" alt="Aula de surf individual em Florianópolis - instrutor e aluno na praia do Campeche" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1531722569936-825d3dd91b15?w=800&q=80" alt="Aula de surf individual em Florianópolis - instrutor e aluno na praia do Campeche" loading="lazy">
                 </div>
                 <div class="lesson-content animate-on-scroll">
-                    <h2>Sua Aula, Seu Ritmo, Sua Evolução</h2>
-                    <p>Na Village Summer, cada aula individual é uma experiência única, desenhada especialmente para você. Nossos instrutores dedicam 100% da atenção ao seu desenvolvimento.</p>
+                    <h2 data-i18n="lessonTitle">Sua Aula, Seu Ritmo, Sua Evolução</h2>
+                    <p data-i18n="lessonDesc">Na Village Summer, cada aula individual é uma experiência única, desenhada especialmente para você. Nossos instrutores dedicam 100% da atenção ao seu desenvolvimento.</p>
 
                     <ul class="lesson-benefits">
-                        <li>Atenção 100% focada em você durante toda a aula</li>
-                        <li>Progressão personalizada no seu ritmo</li>
-                        <li>Correção técnica imediata e feedback constante</li>
-                        <li>Horários flexíveis para sua agenda</li>
-                        <li>Vídeo-análise profissional inclusa</li>
+                        <li data-i18n="lessonBenefit1">Atenção 100% focada em você durante toda a aula</li>
+                        <li data-i18n="lessonBenefit2">Progressão personalizada no seu ritmo</li>
+                        <li data-i18n="lessonBenefit3">Correção técnica imediata e feedback constante</li>
+                        <li data-i18n="lessonBenefit4">Horários flexíveis para sua agenda</li>
+                        <li data-i18n="lessonBenefit5">Vídeo-análise profissional inclusa</li>
                     </ul>
 
                     <div class="lesson-includes">
-                        <h4>O que está incluso:</h4>
-                        <p>Equipamento completo (prancha, lycra, wetsuit se necessário), vídeo-análise da sua performance e acompanhamento personalizado da sua evolução.</p>
+                        <h4 data-i18n="lessonIncludesTitle">O que está incluso:</h4>
+                        <p data-i18n="lessonIncludesDesc">Equipamento completo (prancha, lycra, wetsuit se necessário), vídeo-análise da sua performance e acompanhamento personalizado da sua evolução.</p>
                     </div>
 
-                    <a href="https://wa.me/5548996271507?text=Olá! Gostaria de saber mais sobre as aulas individuais." class="btn btn-primary" style="margin-top: 2rem;" target="_blank" rel="noopener">
+                    <a href="https://wa.me/5548996271507?text=Olá! Gostaria de saber mais sobre as aulas individuais." class="btn btn-primary" style="margin-top: 2rem;" target="_blank" rel="noopener" data-i18n="lessonCta">
                         Quero Minha Aula Individual
                     </a>
                 </div>
@@ -1359,33 +1364,33 @@
     <section class="section why-village" id="metodologia">
         <div class="container">
             <div class="section-title">
-                <h2>Por que a Village Summer?</h2>
-                <p>Mais do que aulas de surf, oferecemos uma experiência transformadora que conecta você com o mar e consigo mesmo.</p>
+                <h2 data-i18n="whyTitle">Por que a Village Summer?</h2>
+                <p data-i18n="whyDesc">Mais do que aulas de surf, oferecemos uma experiência transformadora que conecta você com o mar e consigo mesmo.</p>
             </div>
 
             <div class="features-grid">
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">🎯</div>
-                    <h3>Metodologia Exclusiva</h3>
-                    <p>Desenvolvemos uma metodologia própria que combina técnica, consciência corporal e conexão com o mar para acelerar seu aprendizado.</p>
+                    <h3 data-i18n="feature1Title">Metodologia Exclusiva</h3>
+                    <p data-i18n="feature1Desc">Desenvolvemos uma metodologia própria que combina técnica, consciência corporal e conexão com o mar para acelerar seu aprendizado.</p>
                 </div>
 
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">🏆</div>
-                    <h3>Instrutores Certificados</h3>
-                    <p>Nossa equipe é formada por profissionais certificados com anos de experiência no ensino do surf.</p>
+                    <h3 data-i18n="feature2Title">Instrutores Certificados</h3>
+                    <p data-i18n="feature2Desc">Nossa equipe é formada por profissionais certificados com anos de experiência no ensino do surf.</p>
                 </div>
 
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">📍</div>
-                    <h3>Localização Privilegiada</h3>
-                    <p>Atuamos nas melhores praias do Sul de Florianópolis: Campeche, Armação e Matadeiro.</p>
+                    <h3 data-i18n="feature3Title">Localização Privilegiada</h3>
+                    <p data-i18n="feature3Desc">Atuamos nas melhores praias do Sul de Florianópolis: Campeche, Armação e Matadeiro.</p>
                 </div>
 
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">💎</div>
-                    <h3>Experiência Premium</h3>
-                    <p>Atendimento personalizado para profissionais que buscam qualidade e evolução real no surf.</p>
+                    <h3 data-i18n="feature4Title">Experiência Premium</h3>
+                    <p data-i18n="feature4Desc">Atendimento personalizado para profissionais que buscam qualidade e evolução real no surf.</p>
                 </div>
             </div>
         </div>
@@ -1396,35 +1401,35 @@
         <div class="container">
             <div class="analysis-grid reverse">
                 <div class="analysis-image animate-on-scroll">
-                    <span class="analysis-badge">Diferencial Village</span>
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Análise de vídeo de surf - metodologia exclusiva Village Summer" loading="lazy">
+                    <span class="analysis-badge" data-i18n="videoBadge">Diferencial Village</span>
+                    <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80" alt="Análise de vídeo de surf - metodologia exclusiva Village Summer" loading="lazy">
                 </div>
                 <div class="analysis-content animate-on-scroll">
-                    <h2>Vídeo-Análise Profissional</h2>
-                    <p>Não é apenas uma aula, é evolução técnica monitorada. Gravamos sua performance e analisamos cada movimento para acelerar seu progresso.</p>
+                    <h2 data-i18n="videoTitle">Vídeo-Análise Profissional</h2>
+                    <p data-i18n="videoDesc">Não é apenas uma aula, é evolução técnica monitorada. Gravamos sua performance e analisamos cada movimento para acelerar seu progresso.</p>
 
                     <div class="analysis-steps">
                         <div class="analysis-step">
                             <div class="step-number">1</div>
                             <div class="step-content">
-                                <h4>Gravação Profissional</h4>
-                                <p>Filmamos sua sessão com equipamento de qualidade para capturar cada detalhe.</p>
+                                <h4 data-i18n="videoStep1Title">Gravação Profissional</h4>
+                                <p data-i18n="videoStep1Desc">Filmamos sua sessão com equipamento de qualidade para capturar cada detalhe.</p>
                             </div>
                         </div>
 
                         <div class="analysis-step">
                             <div class="step-number">2</div>
                             <div class="step-content">
-                                <h4>Análise Técnica Detalhada</h4>
-                                <p>Nossos instrutores analisam cada movimento, identificando pontos de melhoria.</p>
+                                <h4 data-i18n="videoStep2Title">Análise Técnica Detalhada</h4>
+                                <p data-i18n="videoStep2Desc">Nossos instrutores analisam cada movimento, identificando pontos de melhoria.</p>
                             </div>
                         </div>
 
                         <div class="analysis-step">
                             <div class="step-number">3</div>
                             <div class="step-content">
-                                <h4>Feedback Personalizado</h4>
-                                <p>Você recebe o vídeo com comentários e dicas específicas para sua evolução.</p>
+                                <h4 data-i18n="videoStep3Title">Feedback Personalizado</h4>
+                                <p data-i18n="videoStep3Desc">Você recebe o vídeo com comentários e dicas específicas para sua evolução.</p>
                             </div>
                         </div>
                     </div>
@@ -1437,13 +1442,13 @@
     <section class="section testimonials" id="depoimentos">
         <div class="container">
             <div class="section-title">
-                <h2>O que Nossos Alunos Dizem</h2>
-                <p>Histórias reais de transformação e conexão com o mar.</p>
+                <h2 data-i18n="testimonialsTitle">O que Nossos Alunos Dizem</h2>
+                <p data-i18n="testimonialsDesc">Histórias reais de transformação e conexão com o mar.</p>
             </div>
 
             <div class="testimonials-grid">
                 <div class="testimonial-card featured animate-on-scroll">
-                    <p class="testimonial-text">"Vocês mudaram minha vida... volto mais fissurada, corajosa e leve. A metodologia da Village Summer me fez evoluir de uma forma que eu nunca imaginei ser possível."</p>
+                    <p class="testimonial-text" data-i18n="testimonial1">"Vocês mudaram minha vida... volto mais fissurada, corajosa e leve. A metodologia da Village Summer me fez evoluir de uma forma que eu nunca imaginei ser possível."</p>
                     <div class="testimonial-author">
                         <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80" alt="Vitória Mecca - Médica e aluna Village Summer" class="author-avatar">
                         <div class="author-info">
@@ -1454,11 +1459,11 @@
                 </div>
 
                 <div class="testimonial-card testimonial-placeholder animate-on-scroll">
-                    <p>Espaço reservado para mais depoimentos</p>
+                    <p data-i18n="testimonialPlaceholder">Espaço reservado para mais depoimentos</p>
                 </div>
 
                 <div class="testimonial-card testimonial-placeholder animate-on-scroll">
-                    <p>Espaço reservado para mais depoimentos</p>
+                    <p data-i18n="testimonialPlaceholder">Espaço reservado para mais depoimentos</p>
                 </div>
             </div>
         </div>
@@ -1469,39 +1474,39 @@
         <div class="container">
             <div class="floripa-grid">
                 <div class="floripa-content animate-on-scroll">
-                    <h2>Por que Florianópolis?</h2>
-                    <p>Florianópolis, a Ilha da Magia, é um dos melhores destinos de surf do Brasil. Com mais de 40 praias e ondas para todos os níveis, é o lugar perfeito para aprender e evoluir.</p>
-                    <p>No Sul da Ilha, você encontra praias menos lotadas, natureza preservada e ondas consistentes durante todo o ano.</p>
+                    <h2 data-i18n="floripaTitle">Por que Florianópolis?</h2>
+                    <p data-i18n="floripaDesc1">Florianópolis, a Ilha da Magia, é um dos melhores destinos de surf do Brasil. Com mais de 40 praias e ondas para todos os níveis, é o lugar perfeito para aprender e evoluir.</p>
+                    <p data-i18n="floripaDesc2">No Sul da Ilha, você encontra praias menos lotadas, natureza preservada e ondas consistentes durante todo o ano.</p>
 
                     <div class="beaches-list">
                         <div class="beach-item">
                             <span class="beach-icon">🏖️</span>
                             <div class="beach-info">
-                                <h4>Campeche</h4>
-                                <p>Ondas consistentes, ideal para todos os níveis. Nossa praia principal.</p>
+                                <h4 data-i18n="beach1Name">Campeche</h4>
+                                <p data-i18n="beach1Desc">Ondas consistentes, ideal para todos os níveis. Nossa praia principal.</p>
                             </div>
                         </div>
                         <div class="beach-item">
                             <span class="beach-icon">🌊</span>
                             <div class="beach-info">
-                                <h4>Armação</h4>
-                                <p>Praia familiar com ondas suaves, perfeita para iniciantes.</p>
+                                <h4 data-i18n="beach2Name">Armação</h4>
+                                <p data-i18n="beach2Desc">Praia familiar com ondas suaves, perfeita para iniciantes.</p>
                             </div>
                         </div>
                         <div class="beach-item">
                             <span class="beach-icon">🏄</span>
                             <div class="beach-info">
-                                <h4>Matadeiro</h4>
-                                <p>Ondas mais desafiadoras para alunos intermediários e avançados.</p>
+                                <h4 data-i18n="beach3Name">Matadeiro</h4>
+                                <p data-i18n="beach3Desc">Ondas mais desafiadoras para alunos intermediários e avançados.</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="floripa-images animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1509914398892-963f53e6e2f1?w=600&q=80" alt="Praia do Campeche - Sul de Florianópolis" loading="lazy">
-                    <img src="https://images.unsplash.com/photo-1505459668311-8dfac7952bf0?w=600&q=80" alt="Surfista no pôr do sol em Florianópolis" loading="lazy">
-                    <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=600&q=80" alt="Ondas perfeitas no Sul de Floripa" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Praia do Campeche - Sul de Florianópolis" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1509914398892-963f53e6e2f1?w=600&q=80" alt="Surfista no pôr do sol em Florianópolis" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1455729552865-3658a5d39692?w=600&q=80" alt="Ondas perfeitas no Sul de Floripa" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1511,8 +1516,8 @@
     <section class="section surf-trips" id="trips">
         <div class="container">
             <div class="section-title">
-                <h2>Próximas Trips</h2>
-                <p>Expedições exclusivas para os melhores picos de surf. Vagas limitadas!</p>
+                <h2 data-i18n="tripsTitle">Próximas Trips</h2>
+                <p data-i18n="tripsDesc">Expedições exclusivas para os melhores picos de surf. Vagas limitadas!</p>
             </div>
 
             <div class="trips-grid">
@@ -1520,13 +1525,13 @@
                 <div class="trip-card animate-on-scroll">
                     <div class="trip-image">
                         <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=600&q=80" alt="Surf Trip Garopaba" loading="lazy">
-                        <span class="trip-date">Em breve</span>
-                        <span class="trip-spots">Vagas limitadas</span>
+                        <span class="trip-date" data-i18n="tripDate">Em breve</span>
+                        <span class="trip-spots" data-i18n="tripSpots">Vagas limitadas</span>
                     </div>
                     <div class="trip-content">
-                        <h3>Trip Garopaba</h3>
-                        <p>Expedição para as ondas clássicas de Garopaba, Ferrugem e Silveira.</p>
-                        <a href="https://wa.me/5548996271507?text=Olá! Gostaria de saber mais sobre a Trip Garopaba." class="btn btn-primary" target="_blank" rel="noopener">
+                        <h3 data-i18n="trip1Title">Trip Garopaba</h3>
+                        <p data-i18n="trip1Desc">Expedição para as ondas clássicas de Garopaba, Ferrugem e Silveira.</p>
+                        <a href="https://wa.me/5548996271507?text=Olá! Gostaria de saber mais sobre a Trip Garopaba." class="btn btn-primary" target="_blank" rel="noopener" data-i18n="tripCta">
                             Quero Saber Mais
                         </a>
                     </div>
@@ -1536,13 +1541,13 @@
                 <div class="trip-card animate-on-scroll">
                     <div class="trip-image">
                         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Surf Trip Guarda do Embaú" loading="lazy">
-                        <span class="trip-date">Em breve</span>
-                        <span class="trip-spots">Vagas limitadas</span>
+                        <span class="trip-date" data-i18n="tripDate">Em breve</span>
+                        <span class="trip-spots" data-i18n="tripSpots">Vagas limitadas</span>
                     </div>
                     <div class="trip-content">
-                        <h3>Expedição Guarda do Embaú</h3>
-                        <p>Aventura na praia mais bonita de Santa Catarina com ondas incríveis.</p>
-                        <a href="https://wa.me/5548996271507?text=Olá! Gostaria de saber mais sobre a Expedição Guarda do Embaú." class="btn btn-primary" target="_blank" rel="noopener">
+                        <h3 data-i18n="trip2Title">Expedição Guarda do Embaú</h3>
+                        <p data-i18n="trip2Desc">Aventura na praia mais bonita de Santa Catarina com ondas incríveis.</p>
+                        <a href="https://wa.me/5548996271507?text=Olá! Gostaria de saber mais sobre a Expedição Guarda do Embaú." class="btn btn-primary" target="_blank" rel="noopener" data-i18n="tripCta">
                             Quero Saber Mais
                         </a>
                     </div>
@@ -1550,7 +1555,7 @@
 
                 <!-- Trip 3 - Placeholder para futuras trips -->
                 <div class="trip-card trip-placeholder animate-on-scroll">
-                    <p>Novas trips em breve!<br><br>Siga nosso Instagram para ficar por dentro das próximas expedições.</p>
+                    <p data-i18n="tripPlaceholder">Novas trips em breve!<br><br>Siga nosso Instagram para ficar por dentro das próximas expedições.</p>
                 </div>
             </div>
         </div>
@@ -1559,17 +1564,17 @@
     <!-- Final CTA Section -->
     <section class="section final-cta" id="contato">
         <div class="container">
-            <h2>Sua Onda Está Esperando</h2>
-            <p>Agende sua aula individual e comece sua jornada de transformação através do surf.</p>
+            <h2 data-i18n="ctaTitle">Sua Onda Está Esperando</h2>
+            <p data-i18n="ctaDesc">Agende sua aula individual e comece sua jornada de transformação através do surf.</p>
 
             <div class="cta-buttons">
                 <a href="https://wa.me/5548996271507?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-whatsapp" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Agendar pelo WhatsApp
+                    <span data-i18n="ctaWhatsapp">Agendar pelo WhatsApp</span>
                 </a>
                 <a href="https://instagram.com/villagesummersurf" class="btn btn-secondary" target="_blank" rel="noopener">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    Seguir no Instagram
+                    <span data-i18n="ctaInstagram">Seguir no Instagram</span>
                 </a>
             </div>
         </div>
@@ -1581,11 +1586,11 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="#" class="logo">Village <span>Summer</span></a>
-                    <p>Escola de surf premium em Florianópolis. +10 anos transformando vidas através da conexão com o mar.</p>
+                    <p data-i18n="footerDesc">Escola de surf premium em Florianópolis. +10 anos transformando vidas através da conexão com o mar.</p>
                 </div>
 
                 <div class="footer-contact">
-                    <h4>Contato</h4>
+                    <h4 data-i18n="footerContact">Contato</h4>
                     <a href="https://wa.me/5548996271507" target="_blank" rel="noopener">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         (48) 99627-1507
@@ -1597,7 +1602,7 @@
                 </div>
 
                 <div class="footer-social">
-                    <h4>Redes Sociais</h4>
+                    <h4 data-i18n="footerSocial">Redes Sociais</h4>
                     <div class="social-links">
                         <a href="https://instagram.com/villagesummersurf" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -1610,7 +1615,7 @@
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2025 Village Summer - Surf Experience. Todos os direitos reservados.</p>
+                <p data-i18n="footerCopyright">&copy; 2025 Village Summer - Surf Experience. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
@@ -1624,6 +1629,352 @@
 
     <!-- JavaScript -->
     <script>
+        // ===== TRANSLATIONS =====
+        const translations = {
+            pt: {
+                // Nav
+                navLesson: 'Aula Individual',
+                navMethod: 'Metodologia',
+                navTestimonials: 'Depoimentos',
+                navTrips: 'Trips',
+                navContact: 'Contato',
+                navCta: 'Agendar Aula',
+
+                // Hero
+                badge1: '+10 Anos de Experiência',
+                badge2: '+1.000 Alunos',
+                badge3: 'Sul de Florianópolis',
+                heroTitle: 'Aula de Surf Individual<br>no Sul de Florianópolis',
+                heroSubtitle: 'Evolução técnica real com metodologia exclusiva e vídeo-análise profissional',
+                heroLocation: 'Aulas particulares em Campeche, Armação e Matadeiro',
+                heroCta: 'AGENDAR MINHA AULA INDIVIDUAL',
+                heroCtaSecondary: 'Conheça no Instagram',
+
+                // Stats
+                stat1Label: 'Anos de Experiência',
+                stat2Label: 'Alunos Impactados',
+                stat3Label: 'Crescimento Anual',
+
+                // Individual Lesson
+                lessonTitle: 'Sua Aula, Seu Ritmo, Sua Evolução',
+                lessonDesc: 'Na Village Summer, cada aula individual é uma experiência única, desenhada especialmente para você. Nossos instrutores dedicam 100% da atenção ao seu desenvolvimento.',
+                lessonBenefit1: 'Atenção 100% focada em você durante toda a aula',
+                lessonBenefit2: 'Progressão personalizada no seu ritmo',
+                lessonBenefit3: 'Correção técnica imediata e feedback constante',
+                lessonBenefit4: 'Horários flexíveis para sua agenda',
+                lessonBenefit5: 'Vídeo-análise profissional inclusa',
+                lessonIncludesTitle: 'O que está incluso:',
+                lessonIncludesDesc: 'Equipamento completo (prancha, lycra, wetsuit se necessário), vídeo-análise da sua performance e acompanhamento personalizado da sua evolução.',
+                lessonCta: 'Quero Minha Aula Individual',
+
+                // Why Village
+                whyTitle: 'Por que a Village Summer?',
+                whyDesc: 'Mais do que aulas de surf, oferecemos uma experiência transformadora que conecta você com o mar e consigo mesmo.',
+                feature1Title: 'Metodologia Exclusiva',
+                feature1Desc: 'Desenvolvemos uma metodologia própria que combina técnica, consciência corporal e conexão com o mar para acelerar seu aprendizado.',
+                feature2Title: 'Instrutores Certificados',
+                feature2Desc: 'Nossa equipe é formada por profissionais certificados com anos de experiência no ensino do surf.',
+                feature3Title: 'Localização Privilegiada',
+                feature3Desc: 'Atuamos nas melhores praias do Sul de Florianópolis: Campeche, Armação e Matadeiro.',
+                feature4Title: 'Experiência Premium',
+                feature4Desc: 'Atendimento personalizado para profissionais que buscam qualidade e evolução real no surf.',
+
+                // Video Analysis
+                videoTitle: 'Vídeo-Análise Profissional',
+                videoDesc: 'Não é apenas uma aula, é evolução técnica monitorada. Gravamos sua performance e analisamos cada movimento para acelerar seu progresso.',
+                videoStep1Title: 'Gravação Profissional',
+                videoStep1Desc: 'Filmamos sua sessão com equipamento de qualidade para capturar cada detalhe.',
+                videoStep2Title: 'Análise Técnica Detalhada',
+                videoStep2Desc: 'Nossos instrutores analisam cada movimento, identificando pontos de melhoria.',
+                videoStep3Title: 'Feedback Personalizado',
+                videoStep3Desc: 'Você recebe o vídeo com comentários e dicas específicas para sua evolução.',
+                videoBadge: 'Diferencial Village',
+
+                // Testimonials
+                testimonialsTitle: 'O que Nossos Alunos Dizem',
+                testimonialsDesc: 'Histórias reais de transformação e conexão com o mar.',
+                testimonial1: '"Vocês mudaram minha vida... volto mais fissurada, corajosa e leve. A metodologia da Village Summer me fez evoluir de uma forma que eu nunca imaginei ser possível."',
+                testimonialPlaceholder: 'Espaço reservado para mais depoimentos',
+
+                // Floripa
+                floripaTitle: 'Por que Florianópolis?',
+                floripaDesc1: 'Florianópolis, a Ilha da Magia, é um dos melhores destinos de surf do Brasil. Com mais de 40 praias e ondas para todos os níveis, é o lugar perfeito para aprender e evoluir.',
+                floripaDesc2: 'No Sul da Ilha, você encontra praias menos lotadas, natureza preservada e ondas consistentes durante todo o ano.',
+                beach1Name: 'Campeche',
+                beach1Desc: 'Ondas consistentes, ideal para todos os níveis. Nossa praia principal.',
+                beach2Name: 'Armação',
+                beach2Desc: 'Praia familiar com ondas suaves, perfeita para iniciantes.',
+                beach3Name: 'Matadeiro',
+                beach3Desc: 'Ondas mais desafiadoras para alunos intermediários e avançados.',
+
+                // Trips
+                tripsTitle: 'Próximas Trips',
+                tripsDesc: 'Expedições exclusivas para os melhores picos de surf. Vagas limitadas!',
+                tripDate: 'Em breve',
+                tripSpots: 'Vagas limitadas',
+                trip1Title: 'Trip Garopaba',
+                trip1Desc: 'Expedição para as ondas clássicas de Garopaba, Ferrugem e Silveira.',
+                trip2Title: 'Expedição Guarda do Embaú',
+                trip2Desc: 'Aventura na praia mais bonita de Santa Catarina com ondas incríveis.',
+                tripCta: 'Quero Saber Mais',
+                tripPlaceholder: 'Novas trips em breve!<br><br>Siga nosso Instagram para ficar por dentro das próximas expedições.',
+
+                // Final CTA
+                ctaTitle: 'Sua Onda Está Esperando',
+                ctaDesc: 'Agende sua aula individual e comece sua jornada de transformação através do surf.',
+                ctaWhatsapp: 'Agendar pelo WhatsApp',
+                ctaInstagram: 'Seguir no Instagram',
+
+                // Footer
+                footerDesc: 'Escola de surf premium em Florianópolis. +10 anos transformando vidas através da conexão com o mar.',
+                footerContact: 'Contato',
+                footerSocial: 'Redes Sociais',
+                footerCopyright: '© 2025 Village Summer - Surf Experience. Todos os direitos reservados.'
+            },
+            en: {
+                // Nav
+                navLesson: 'Private Lesson',
+                navMethod: 'Methodology',
+                navTestimonials: 'Testimonials',
+                navTrips: 'Trips',
+                navContact: 'Contact',
+                navCta: 'Book Lesson',
+
+                // Hero
+                badge1: '+10 Years of Experience',
+                badge2: '+1,000 Students',
+                badge3: 'South Florianópolis',
+                heroTitle: 'Private Surf Lessons<br>in South Florianópolis',
+                heroSubtitle: 'Real technical evolution with exclusive methodology and professional video analysis',
+                heroLocation: 'Private lessons in Campeche, Armação and Matadeiro',
+                heroCta: 'BOOK MY PRIVATE LESSON',
+                heroCtaSecondary: 'Follow on Instagram',
+
+                // Stats
+                stat1Label: 'Years of Experience',
+                stat2Label: 'Students Impacted',
+                stat3Label: 'Annual Growth',
+
+                // Individual Lesson
+                lessonTitle: 'Your Lesson, Your Pace, Your Evolution',
+                lessonDesc: 'At Village Summer, each private lesson is a unique experience designed especially for you. Our instructors dedicate 100% attention to your development.',
+                lessonBenefit1: '100% attention focused on you throughout the lesson',
+                lessonBenefit2: 'Personalized progression at your pace',
+                lessonBenefit3: 'Immediate technical correction and constant feedback',
+                lessonBenefit4: 'Flexible hours for your schedule',
+                lessonBenefit5: 'Professional video analysis included',
+                lessonIncludesTitle: "What's included:",
+                lessonIncludesDesc: 'Complete equipment (board, rashguard, wetsuit if needed), video analysis of your performance and personalized tracking of your evolution.',
+                lessonCta: 'I Want My Private Lesson',
+
+                // Why Village
+                whyTitle: 'Why Village Summer?',
+                whyDesc: 'More than surf lessons, we offer a transformative experience that connects you with the ocean and yourself.',
+                feature1Title: 'Exclusive Methodology',
+                feature1Desc: 'We developed our own methodology that combines technique, body awareness and connection with the sea to accelerate your learning.',
+                feature2Title: 'Certified Instructors',
+                feature2Desc: 'Our team is made up of certified professionals with years of experience in surf teaching.',
+                feature3Title: 'Prime Location',
+                feature3Desc: 'We operate on the best beaches of South Florianópolis: Campeche, Armação and Matadeiro.',
+                feature4Title: 'Premium Experience',
+                feature4Desc: 'Personalized service for professionals seeking quality and real evolution in surfing.',
+
+                // Video Analysis
+                videoTitle: 'Professional Video Analysis',
+                videoDesc: "It's not just a lesson, it's monitored technical evolution. We record your performance and analyze every movement to accelerate your progress.",
+                videoStep1Title: 'Professional Recording',
+                videoStep1Desc: 'We film your session with quality equipment to capture every detail.',
+                videoStep2Title: 'Detailed Technical Analysis',
+                videoStep2Desc: 'Our instructors analyze each movement, identifying areas for improvement.',
+                videoStep3Title: 'Personalized Feedback',
+                videoStep3Desc: 'You receive the video with specific comments and tips for your evolution.',
+                videoBadge: 'Village Difference',
+
+                // Testimonials
+                testimonialsTitle: 'What Our Students Say',
+                testimonialsDesc: 'Real stories of transformation and connection with the sea.',
+                testimonial1: '"You changed my life... I come back more stoked, brave and light. Village Summer\'s methodology made me evolve in ways I never imagined possible."',
+                testimonialPlaceholder: 'Space reserved for more testimonials',
+
+                // Floripa
+                floripaTitle: 'Why Florianópolis?',
+                floripaDesc1: 'Florianópolis, the Magic Island, is one of the best surf destinations in Brazil. With over 40 beaches and waves for all levels, it\'s the perfect place to learn and evolve.',
+                floripaDesc2: 'In the South of the Island, you\'ll find less crowded beaches, preserved nature and consistent waves year-round.',
+                beach1Name: 'Campeche',
+                beach1Desc: 'Consistent waves, ideal for all levels. Our main beach.',
+                beach2Name: 'Armação',
+                beach2Desc: 'Family beach with gentle waves, perfect for beginners.',
+                beach3Name: 'Matadeiro',
+                beach3Desc: 'More challenging waves for intermediate and advanced students.',
+
+                // Trips
+                tripsTitle: 'Upcoming Trips',
+                tripsDesc: 'Exclusive expeditions to the best surf spots. Limited spots!',
+                tripDate: 'Coming soon',
+                tripSpots: 'Limited spots',
+                trip1Title: 'Garopaba Trip',
+                trip1Desc: 'Expedition to the classic waves of Garopaba, Ferrugem and Silveira.',
+                trip2Title: 'Guarda do Embaú Expedition',
+                trip2Desc: 'Adventure at the most beautiful beach in Santa Catarina with incredible waves.',
+                tripCta: 'I Want to Know More',
+                tripPlaceholder: 'New trips coming soon!<br><br>Follow our Instagram to stay updated on upcoming expeditions.',
+
+                // Final CTA
+                ctaTitle: 'Your Wave is Waiting',
+                ctaDesc: 'Book your private lesson and start your transformation journey through surfing.',
+                ctaWhatsapp: 'Book via WhatsApp',
+                ctaInstagram: 'Follow on Instagram',
+
+                // Footer
+                footerDesc: 'Premium surf school in Florianópolis. +10 years transforming lives through connection with the sea.',
+                footerContact: 'Contact',
+                footerSocial: 'Social Media',
+                footerCopyright: '© 2025 Village Summer - Surf Experience. All rights reserved.'
+            },
+            es: {
+                // Nav
+                navLesson: 'Clase Individual',
+                navMethod: 'Metodología',
+                navTestimonials: 'Testimonios',
+                navTrips: 'Trips',
+                navContact: 'Contacto',
+                navCta: 'Reservar Clase',
+
+                // Hero
+                badge1: '+10 Años de Experiencia',
+                badge2: '+1.000 Alumnos',
+                badge3: 'Sur de Florianópolis',
+                heroTitle: 'Clase de Surf Individual<br>en el Sur de Florianópolis',
+                heroSubtitle: 'Evolución técnica real con metodología exclusiva y videoanálisis profesional',
+                heroLocation: 'Clases particulares en Campeche, Armação y Matadeiro',
+                heroCta: 'RESERVAR MI CLASE INDIVIDUAL',
+                heroCtaSecondary: 'Conocer en Instagram',
+
+                // Stats
+                stat1Label: 'Años de Experiencia',
+                stat2Label: 'Alumnos Impactados',
+                stat3Label: 'Crecimiento Anual',
+
+                // Individual Lesson
+                lessonTitle: 'Tu Clase, Tu Ritmo, Tu Evolución',
+                lessonDesc: 'En Village Summer, cada clase individual es una experiencia única, diseñada especialmente para ti. Nuestros instructores dedican 100% de atención a tu desarrollo.',
+                lessonBenefit1: 'Atención 100% enfocada en ti durante toda la clase',
+                lessonBenefit2: 'Progresión personalizada a tu ritmo',
+                lessonBenefit3: 'Corrección técnica inmediata y feedback constante',
+                lessonBenefit4: 'Horarios flexibles para tu agenda',
+                lessonBenefit5: 'Videoanálisis profesional incluido',
+                lessonIncludesTitle: 'Qué está incluido:',
+                lessonIncludesDesc: 'Equipo completo (tabla, lycra, wetsuit si es necesario), videoanálisis de tu desempeño y seguimiento personalizado de tu evolución.',
+                lessonCta: 'Quiero Mi Clase Individual',
+
+                // Why Village
+                whyTitle: '¿Por qué Village Summer?',
+                whyDesc: 'Más que clases de surf, ofrecemos una experiencia transformadora que te conecta con el mar y contigo mismo.',
+                feature1Title: 'Metodología Exclusiva',
+                feature1Desc: 'Desarrollamos una metodología propia que combina técnica, conciencia corporal y conexión con el mar para acelerar tu aprendizaje.',
+                feature2Title: 'Instructores Certificados',
+                feature2Desc: 'Nuestro equipo está formado por profesionales certificados con años de experiencia en la enseñanza del surf.',
+                feature3Title: 'Ubicación Privilegiada',
+                feature3Desc: 'Operamos en las mejores playas del Sur de Florianópolis: Campeche, Armação y Matadeiro.',
+                feature4Title: 'Experiencia Premium',
+                feature4Desc: 'Atención personalizada para profesionales que buscan calidad y evolución real en el surf.',
+
+                // Video Analysis
+                videoTitle: 'Videoanálisis Profesional',
+                videoDesc: 'No es solo una clase, es evolución técnica monitoreada. Grabamos tu desempeño y analizamos cada movimiento para acelerar tu progreso.',
+                videoStep1Title: 'Grabación Profesional',
+                videoStep1Desc: 'Filmamos tu sesión con equipo de calidad para capturar cada detalle.',
+                videoStep2Title: 'Análisis Técnico Detallado',
+                videoStep2Desc: 'Nuestros instructores analizan cada movimiento, identificando puntos de mejora.',
+                videoStep3Title: 'Feedback Personalizado',
+                videoStep3Desc: 'Recibes el video con comentarios y consejos específicos para tu evolución.',
+                videoBadge: 'Diferencial Village',
+
+                // Testimonials
+                testimonialsTitle: 'Lo que Dicen Nuestros Alumnos',
+                testimonialsDesc: 'Historias reales de transformación y conexión con el mar.',
+                testimonial1: '"Ustedes cambiaron mi vida... vuelvo más enganchada, valiente y liviana. La metodología de Village Summer me hizo evolucionar de una forma que nunca imaginé posible."',
+                testimonialPlaceholder: 'Espacio reservado para más testimonios',
+
+                // Floripa
+                floripaTitle: '¿Por qué Florianópolis?',
+                floripaDesc1: 'Florianópolis, la Isla de la Magia, es uno de los mejores destinos de surf de Brasil. Con más de 40 playas y olas para todos los niveles, es el lugar perfecto para aprender y evolucionar.',
+                floripaDesc2: 'En el Sur de la Isla, encontrarás playas menos concurridas, naturaleza preservada y olas consistentes durante todo el año.',
+                beach1Name: 'Campeche',
+                beach1Desc: 'Olas consistentes, ideal para todos los niveles. Nuestra playa principal.',
+                beach2Name: 'Armação',
+                beach2Desc: 'Playa familiar con olas suaves, perfecta para principiantes.',
+                beach3Name: 'Matadeiro',
+                beach3Desc: 'Olas más desafiantes para alumnos intermedios y avanzados.',
+
+                // Trips
+                tripsTitle: 'Próximos Trips',
+                tripsDesc: 'Expediciones exclusivas a los mejores picos de surf. ¡Plazas limitadas!',
+                tripDate: 'Próximamente',
+                tripSpots: 'Plazas limitadas',
+                trip1Title: 'Trip Garopaba',
+                trip1Desc: 'Expedición a las olas clásicas de Garopaba, Ferrugem y Silveira.',
+                trip2Title: 'Expedición Guarda do Embaú',
+                trip2Desc: 'Aventura en la playa más hermosa de Santa Catarina con olas increíbles.',
+                tripCta: 'Quiero Saber Más',
+                tripPlaceholder: '¡Nuevos trips próximamente!<br><br>Sigue nuestro Instagram para estar al tanto de las próximas expediciones.',
+
+                // Final CTA
+                ctaTitle: 'Tu Ola Te Está Esperando',
+                ctaDesc: 'Reserva tu clase individual y comienza tu viaje de transformación a través del surf.',
+                ctaWhatsapp: 'Reservar por WhatsApp',
+                ctaInstagram: 'Seguir en Instagram',
+
+                // Footer
+                footerDesc: 'Escuela de surf premium en Florianópolis. +10 años transformando vidas a través de la conexión con el mar.',
+                footerContact: 'Contacto',
+                footerSocial: 'Redes Sociales',
+                footerCopyright: '© 2025 Village Summer - Surf Experience. Todos los derechos reservados.'
+            }
+        };
+
+        // Current language
+        let currentLang = localStorage.getItem('lang') || 'pt';
+
+        // Function to change language
+        function changeLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('lang', lang);
+
+            // Update all translatable elements
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+
+            // Update lang selector active state
+            document.querySelectorAll('.lang-selector a, .mobile-lang-selector a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('data-lang') === lang) {
+                    a.classList.add('active');
+                }
+            });
+
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
+        }
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            changeLanguage(currentLang);
+        });
+
+        // Language selector click handlers
+        document.querySelectorAll('.lang-selector a, .mobile-lang-selector a').forEach(a => {
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = a.getAttribute('data-lang');
+                changeLanguage(lang);
+            });
+        });
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
