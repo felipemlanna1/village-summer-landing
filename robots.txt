@@ -1,0 +1,36 @@
+# Robots.txt for Village Summer - Surf Experience
+# https://felipemlanna1.github.io/village-summer-landing/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://felipemlanna1.github.io/village-summer-landing/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+
+# Google Images
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow all social media bots
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
