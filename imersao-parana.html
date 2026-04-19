@@ -114,28 +114,11 @@
             background: rgba(39, 39, 39, 0.5);
         }
 
-        .hero-background .photo-placeholder {
+        .hero-background img {
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            border: none;
-            border-radius: 0;
-        }
-
-        .hero-background .photo-placeholder-icon {
-            font-size: 80px;
-            color: var(--amarelo);
-            opacity: 0.3;
-            margin-bottom: 20px;
-        }
-
-        .hero-background .photo-placeholder p {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 18px;
+            object-fit: cover;
+            display: block;
         }
 
         .hero-content {
@@ -276,6 +259,25 @@
 
         .photo-square {
             aspect-ratio: 1/1;
+        }
+
+        .photo-wrapper img,
+        .team-member-photo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .photo-wrapper {
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .team-member-photo-wrapper {
+            border-radius: 4px;
+            overflow: hidden;
         }
 
         /* Cards Grid */
@@ -601,10 +603,7 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-background">
-            <div class="photo-placeholder">
-                <div class="photo-placeholder-icon">📸</div>
-                <p>Foto de fundo do hero — surfista na onda de Matinhos</p>
-            </div>
+            <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=2000&q=80" alt="Surfista pegando onda">
         </div>
         <div class="hero-content">
             <h1>Imersão Paraná</h1>
@@ -624,10 +623,7 @@
                     <p>Não é só aula de surf: é o Kelvin e a Júlia levando a galera pra surfar junto, se divertir e se conectar. Com o Método Desbloqueia Surf, acompanhamento completo e uma vibe de família que só a Village tem.</p>
                 </div>
                 <div class="photo-wrapper">
-                    <div class="photo-placeholder">
-                        <div class="photo-placeholder-icon">🏄</div>
-                        <p>Foto da galera surfando juntos</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=1200&q=80" alt="Surfistas na praia" style="aspect-ratio: 4/3; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -682,10 +678,7 @@
                     </div>
                 </div>
                 <div class="photo-wrapper">
-                    <div class="photo-placeholder photo-large">
-                        <div class="photo-placeholder-icon">🌊</div>
-                        <p>Foto da praia de Matinhos</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=1400&q=80" alt="Praia e mar" style="aspect-ratio: 16/9; object-fit: cover;">
                 </div>
             </div>
         </div>
@@ -698,10 +691,7 @@
 
             <div class="team-member">
                 <div class="team-member-photo-wrapper">
-                    <div class="photo-placeholder">
-                        <div class="photo-placeholder-icon">🏄‍♂️</div>
-                        <p>Foto Kelvin</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=600&q=80" alt="Substituir pela foto do Kelvin" style="aspect-ratio: 3/4; object-fit: cover;">
                 </div>
                 <div class="team-member-bio">
                     <h3>Kelvin</h3>
@@ -712,10 +702,7 @@
 
             <div class="team-member">
                 <div class="team-member-photo-wrapper">
-                    <div class="photo-placeholder">
-                        <div class="photo-placeholder-icon">🏄‍♀️</div>
-                        <p>Foto Júlia</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&q=80" alt="Substituir pela foto da Júlia" style="aspect-ratio: 3/4; object-fit: cover;">
                 </div>
                 <div class="team-member-bio">
                     <h3>Júlia</h3>
@@ -726,10 +713,7 @@
 
             <div class="team-member">
                 <div class="team-member-photo-wrapper">
-                    <div class="photo-placeholder">
-                        <div class="photo-placeholder-icon">🤙</div>
-                        <p>Foto Bob</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Substituir pela foto do Bob" style="aspect-ratio: 3/4; object-fit: cover;">
                 </div>
                 <div class="team-member-bio">
                     <h3>Bob</h3>
@@ -740,10 +724,7 @@
 
             <div class="team-member">
                 <div class="team-member-photo-wrapper">
-                    <div class="photo-placeholder">
-                        <div class="photo-placeholder-icon">🌊</div>
-                        <p>Foto Sara</p>
-                    </div>
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=600&q=80" alt="Substituir pela foto da Sara" style="aspect-ratio: 3/4; object-fit: cover;">
                 </div>
                 <div class="team-member-bio">
                     <h3>Sara</h3>
