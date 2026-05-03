@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1660956965152744');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1660956965152744&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -67,7 +85,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <!-- Schema.org JSON-LD - Organization -->
     <script type="application/ld+json">
@@ -402,72 +420,60 @@
             scroll-behavior: smooth;
         }
 
-        /* ===== CSS VARIABLES - VILLAGE SUMMER BRAND ===== */
+        /* ===== CSS VARIABLES - VILLAGE SUMMER DESIGN SYSTEM ===== */
         :root {
-            /* Brand Colors - Village Summer */
-            --bronze: #957F5C;           /* Bronze Solidão - Sophistication */
-            --bronze-light: #B09A76;     /* Bronze claro para hover */
-            --bronze-dark: #7A6849;      /* Bronze escuro para contraste */
-            --gold: #FFD700;             /* Amarelo Ativo - Energy & Highlights */
-            --gold-light: #FFE44D;       /* Amarelo claro */
-            --black-deep: #0B1013;       /* Preto Profundo - Backgrounds */
-            --black-soft: #1A1D21;       /* Preto suave para cards */
-            --black-lighter: #252A30;   /* Preto mais claro para bordas */
+            --preto: #272727;
+            --amarelo: #FFBD59;
+            --branco: #FAF8F3;
+            --cinza: #5a5a5a;
+            --display: 'Bebas Neue', sans-serif;
+            --body: 'Poppins', sans-serif;
 
-            /* Legacy aliases for compatibility */
-            --ocean-deep: #0B1013;
-            --ocean-teal: #957F5C;
-            --ocean-light: #1A1D21;
-            --sunset-orange: #FFD700;
-            --sunset-gold: #957F5C;
-            --sunset-coral: #B09A76;
+            /* Aliases para compatibilidade com código JS existente */
+            --gold: #FFBD59;
+            --gold-light: #ffd080;
+            --black-deep: #272727;
+            --black-soft: #1e1e1e;
+            --black-lighter: #333333;
+            --bronze: #FFBD59;
+            --bronze-light: #ffd080;
+            --bronze-dark: #e6a840;
+            --ocean-deep: #272727;
+            --white: #FAF8F3;
+            --cream: #FAF8F3;
+            --text-light: rgba(250, 248, 243, 0.65);
+            --gray-100: #333333;
+            --gray-200: #444444;
 
-            /* Neutrals */
-            --white: #FFFFFF;
-            --cream: #F5F0E6;
-            --text-dark: #FFFFFF;
-            --text-light: #B8B8B8;
-            --gray-100: #1A1D21;
-            --gray-200: #252A30;
-
-            /* Shadows - Gold accent */
             --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
             --shadow-md: 0 4px 6px rgba(0,0,0,0.4);
             --shadow-lg: 0 10px 25px rgba(0,0,0,0.5);
-            --shadow-gold: 0 4px 14px rgba(255, 215, 0, 0.3);
-            --shadow-bronze: 0 4px 14px rgba(149, 127, 92, 0.4);
-            --shadow-orange: 0 4px 14px rgba(255, 215, 0, 0.3);
-
-            /* Typography */
-            --font-heading: 'Montserrat', sans-serif;
-            --font-elegant: 'Cinzel', serif;
-            --font-body: 'Inter', sans-serif;
+            --shadow-gold: 0 4px 14px rgba(255, 189, 89, 0.3);
+            --shadow-bronze: 0 4px 14px rgba(255, 189, 89, 0.3);
+            --shadow-orange: 0 4px 14px rgba(255, 189, 89, 0.3);
         }
 
         /* ===== TYPOGRAPHY ===== */
         body {
-            font-family: var(--font-body);
+            font-family: var(--body);
+            font-weight: 300;
             font-size: 16px;
             line-height: 1.6;
-            color: var(--white);
-            background-color: var(--black-deep);
+            color: var(--branco);
+            background-color: var(--preto);
         }
 
         h1, h2, h3, h4 {
-            font-family: var(--font-heading);
-            font-weight: 700;
-            line-height: 1.2;
+            font-family: var(--display);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: 0.02em;
         }
 
-        /* Elegant accent for special headings */
         .elegant-title {
-            font-family: var(--font-elegant);
-            letter-spacing: 0.1em;
+            font-family: var(--display);
+            letter-spacing: 0.05em;
         }
-
-        h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-        h2 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
-        h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
 
         p { margin-bottom: 1rem; }
 
@@ -487,43 +493,104 @@
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 80px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
         }
 
         .section {
-            padding: 4rem 0;
+            padding: 120px 0;
         }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
+        @media (max-width: 768px) {
+            .section {
+                padding: 80px 0;
+            }
         }
 
-        .section-title h2 {
-            color: var(--white);
+        /* Section label estilo imersao-parana */
+        .section-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-family: var(--body);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--amarelo);
             margin-bottom: 1rem;
         }
 
+        .section-label::before {
+            content: '';
+            width: 32px;
+            height: 2px;
+            background: var(--amarelo);
+            flex-shrink: 0;
+        }
+
+        .section-title {
+            margin-bottom: 3rem;
+        }
+
+        .section-title.centered {
+            text-align: center;
+        }
+
+        .section-title.centered .section-label {
+            justify-content: center;
+        }
+
+        .section-title h2 {
+            font-family: var(--display);
+            font-size: clamp(52px, 6vw, 88px);
+            line-height: 0.95;
+            color: var(--branco);
+        }
+
+        /* Sobre fundo claro, títulos escuros */
+        .section--light .section-title h2,
+        .section--light h2,
+        .section--light h3,
+        .section--light h4 {
+            color: var(--preto);
+        }
+
         .section-title h2 span {
-            color: var(--gold);
+            color: var(--amarelo);
         }
 
         .section-title p {
-            color: var(--text-light);
+            font-weight: 300;
+            color: rgba(250, 248, 243, 0.75);
             max-width: 600px;
+        }
+
+        .section-title.centered p {
             margin: 0 auto;
         }
 
+        .section--light .section-title p {
+            color: var(--cinza);
+        }
+
+        /* ===== BOTÕES ===== */
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            padding: 1rem 2rem;
-            font-family: var(--font-heading);
+            padding: 18px 44px;
+            font-family: var(--body);
             font-weight: 600;
-            font-size: 1rem;
-            border-radius: 50px;
+            font-size: 15px;
+            letter-spacing: 0.05em;
+            border-radius: 2px;
             cursor: pointer;
             transition: all 0.3s ease;
             border: none;
@@ -531,43 +598,52 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            color: var(--black-deep);
-            box-shadow: var(--shadow-gold);
-            font-weight: 700;
+            background: var(--amarelo);
+            color: var(--preto);
         }
 
         .btn-primary:hover {
-            background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+            background: var(--gold-light);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.5);
+            box-shadow: var(--shadow-gold);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--bronze);
-            border: 2px solid var(--bronze);
+            color: var(--branco);
+            border: 1px solid rgba(250, 248, 243, 0.3);
         }
 
         .btn-secondary:hover {
-            background: var(--bronze);
-            color: var(--white);
+            border-color: var(--branco);
+            background: rgba(250, 248, 243, 0.08);
+        }
+
+        /* Versão do botão secundário em fundo claro */
+        .section--light .btn-secondary {
+            color: var(--preto);
+            border-color: rgba(39, 39, 39, 0.3);
+        }
+
+        .section--light .btn-secondary:hover {
+            border-color: var(--preto);
+            background: rgba(39, 39, 39, 0.05);
         }
 
         .btn-bronze {
-            background: linear-gradient(135deg, var(--bronze) 0%, var(--bronze-light) 100%);
-            color: var(--white);
-            box-shadow: var(--shadow-bronze);
+            background: var(--amarelo);
+            color: var(--preto);
         }
 
         .btn-bronze:hover {
-            background: linear-gradient(135deg, var(--bronze-light) 0%, var(--bronze) 100%);
+            background: var(--gold-light);
             transform: translateY(-2px);
         }
 
         .btn-whatsapp {
             background: #25D366;
-            color: var(--white);
+            color: #fff;
+            border-radius: 2px;
         }
 
         .btn-whatsapp:hover {
@@ -575,22 +651,23 @@
             transform: translateY(-2px);
         }
 
-        /* ===== HEADER ===== */
+        /* ===== HEADER / NAV ===== */
         .header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(11, 16, 19, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(149, 127, 92, 0.2);
+            background: rgba(39, 39, 39, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 189, 89, 0.1);
             transition: all 0.3s ease;
         }
 
         .header.scrolled {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+            background: rgba(39, 39, 39, 0.98);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+            border-bottom-color: rgba(255, 189, 89, 0.2);
         }
 
         .header-inner {
@@ -601,11 +678,11 @@
         }
 
         .logo {
-            font-family: var(--font-elegant);
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--white);
-            letter-spacing: 0.1em;
+            font-family: var(--display);
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--branco);
+            letter-spacing: 0.08em;
             display: flex;
             align-items: center;
             gap: 0.75rem;
@@ -617,7 +694,7 @@
         }
 
         .logo span {
-            color: var(--gold);
+            color: var(--amarelo);
         }
 
         .nav {
@@ -631,13 +708,17 @@
         }
 
         .nav-link {
-            font-weight: 500;
-            color: var(--white);
+            font-family: var(--body);
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: rgba(250, 248, 243, 0.8);
             transition: color 0.3s ease;
         }
 
         .nav-link:hover {
-            color: var(--gold);
+            color: var(--amarelo);
         }
 
         .header-cta {
@@ -657,29 +738,34 @@
         .mobile-menu-btn span {
             display: block;
             width: 25px;
-            height: 3px;
-            background: var(--bronze);
-            border-radius: 2px;
+            height: 2px;
+            background: var(--amarelo);
+            border-radius: 0;
             transition: all 0.3s ease;
         }
 
         .lang-selector {
             display: flex;
-            gap: 0.5rem;
-            font-size: 0.875rem;
+            gap: 0.25rem;
+            font-size: 0.8rem;
         }
 
         .lang-selector a {
-            color: var(--text-light);
+            font-family: var(--body);
+            font-weight: 500;
+            font-size: 12px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: rgba(250, 248, 243, 0.5);
             padding: 0.25rem 0.5rem;
-            border-radius: 4px;
+            border-radius: 2px;
             transition: all 0.3s ease;
         }
 
         .lang-selector a:hover,
         .lang-selector a.active {
-            color: var(--gold);
-            background: rgba(149, 127, 92, 0.2);
+            color: var(--amarelo);
+            background: rgba(255, 189, 89, 0.1);
         }
 
         @media (min-width: 768px) {
@@ -704,7 +790,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(180deg, var(--black-deep) 0%, var(--black-soft) 100%);
+            background: var(--preto);
             overflow: hidden;
         }
 
@@ -716,7 +802,7 @@
             right: 0;
             bottom: 0;
             background: url('https://images.unsplash.com/photo-1455729552865-3658a5d39692?w=1920&q=80') center/cover;
-            opacity: 0.2;
+            opacity: 0.18;
         }
 
         .hero::after {
@@ -725,14 +811,14 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 200px;
-            background: linear-gradient(to top, var(--black-deep), transparent);
+            height: 280px;
+            background: linear-gradient(to top, var(--preto), transparent);
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
-            color: var(--white);
+            color: var(--branco);
             text-align: center;
             padding: 8rem 0 4rem;
         }
@@ -741,46 +827,59 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 0.75rem;
+            margin-bottom: 2.5rem;
         }
 
         .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(149, 127, 92, 0.2);
+            background: rgba(255, 189, 89, 0.12);
             backdrop-filter: blur(5px);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
+            padding: 0.4rem 1rem;
+            border-radius: 2px;
+            font-family: var(--body);
+            font-size: 12px;
             font-weight: 500;
-            border: 1px solid rgba(149, 127, 92, 0.3);
-            color: var(--bronze-light);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            border: 1px solid rgba(255, 189, 89, 0.25);
+            color: var(--amarelo);
         }
 
         .hero h1 {
+            font-family: var(--display);
+            font-size: clamp(80px, 12vw, 160px);
+            line-height: 0.92;
+            letter-spacing: 0.01em;
             margin-bottom: 1.5rem;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
         }
 
         .hero h1 span {
-            color: var(--gold);
+            color: var(--amarelo);
         }
 
         .hero-subtitle {
-            font-size: clamp(1.125rem, 2.5vw, 1.5rem);
-            opacity: 0.9;
-            margin-bottom: 1rem;
-            max-width: 700px;
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            opacity: 0.85;
+            margin-bottom: 0.75rem;
+            max-width: 680px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .hero-location {
-            font-size: 1rem;
-            opacity: 0.8;
-            margin-bottom: 2.5rem;
+            font-family: var(--body);
+            font-weight: 400;
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.6;
+            margin-bottom: 3rem;
         }
 
         .hero-cta {
@@ -803,75 +902,95 @@
 
         /* ===== STATS SECTION ===== */
         .stats {
-            background: var(--black-soft);
+            background: #1e1e1e;
             padding: 4rem 0;
-            margin-top: -3rem;
             position: relative;
             z-index: 2;
-            border-top: 1px solid rgba(149, 127, 92, 0.2);
-            border-bottom: 1px solid rgba(149, 127, 92, 0.2);
+            border-top: 1px solid rgba(255, 189, 89, 0.1);
+            border-bottom: 1px solid rgba(255, 189, 89, 0.1);
         }
 
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            background: var(--black-lighter);
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
-            padding: 3rem 2rem;
-            border: 1px solid rgba(149, 127, 92, 0.2);
+            gap: 0;
         }
 
         .stat-item {
             text-align: center;
+            padding: 2rem;
+            border-right: 1px solid rgba(255, 189, 89, 0.1);
+        }
+
+        .stat-item:last-child {
+            border-right: none;
         }
 
         .stat-number {
-            font-family: var(--font-heading);
-            font-size: clamp(2.5rem, 5vw, 3.5rem);
-            font-weight: 800;
-            color: var(--gold);
+            font-family: var(--display);
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 400;
+            color: var(--amarelo);
             line-height: 1;
         }
 
         .stat-label {
-            color: var(--text-light);
-            font-size: 1rem;
+            font-family: var(--body);
+            font-weight: 300;
+            color: rgba(250, 248, 243, 0.6);
+            font-size: 14px;
             margin-top: 0.5rem;
+            letter-spacing: 0.04em;
         }
 
         /* ===== INDIVIDUAL LESSON SECTION ===== */
         .individual-lesson {
-            background: var(--black-deep);
+            background: var(--branco);
+            color: var(--preto);
+        }
+
+        .individual-lesson .section-label {
+            color: var(--amarelo);
+        }
+
+        .individual-lesson .section-label::before {
+            background: var(--amarelo);
         }
 
         .lesson-grid {
             display: grid;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
 
         .lesson-image {
-            border-radius: 20px;
+            border-radius: 0;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(149, 127, 92, 0.3);
         }
 
         .lesson-image img {
             width: 100%;
-            height: 400px;
+            height: 480px;
             object-fit: cover;
         }
 
         .lesson-content h2 {
-            color: var(--white);
+            font-family: var(--display);
+            font-size: clamp(40px, 5vw, 72px);
+            color: var(--preto);
             margin-bottom: 1.5rem;
+            line-height: 0.95;
         }
 
         .lesson-content h2 span {
-            color: var(--gold);
+            color: var(--amarelo);
+        }
+
+        .lesson-content p {
+            font-family: var(--body);
+            font-weight: 300;
+            color: var(--cinza);
         }
 
         .lesson-benefits {
@@ -884,8 +1003,10 @@
             align-items: flex-start;
             gap: 1rem;
             margin-bottom: 1.25rem;
-            font-size: 1.1rem;
-            color: var(--white);
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 1rem;
+            color: var(--preto);
         }
 
         .lesson-benefits li::before {
@@ -893,32 +1014,36 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 28px;
-            height: 28px;
-            background: var(--bronze);
-            color: var(--white);
-            border-radius: 50%;
-            font-weight: bold;
+            width: 26px;
+            height: 26px;
+            background: var(--amarelo);
+            color: var(--preto);
+            border-radius: 2px;
+            font-weight: 700;
+            font-size: 14px;
             flex-shrink: 0;
         }
 
         .lesson-includes {
-            background: var(--black-soft);
+            background: rgba(39, 39, 39, 0.05);
             padding: 1.5rem;
-            border-radius: 12px;
+            border-radius: 0;
             margin-top: 2rem;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(149, 127, 92, 0.2);
+            border-left: 3px solid var(--amarelo);
         }
 
         .lesson-includes h4 {
-            color: var(--bronze-light);
+            font-family: var(--body);
+            font-weight: 600;
+            color: var(--preto);
             margin-bottom: 0.75rem;
             font-size: 1rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
         }
 
         .lesson-includes p {
-            color: var(--text-light);
+            color: var(--cinza);
             margin-bottom: 0;
             font-size: 0.95rem;
         }
@@ -931,109 +1056,121 @@
 
         /* ===== WHY VILLAGE SECTION ===== */
         .why-village {
-            background: var(--black-soft);
-            color: var(--white);
+            background: var(--preto);
+            color: var(--branco);
         }
 
         .why-village .section-title h2 {
-            color: var(--white);
+            color: var(--branco);
         }
 
         .why-village .section-title p {
-            color: rgba(255,255,255,0.8);
+            color: rgba(250, 248, 243, 0.7);
         }
 
         .features-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 1px;
+            background: rgba(255, 189, 89, 0.1);
+            border: 1px solid rgba(255, 189, 89, 0.1);
         }
 
         .feature-card {
-            background: rgba(149, 127, 92, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 2rem;
-            border-radius: 16px;
+            background: var(--preto);
+            padding: 2.5rem 2rem;
             text-align: center;
             transition: all 0.3s ease;
-            border: 1px solid rgba(149, 127, 92, 0.2);
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold);
-            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.1);
+            background: #1e1e1e;
         }
 
         .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            background: rgba(255, 189, 89, 0.12);
+            border: 1px solid rgba(255, 189, 89, 0.25);
+            border-radius: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: var(--black-deep);
+            font-size: 1.75rem;
+            color: var(--amarelo);
         }
 
         .feature-card h3 {
-            margin-bottom: 1rem;
-            font-size: 1.25rem;
-            color: var(--bronze-light);
+            font-family: var(--display);
+            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--branco);
         }
 
         .feature-card p {
-            opacity: 0.85;
+            font-family: var(--body);
+            font-weight: 300;
+            opacity: 0.7;
             font-size: 0.95rem;
             margin-bottom: 0;
         }
 
         /* ===== VIDEO ANALYSIS SECTION ===== */
         .video-analysis {
-            background: var(--black-deep);
+            background: var(--branco);
+            color: var(--preto);
         }
 
         .analysis-grid {
             display: grid;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
 
         .analysis-image {
             position: relative;
-            border-radius: 20px;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(149, 127, 92, 0.3);
         }
 
         .analysis-image img {
             width: 100%;
-            height: 400px;
+            height: 480px;
             object-fit: cover;
         }
 
         .analysis-badge {
             position: absolute;
-            top: 1rem;
-            left: 1rem;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            color: var(--black-deep);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
+            top: 1.25rem;
+            left: 1.25rem;
+            background: var(--amarelo);
+            color: var(--preto);
+            padding: 0.4rem 1rem;
+            border-radius: 2px;
+            font-family: var(--body);
             font-weight: 600;
-            font-size: 0.875rem;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
         }
 
         .analysis-content h2 {
-            color: var(--white);
+            font-family: var(--display);
+            font-size: clamp(40px, 5vw, 72px);
+            color: var(--preto);
             margin-bottom: 1.5rem;
+            line-height: 0.95;
         }
 
         .analysis-content h2 span {
-            color: var(--gold);
+            color: var(--amarelo);
+        }
+
+        .analysis-content p {
+            font-family: var(--body);
+            font-weight: 300;
+            color: var(--cinza);
         }
 
         .analysis-steps {
@@ -1042,32 +1179,37 @@
 
         .analysis-step {
             display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            gap: 1.25rem;
+            margin-bottom: 1.75rem;
         }
 
         .step-number {
             width: 40px;
             height: 40px;
-            background: var(--bronze);
-            color: var(--white);
-            border-radius: 50%;
+            background: var(--amarelo);
+            color: var(--preto);
+            border-radius: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 700;
+            font-family: var(--display);
+            font-size: 1.25rem;
+            font-weight: 400;
             flex-shrink: 0;
         }
 
         .step-content h4 {
-            color: var(--bronze-light);
+            font-family: var(--body);
+            font-weight: 600;
+            color: var(--preto);
             margin-bottom: 0.25rem;
+            font-size: 1rem;
         }
 
         .step-content p {
-            color: var(--text-light);
+            color: var(--cinza);
             margin-bottom: 0;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         @media (min-width: 768px) {
@@ -1086,42 +1228,53 @@
 
         /* ===== TESTIMONIALS SECTION ===== */
         .testimonials {
-            background: var(--black-soft);
+            background: var(--preto);
+            color: var(--branco);
+        }
+
+        .testimonials .section-title h2 {
+            color: var(--branco);
+        }
+
+        .testimonials .section-title p {
+            color: rgba(250, 248, 243, 0.7);
         }
 
         .testimonials-grid {
             display: grid;
-            gap: 2rem;
+            gap: 1px;
+            background: rgba(255, 189, 89, 0.1);
+            border: 1px solid rgba(255, 189, 89, 0.1);
         }
 
         .testimonial-card {
-            background: var(--black-lighter);
+            background: var(--preto);
             padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-md);
             position: relative;
-            border: 1px solid rgba(149, 127, 92, 0.2);
         }
 
         .testimonial-card::before {
             content: '"';
             position: absolute;
-            top: 1rem;
-            left: 1.5rem;
-            font-size: 5rem;
+            top: 1.5rem;
+            left: 2rem;
+            font-size: 6rem;
             font-family: Georgia, serif;
-            color: var(--gold);
-            opacity: 0.3;
+            color: var(--amarelo);
+            opacity: 0.2;
             line-height: 1;
         }
 
         .testimonial-text {
-            font-size: 1.125rem;
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 1.05rem;
             font-style: italic;
-            color: var(--white);
+            color: rgba(250, 248, 243, 0.9);
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
+            line-height: 1.7;
         }
 
         .testimonial-author {
@@ -1131,33 +1284,38 @@
         }
 
         .author-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            border-radius: 2px;
             object-fit: cover;
-            border: 3px solid var(--bronze);
+            border: 2px solid var(--amarelo);
         }
 
         .author-info h4 {
-            color: var(--bronze-light);
-            margin-bottom: 0.25rem;
+            font-family: var(--body);
+            font-weight: 600;
+            color: var(--amarelo);
+            margin-bottom: 0.15rem;
+            font-size: 0.95rem;
         }
 
         .author-info p {
-            color: var(--text-light);
-            font-size: 0.875rem;
+            font-family: var(--body);
+            font-weight: 300;
+            color: rgba(250, 248, 243, 0.5);
+            font-size: 0.8rem;
             margin-bottom: 0;
         }
 
         .testimonial-placeholder {
-            background: var(--black-lighter);
-            border: 2px dashed rgba(149, 127, 92, 0.3);
+            background: var(--preto);
+            border: 1px dashed rgba(255, 189, 89, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: 200px;
             text-align: center;
-            color: var(--text-light);
+            color: rgba(250, 248, 243, 0.4);
         }
 
         @media (min-width: 768px) {
@@ -1182,28 +1340,38 @@
 
         /* ===== FLORIPA SECTION ===== */
         .floripa {
-            background: var(--black-deep);
+            background: var(--branco);
+            color: var(--preto);
             overflow: hidden;
         }
 
         .floripa-grid {
             display: grid;
-            gap: 3rem;
+            gap: 4rem;
             align-items: center;
         }
 
         .floripa-content h2 {
-            color: var(--white);
+            font-family: var(--display);
+            font-size: clamp(40px, 5vw, 72px);
+            color: var(--preto);
             margin-bottom: 1.5rem;
+            line-height: 0.95;
         }
 
         .floripa-content h2 span {
-            color: var(--gold);
+            color: var(--amarelo);
+        }
+
+        .floripa-content p {
+            font-family: var(--body);
+            font-weight: 300;
+            color: var(--cinza);
         }
 
         .beaches-list {
             display: grid;
-            gap: 1rem;
+            gap: 0.75rem;
             margin-top: 2rem;
         }
 
@@ -1211,50 +1379,51 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            padding: 1rem;
-            background: var(--black-soft);
-            border-radius: 12px;
+            padding: 1rem 1.25rem;
+            background: rgba(39, 39, 39, 0.04);
+            border-left: 3px solid transparent;
             transition: all 0.3s ease;
-            border: 1px solid rgba(149, 127, 92, 0.2);
         }
 
         .beach-item:hover {
-            background: var(--black-lighter);
-            transform: translateX(5px);
-            border-color: var(--bronze);
+            border-left-color: var(--amarelo);
+            background: rgba(39, 39, 39, 0.07);
+            transform: translateX(4px);
         }
 
         .beach-icon {
-            font-size: 2rem;
+            font-size: 1.75rem;
         }
 
         .beach-info h4 {
-            color: var(--bronze-light);
-            margin-bottom: 0.25rem;
+            font-family: var(--body);
+            font-weight: 600;
+            color: var(--preto);
+            margin-bottom: 0.15rem;
+            font-size: 0.95rem;
         }
 
         .beach-info p {
-            color: var(--text-light);
-            font-size: 0.875rem;
+            color: var(--cinza);
+            font-size: 0.85rem;
             margin-bottom: 0;
         }
 
         .floripa-images {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1rem;
+            gap: 0.75rem;
         }
 
         .floripa-images img {
-            border-radius: 12px;
+            border-radius: 0;
             height: 200px;
             object-fit: cover;
-            transition: transform 0.3s ease;
-            border: 1px solid rgba(149, 127, 92, 0.2);
+            transition: transform 0.4s ease;
         }
 
         .floripa-images img:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         .floripa-images img:first-child {
@@ -1270,41 +1439,38 @@
 
         /* ===== SURF TRIPS SECTION ===== */
         .surf-trips {
-            background: linear-gradient(135deg, var(--black-soft) 0%, var(--black-lighter) 100%);
-            color: var(--white);
+            background: var(--preto);
+            color: var(--branco);
         }
 
         .surf-trips .section-title h2 {
-            color: var(--white);
+            color: var(--branco);
         }
 
         .surf-trips .section-title p {
-            color: rgba(255,255,255,0.8);
+            color: rgba(250, 248, 243, 0.7);
         }
 
         .trips-grid {
             display: grid;
-            gap: 2rem;
+            gap: 1px;
+            background: rgba(255, 189, 89, 0.08);
         }
 
         .trip-card {
-            background: var(--black-lighter);
-            border-radius: 20px;
+            background: var(--preto);
             overflow: hidden;
-            box-shadow: var(--shadow-lg);
-            color: var(--white);
-            transition: all 0.3s ease;
-            border: 1px solid rgba(149, 127, 92, 0.2);
+            color: var(--branco);
+            transition: background 0.3s ease;
         }
 
         .trip-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold);
+            background: #1e1e1e;
         }
 
         .trip-image {
             position: relative;
-            height: 200px;
+            height: 220px;
             overflow: hidden;
         }
 
@@ -1312,44 +1478,58 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .trip-card:hover .trip-image img {
+            transform: scale(1.04);
         }
 
         .trip-date {
             position: absolute;
             top: 1rem;
             right: 1rem;
-            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
-            color: var(--black-deep);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
+            background: var(--amarelo);
+            color: var(--preto);
+            padding: 0.35rem 0.85rem;
+            border-radius: 2px;
+            font-family: var(--body);
             font-weight: 600;
-            font-size: 0.875rem;
+            font-size: 12px;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
         }
 
         .trip-spots {
             position: absolute;
             bottom: 1rem;
             left: 1rem;
-            background: rgba(0,0,0,0.7);
-            color: var(--white);
-            padding: 0.25rem 0.75rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
+            background: rgba(0,0,0,0.75);
+            color: var(--branco);
+            padding: 0.2rem 0.65rem;
+            border-radius: 2px;
+            font-family: var(--body);
+            font-size: 11px;
+            letter-spacing: 0.04em;
         }
 
         .trip-content {
-            padding: 1.5rem;
+            padding: 1.75rem;
         }
 
         .trip-content h3 {
-            color: var(--bronze-light);
+            font-family: var(--display);
+            font-size: 1.5rem;
+            color: var(--branco);
             margin-bottom: 0.5rem;
         }
 
         .trip-content p {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
+            font-family: var(--body);
+            font-weight: 300;
+            color: rgba(250, 248, 243, 0.6);
+            font-size: 0.9rem;
+            margin-bottom: 1.25rem;
         }
 
         .trip-card .btn {
@@ -1357,8 +1537,8 @@
         }
 
         .trip-placeholder {
-            background: rgba(149, 127, 92, 0.1);
-            border: 2px dashed rgba(149, 127, 92, 0.3);
+            background: rgba(255, 189, 89, 0.04);
+            border: 1px dashed rgba(255, 189, 89, 0.2);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1369,8 +1549,10 @@
         }
 
         .trip-placeholder p {
+            font-family: var(--body);
+            font-weight: 300;
             margin-bottom: 0;
-            opacity: 0.8;
+            opacity: 0.6;
         }
 
         @media (min-width: 768px) {
@@ -1387,23 +1569,30 @@
 
         /* ===== FINAL CTA SECTION ===== */
         .final-cta {
-            background: linear-gradient(135deg, var(--black-soft) 0%, var(--black-deep) 100%);
+            background: var(--amarelo);
             text-align: center;
-            border-top: 1px solid rgba(255, 215, 0, 0.2);
+            color: var(--preto);
         }
 
         .final-cta h2 {
-            color: var(--white);
-            margin-bottom: 1rem;
+            font-family: var(--display);
+            font-size: clamp(52px, 7vw, 100px);
+            color: var(--preto);
+            line-height: 0.92;
+            margin-bottom: 1.25rem;
         }
 
         .final-cta h2 span {
-            color: var(--gold);
+            color: var(--preto);
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
         }
 
         .final-cta > .container > p {
-            color: var(--text-light);
-            font-size: 1.25rem;
+            font-family: var(--body);
+            font-weight: 300;
+            color: rgba(39, 39, 39, 0.7);
+            font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto 2.5rem;
         }
@@ -1419,6 +1608,26 @@
             min-width: 280px;
         }
 
+        .final-cta .btn-primary {
+            background: var(--preto);
+            color: var(--branco);
+        }
+
+        .final-cta .btn-primary:hover {
+            background: #3a3a3a;
+        }
+
+        .final-cta .btn-secondary {
+            background: transparent;
+            color: var(--preto);
+            border: 1px solid rgba(39, 39, 39, 0.4);
+        }
+
+        .final-cta .btn-secondary:hover {
+            border-color: var(--preto);
+            background: rgba(39, 39, 39, 0.08);
+        }
+
         @media (min-width: 768px) {
             .cta-buttons {
                 flex-direction: row;
@@ -1428,10 +1637,10 @@
 
         /* ===== FOOTER ===== */
         .footer {
-            background: var(--black-deep);
-            color: var(--white);
-            padding: 4rem 0 2rem;
-            border-top: 1px solid rgba(149, 127, 92, 0.3);
+            background: #1a1a1a;
+            color: var(--branco);
+            padding: 80px 0 2rem;
+            border-top: 1px solid rgba(255, 189, 89, 0.1);
         }
 
         .footer-grid {
@@ -1441,19 +1650,25 @@
         }
 
         .footer-brand .logo {
-            color: var(--white);
+            color: var(--branco);
             margin-bottom: 1rem;
         }
 
         .footer-brand p {
-            opacity: 0.8;
-            font-size: 0.95rem;
+            font-family: var(--body);
+            font-weight: 300;
+            opacity: 0.6;
+            font-size: 0.9rem;
         }
 
         .footer-contact h4 {
+            font-family: var(--body);
+            font-weight: 600;
             margin-bottom: 1rem;
-            font-size: 1.125rem;
-            color: var(--bronze-light);
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--amarelo);
         }
 
         .footer-contact a {
@@ -1461,52 +1676,62 @@
             align-items: center;
             gap: 0.75rem;
             margin-bottom: 0.75rem;
-            opacity: 0.8;
+            font-family: var(--body);
+            font-weight: 300;
+            opacity: 0.65;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
 
         .footer-contact a:hover {
             opacity: 1;
-            color: var(--gold);
+            color: var(--amarelo);
         }
 
         .footer-social h4 {
+            font-family: var(--body);
+            font-weight: 600;
             margin-bottom: 1rem;
-            font-size: 1.125rem;
-            color: var(--bronze-light);
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--amarelo);
         }
 
         .social-links {
             display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
         }
 
         .social-link {
-            width: 45px;
-            height: 45px;
-            background: rgba(149, 127, 92, 0.2);
-            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 189, 89, 0.08);
+            border-radius: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.25rem;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            border: 1px solid rgba(149, 127, 92, 0.3);
+            border: 1px solid rgba(255, 189, 89, 0.15);
         }
 
         .social-link:hover {
-            background: var(--gold);
-            color: var(--black-deep);
+            background: var(--amarelo);
+            color: var(--preto);
             transform: translateY(-3px);
-            border-color: var(--gold);
+            border-color: var(--amarelo);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(149, 127, 92, 0.2);
+            border-top: 1px solid rgba(255, 189, 89, 0.1);
             padding-top: 2rem;
             text-align: center;
-            opacity: 0.7;
-            font-size: 0.875rem;
+            font-family: var(--body);
+            font-weight: 300;
+            opacity: 0.5;
+            font-size: 0.8rem;
+            letter-spacing: 0.04em;
         }
 
         @media (min-width: 768px) {
@@ -1530,14 +1755,14 @@
             width: 60px;
             height: 60px;
             background: #25D366;
-            border-radius: 50%;
+            border-radius: 2px;
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
             font-size: 2rem;
             transition: all 0.3s ease;
         }
 
         .whatsapp-float a:hover {
-            transform: scale(1.1);
+            transform: scale(1.08);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
         }
 
@@ -1548,7 +1773,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: var(--black-deep);
+            background: var(--preto);
             z-index: 999;
             display: flex;
             flex-direction: column;
@@ -1573,7 +1798,7 @@
             border: none;
             font-size: 2rem;
             cursor: pointer;
-            color: var(--ocean-deep);
+            color: var(--branco);
         }
 
         .mobile-nav-list {
@@ -1585,9 +1810,15 @@
         }
 
         .mobile-nav-list a {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--ocean-deep);
+            font-family: var(--display);
+            font-size: 2rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            color: var(--branco);
+        }
+
+        .mobile-nav-list a:hover {
+            color: var(--amarelo);
         }
 
         .mobile-menu-cta {
@@ -1614,12 +1845,27 @@
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease;
+            transition: opacity 0.7s ease, transform 0.7s ease;
         }
 
         .animate-on-scroll.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay {
+            transition-delay: 0.15s;
         }
 
         /* Reduced motion preference */
@@ -1636,46 +1882,49 @@
 
         /* ===== SAFETY SECTION (SALVA-VIDAS) ===== */
         .safety-section {
-            background: linear-gradient(135deg, var(--bronze-dark) 0%, var(--bronze) 100%);
-            color: var(--white);
-            padding: 3rem 0;
+            background: var(--amarelo);
+            color: var(--preto);
+            padding: 3.5rem 0;
         }
 
         .safety-content {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2rem;
+            gap: 2.5rem;
             flex-wrap: wrap;
             text-align: center;
         }
 
         .safety-icon {
-            width: 80px;
-            height: 80px;
-            background: rgba(255, 215, 0, 0.2);
-            border-radius: 50%;
+            width: 72px;
+            height: 72px;
+            background: rgba(39, 39, 39, 0.1);
+            border-radius: 2px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
-            border: 2px solid rgba(255, 215, 0, 0.3);
+            font-size: 2.25rem;
+            border: 1px solid rgba(39, 39, 39, 0.15);
         }
 
         .safety-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            color: var(--gold);
+            font-family: var(--display);
+            font-size: 1.75rem;
+            margin-bottom: 0.4rem;
+            color: var(--preto);
         }
 
         .safety-text p {
-            opacity: 0.9;
+            font-family: var(--body);
+            font-weight: 300;
+            color: rgba(39, 39, 39, 0.75);
             margin-bottom: 0;
         }
 
         .safety-badges {
             display: flex;
-            gap: 1rem;
+            gap: 0.75rem;
             flex-wrap: wrap;
             justify-content: center;
         }
@@ -1684,28 +1933,48 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(255, 215, 0, 0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
+            background: rgba(39, 39, 39, 0.1);
+            padding: 0.4rem 0.9rem;
+            border-radius: 2px;
+            font-family: var(--body);
+            font-size: 13px;
             font-weight: 500;
-            border: 1px solid rgba(255, 215, 0, 0.3);
+            border: 1px solid rgba(39, 39, 39, 0.15);
+            color: var(--preto);
         }
 
-        /* ===== QUIZ/FORM IA SECTION ===== */
+        /* ===== QUIZ/FORM SECTION ===== */
         .quiz-section {
-            background: var(--black-soft);
-            padding: 5rem 0;
+            background: var(--branco);
+            padding: 120px 0;
+        }
+
+        @media (max-width: 768px) {
+            .quiz-section {
+                padding: 80px 0;
+            }
+        }
+
+        .quiz-section .section-title h2 {
+            color: var(--preto);
+        }
+
+        .quiz-section .section-title p {
+            color: var(--cinza);
+        }
+
+        .quiz-section .section-label {
+            color: var(--amarelo);
         }
 
         .quiz-container {
             max-width: 700px;
             margin: 0 auto;
-            background: var(--black-lighter);
-            border-radius: 20px;
-            box-shadow: var(--shadow-lg);
+            background: #fff;
+            border-radius: 0;
+            box-shadow: 0 8px 40px rgba(39, 39, 39, 0.1);
             padding: 2.5rem;
-            border: 1px solid rgba(149, 127, 92, 0.3);
+            border: 1px solid rgba(39, 39, 39, 0.08);
         }
 
         .quiz-header {
@@ -1714,38 +1983,42 @@
         }
 
         .quiz-header h2 {
-            color: var(--white);
+            font-family: var(--display);
+            font-size: 2rem;
+            color: var(--preto);
             margin-bottom: 0.5rem;
         }
 
         .quiz-header h2 span {
-            color: var(--gold);
+            color: var(--amarelo);
         }
 
         .quiz-header p {
-            color: var(--text-light);
+            font-family: var(--body);
+            font-weight: 300;
+            color: var(--cinza);
         }
 
         .quiz-progress {
             display: flex;
-            gap: 0.5rem;
+            gap: 4px;
             margin-bottom: 2rem;
         }
 
         .quiz-progress-step {
             flex: 1;
-            height: 4px;
-            background: var(--black-soft);
-            border-radius: 2px;
+            height: 3px;
+            background: rgba(39, 39, 39, 0.12);
+            border-radius: 0;
             transition: background 0.3s ease;
         }
 
         .quiz-progress-step.active {
-            background: var(--bronze);
+            background: var(--amarelo);
         }
 
         .quiz-progress-step.completed {
-            background: var(--gold);
+            background: var(--preto);
         }
 
         .quiz-question {
@@ -1757,15 +2030,17 @@
         }
 
         .quiz-question h3 {
-            color: var(--white);
+            font-family: var(--body);
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: var(--preto);
             margin-bottom: 1.5rem;
-            font-size: 1.25rem;
         }
 
         .quiz-options {
             display: flex;
             flex-direction: column;
-            gap: 0.75rem;
+            gap: 0.6rem;
         }
 
         .quiz-option {
@@ -1773,23 +2048,25 @@
             align-items: center;
             gap: 1rem;
             padding: 1rem 1.25rem;
-            background: var(--black-soft);
-            border: 2px solid rgba(149, 127, 92, 0.2);
-            border-radius: 12px;
+            background: rgba(39, 39, 39, 0.03);
+            border: 1px solid rgba(39, 39, 39, 0.12);
+            border-radius: 2px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            color: var(--white);
+            transition: all 0.25s ease;
+            font-family: var(--body);
+            font-weight: 300;
+            color: var(--preto);
         }
 
         .quiz-option:hover {
-            background: rgba(149, 127, 92, 0.1);
-            border-color: var(--bronze);
+            background: rgba(255, 189, 89, 0.08);
+            border-color: var(--amarelo);
         }
 
         .quiz-option.selected {
-            background: var(--bronze);
-            color: var(--white);
-            border-color: var(--bronze);
+            background: var(--amarelo);
+            color: var(--preto);
+            border-color: var(--amarelo);
         }
 
         .quiz-option input {
@@ -1797,26 +2074,31 @@
         }
 
         .quiz-option-radio {
-            width: 24px;
-            height: 24px;
-            border: 2px solid var(--bronze);
+            width: 22px;
+            height: 22px;
+            border: 2px solid rgba(39, 39, 39, 0.3);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
+            transition: border-color 0.25s ease;
+        }
+
+        .quiz-option:hover .quiz-option-radio {
+            border-color: var(--amarelo);
         }
 
         .quiz-option.selected .quiz-option-radio {
-            border-color: var(--white);
-            background: var(--white);
+            border-color: var(--preto);
+            background: var(--preto);
         }
 
         .quiz-option.selected .quiz-option-radio::after {
             content: '';
-            width: 12px;
-            height: 12px;
-            background: var(--bronze);
+            width: 10px;
+            height: 10px;
+            background: var(--amarelo);
             border-radius: 50%;
         }
 
@@ -1828,6 +2110,17 @@
 
         .quiz-nav .btn {
             min-width: 120px;
+        }
+
+        /* Botões do quiz em fundo branco */
+        .quiz-nav .btn-secondary {
+            color: var(--preto);
+            border-color: rgba(39, 39, 39, 0.3);
+        }
+
+        .quiz-nav .btn-secondary:hover {
+            border-color: var(--preto);
+            background: rgba(39, 39, 39, 0.05);
         }
 
         .quiz-result {
@@ -1845,13 +2138,16 @@
         }
 
         .result-title {
-            color: var(--gold);
-            font-size: 1.75rem;
+            font-family: var(--display);
+            font-size: 2rem;
+            color: var(--preto);
             margin-bottom: 0.5rem;
         }
 
         .result-description {
-            color: var(--text-light);
+            font-family: var(--body);
+            font-weight: 300;
+            color: var(--cinza);
             margin-bottom: 2rem;
             max-width: 500px;
             margin-left: auto;
@@ -1859,35 +2155,54 @@
         }
 
         .result-package {
-            background: linear-gradient(135deg, var(--bronze-dark) 0%, var(--bronze) 100%);
-            color: var(--white);
+            background: var(--preto);
+            color: var(--branco);
             padding: 2rem;
-            border-radius: 16px;
+            border-radius: 2px;
             margin-bottom: 2rem;
-            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-left: 4px solid var(--amarelo);
         }
 
         .result-package h4 {
-            font-size: 1.25rem;
+            font-family: var(--display);
+            font-size: 1.5rem;
             margin-bottom: 0.5rem;
-            color: var(--gold);
+            color: var(--amarelo);
         }
 
         .result-package p {
-            opacity: 0.9;
+            font-family: var(--body);
+            font-weight: 300;
+            opacity: 0.85;
             margin-bottom: 1rem;
         }
 
         .result-package .price {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--gold);
+            font-family: var(--display);
+            font-size: 1.75rem;
+            font-weight: 400;
+            color: var(--amarelo);
         }
 
         /* ===== FAQ SECTION ===== */
         .faq-section {
-            background: var(--black-deep);
-            padding: 5rem 0;
+            background: var(--preto);
+            padding: 120px 0;
+            color: var(--branco);
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 80px 0;
+            }
+        }
+
+        .faq-section .section-title h2 {
+            color: var(--branco);
+        }
+
+        .faq-section .section-title p {
+            color: rgba(250, 248, 243, 0.65);
         }
 
         .faq-grid {
@@ -1896,7 +2211,7 @@
         }
 
         .faq-item {
-            border-bottom: 1px solid rgba(149, 127, 92, 0.2);
+            border-bottom: 1px solid rgba(255, 189, 89, 0.15);
             padding: 1.5rem 0;
         }
 
@@ -1905,15 +2220,18 @@
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            font-weight: 600;
-            color: var(--white);
+            font-family: var(--body);
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--branco);
         }
 
         .faq-question::after {
             content: '+';
             font-size: 1.5rem;
-            color: var(--gold);
+            color: var(--amarelo);
             transition: transform 0.3s ease;
+            flex-shrink: 0;
         }
 
         .faq-item.open .faq-question::after {
@@ -1923,12 +2241,16 @@
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
-            color: var(--text-light);
+            transition: max-height 0.35s ease;
+            font-family: var(--body);
+            font-weight: 300;
+            color: rgba(250, 248, 243, 0.65);
+            font-size: 0.95rem;
+            line-height: 1.7;
         }
 
         .faq-item.open .faq-answer {
-            max-height: 200px;
+            max-height: 300px;
             padding-top: 1rem;
         }
 
@@ -1936,7 +2258,7 @@
         @media (max-width: 767px) {
             /* Safety Section Mobile */
             .safety-section {
-                padding: 2rem 0;
+                padding: 2.5rem 0;
             }
 
             .safety-content {
@@ -1951,7 +2273,7 @@
             }
 
             .safety-text h3 {
-                font-size: 1.25rem;
+                font-size: 1.4rem;
             }
 
             .safety-text p {
@@ -1969,14 +2291,9 @@
             }
 
             /* Quiz Section Mobile */
-            .quiz-section {
-                padding: 3rem 0;
-            }
-
             .quiz-container {
                 padding: 1.5rem;
                 margin: 0 1rem;
-                border-radius: 16px;
             }
 
             .quiz-header h2 {
@@ -1988,8 +2305,8 @@
             }
 
             .quiz-question h3 {
-                font-size: 1.1rem;
-                line-height: 1.4;
+                font-size: 1.05rem;
+                line-height: 1.5;
             }
 
             .quiz-option {
@@ -2003,8 +2320,8 @@
             }
 
             .quiz-option.selected .quiz-option-radio::after {
-                width: 10px;
-                height: 10px;
+                width: 8px;
+                height: 8px;
             }
 
             .quiz-nav {
@@ -2022,7 +2339,7 @@
             }
 
             .result-title {
-                font-size: 1.35rem;
+                font-size: 1.6rem;
             }
 
             .result-description {
@@ -2034,18 +2351,14 @@
             }
 
             .result-package h4 {
-                font-size: 1.1rem;
-            }
-
-            .result-package .price {
                 font-size: 1.25rem;
             }
 
-            /* FAQ Section Mobile */
-            .faq-section {
-                padding: 3rem 0;
+            .result-package .price {
+                font-size: 1.4rem;
             }
 
+            /* FAQ Section Mobile */
             .faq-grid {
                 margin: 0 0.5rem;
             }
@@ -2061,7 +2374,6 @@
 
             .faq-question::after {
                 font-size: 1.25rem;
-                flex-shrink: 0;
             }
 
             .faq-answer {
@@ -2069,7 +2381,7 @@
             }
 
             .faq-item.open .faq-answer {
-                max-height: 300px;
+                max-height: 350px;
             }
         }
 
@@ -2194,16 +2506,13 @@
         <div class="container">
             <div class="stats-grid animate-on-scroll">
                 <div class="stat-item">
-                    <div class="stat-number">+10</div>
-                    <div class="stat-label" data-i18n="stat1Label">Anos de Experiência</div>
+                    <div class="stat-number">20+ ANOS NO MAR</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">+1000</div>
-                    <div class="stat-label" data-i18n="stat2Label">Alunos Impactados</div>
+                    <div class="stat-number">MÉTODO EXCLUSIVO</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">60%</div>
-                    <div class="stat-label" data-i18n="stat3Label">Crescimento Anual</div>
+                    <div class="stat-number">SUL DE FLORIANÓPOLIS</div>
                 </div>
             </div>
         </div>
@@ -2404,380 +2713,189 @@
                 </div>
 
                 <div class="floripa-images animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Praia do Campeche - aula de surf Florianópolis Sul da Ilha" loading="lazy">
-                    <img src="https://images.unsplash.com/photo-1509914398892-963f53e6e2f1?w=600&q=80" alt="Surfista praticando surf em Florianópolis ao pôr do sol" loading="lazy">
-                    <img src="https://images.unsplash.com/photo-1455729552865-3658a5d39692?w=600&q=80" alt="Ondas perfeitas para aula de surf iniciante Floripa" loading="lazy">
+                    <div style="background:#d4cfc8;display:flex;align-items:center;justify-content:center;color:#7a7570;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:1rem;">FOTO: Praia do Campeche — vista aérea</div>
+                    <div style="background:#c8c3bc;display:flex;align-items:center;justify-content:center;color:#7a7570;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:1rem;">FOTO: Aluno surfando no sul da ilha</div>
+                    <div style="background:#bfbab3;display:flex;align-items:center;justify-content:center;color:#7a7570;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:1rem;">FOTO: Ondas do Campeche ao entardecer</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Surf Trips Section -->
+    <!-- Imersões 2026 Section -->
     <section class="section surf-trips" id="trips">
         <div class="container">
             <div class="section-title">
-                <h2 data-i18n="tripsTitle">Próximas Trips</h2>
-                <p data-i18n="tripsDesc">Expedições exclusivas para os melhores picos de surf. Vagas limitadas!</p>
+                <h2>IMERSÕES 2026</h2>
+                <p>Quatro dias de surf intenso, conexão e evolução. Vagas limitadas por imersão.</p>
             </div>
 
             <div class="trips-grid">
-                <!-- Trip 1 - Placeholder -->
+                <!-- Junho — Paraná -->
                 <div class="trip-card animate-on-scroll">
                     <div class="trip-image">
-                        <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=600&q=80" alt="Surf Trip Garopaba - expedição de surf saindo de Florianópolis" loading="lazy">
-                        <span class="trip-date" data-i18n="tripDate">Em breve</span>
-                        <span class="trip-spots" data-i18n="tripSpots">Vagas limitadas</span>
+                        <div style="background:#2a2a2a;height:200px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;">FOTO: Imersão Paraná — alunos na água</div>
+                        <span class="trip-date">04–07 Jun</span>
+                        <span class="trip-spots" style="background:var(--amarelo);color:var(--preto);font-weight:600;">VAGAS LIMITADAS</span>
                     </div>
                     <div class="trip-content">
-                        <h3 data-i18n="trip1Title">Trip Garopaba</h3>
-                        <p data-i18n="trip1Desc">Expedição para as ondas clássicas de Garopaba, Ferrugem e Silveira.</p>
-                        <a href="https://wa.me/5548996271507?text=Olá! Gostaria de saber mais sobre a Trip Garopaba." class="btn btn-primary" target="_blank" rel="noopener" data-i18n="tripCta">
-                            Quero Saber Mais
+                        <h3>Junho · Paraná</h3>
+                        <p>Matinhos, PR. Uma das ondas mais longas e consistentes do Sul do Brasil. Com o Kelvin, a Júlia e o Método Desbloqueia Surf.</p>
+                        <a href="imersao-parana.html" class="btn btn-primary">
+                            Ver detalhes da imersão
                         </a>
                     </div>
                 </div>
 
-                <!-- Trip 2 - Placeholder -->
+                <!-- Agosto — Floripa -->
                 <div class="trip-card animate-on-scroll">
                     <div class="trip-image">
-                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80" alt="Surf Trip Guarda do Embaú - escola de surf Florianópolis" loading="lazy">
-                        <span class="trip-date" data-i18n="tripDate">Em breve</span>
-                        <span class="trip-spots" data-i18n="tripSpots">Vagas limitadas</span>
+                        <div style="background:#2a2a2a;height:200px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;">FOTO: Imersão Floripa — surf no Campeche</div>
+                        <span class="trip-date">13–16 Ago</span>
+                        <span class="trip-spots">EM BREVE</span>
                     </div>
                     <div class="trip-content">
-                        <h3 data-i18n="trip2Title">Expedição Guarda do Embaú</h3>
-                        <p data-i18n="trip2Desc">Aventura na praia mais bonita de Santa Catarina com ondas incríveis.</p>
-                        <a href="https://wa.me/5548996271507?text=Olá! Gostaria de saber mais sobre a Expedição Guarda do Embaú." class="btn btn-primary" target="_blank" rel="noopener" data-i18n="tripCta">
-                            Quero Saber Mais
+                        <h3>Agosto · Floripa</h3>
+                        <p>Campeche, Florianópolis. Sul da Ilha em pleno inverno — ondas consistentes e turmas pequenas com acompanhamento total.</p>
+                        <a href="https://wa.me/5548996271507?text=Olá! Tenho interesse na imersão de Agosto em Floripa." class="btn btn-primary" target="_blank" rel="noopener">
+                            Quero ser avisado
                         </a>
                     </div>
                 </div>
 
-                <!-- Trip 3 - Placeholder para futuras trips -->
-                <div class="trip-card trip-placeholder animate-on-scroll">
-                    <p data-i18n="tripPlaceholder">Novas trips em breve!<br><br>Siga nosso Instagram para ficar por dentro das próximas expedições.</p>
+                <!-- Outubro e Dezembro — Floripa -->
+                <div class="trip-card animate-on-scroll">
+                    <div class="trip-image">
+                        <div style="background:#2a2a2a;height:200px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;">FOTO: Imersão Floripa — pôr do sol</div>
+                        <span class="trip-date">Out · Dez</span>
+                        <span class="trip-spots">EM BREVE</span>
+                    </div>
+                    <div class="trip-content">
+                        <h3>Outubro · Dezembro · Floripa</h3>
+                        <p><strong>08–12 Out</strong> e <strong>10–13 Dez</strong> — encerrando o ano no Campeche. Detalhes em breve.</p>
+                        <a href="https://wa.me/5548996271507?text=Olá! Tenho interesse nas imersões de Outubro ou Dezembro em Floripa." class="btn btn-primary" target="_blank" rel="noopener">
+                            Quero ser avisado
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Quiz IA Section - Descubra Seu Nível -->
+    <!-- Quiz Section - Descubra Seu Nível -->
     <section class="quiz-section" id="quiz">
         <div class="container">
             <div class="quiz-container">
                 <div class="quiz-header">
-                    <h2 data-i18n="quizTitle">Descubra Seu Nível de Surf</h2>
-                    <p data-i18n="quizDesc">Responda 10 perguntas e descubra seu perfil completo de surfista</p>
+                    <h2>Qual é o seu perfil?</h2>
+                    <p>3 perguntas rápidas para a gente entender melhor o que você busca</p>
                 </div>
 
                 <div class="quiz-progress" id="quizProgress">
                     <div class="quiz-progress-step active"></div>
                     <div class="quiz-progress-step"></div>
                     <div class="quiz-progress-step"></div>
-                    <div class="quiz-progress-step"></div>
-                    <div class="quiz-progress-step"></div>
-                    <div class="quiz-progress-step"></div>
-                    <div class="quiz-progress-step"></div>
-                    <div class="quiz-progress-step"></div>
-                    <div class="quiz-progress-step"></div>
-                    <div class="quiz-progress-step"></div>
                 </div>
 
                 <form id="quizForm">
-                    <!-- Question 1 - Momento de vida -->
+                    <!-- Question 1 - Nível -->
                     <div class="quiz-question active" data-question="1">
-                        <h3 data-i18n="q1Title">Como você descreveria seu momento de vida atual?</h3>
-                        <div class="quiz-options">
-                            <label class="quiz-option" data-profile="explorer" data-age="young">
-                                <input type="radio" name="q1" value="explorer">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q1Opt1">Estou em busca de novas experiências e aventuras</span>
-                            </label>
-                            <label class="quiz-option" data-profile="balance" data-age="adult">
-                                <input type="radio" name="q1" value="balance">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q1Opt2">Busco equilíbrio entre trabalho intenso e qualidade de vida</span>
-                            </label>
-                            <label class="quiz-option" data-profile="wellness" data-age="mature">
-                                <input type="radio" name="q1" value="wellness">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q1Opt3">Priorizo saúde, bem-estar e momentos de conexão</span>
-                            </label>
-                            <label class="quiz-option" data-profile="challenge" data-age="any">
-                                <input type="radio" name="q1" value="challenge">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q1Opt4">Quero me desafiar e sair da zona de conforto</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Question 2 - Relação com o mar -->
-                    <div class="quiz-question" data-question="2">
-                        <h3 data-i18n="q2Title">Qual a sua relação atual com o mar e o surf?</h3>
+                        <h3>Qual é seu nível atual no surf?</h3>
                         <div class="quiz-options">
                             <label class="quiz-option" data-level="0">
-                                <input type="radio" name="q2" value="0">
+                                <input type="radio" name="q1" value="zero">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q2Opt1">Nunca entrei no mar para surfar, mas sempre quis</span>
+                                <span>Nunca surfei — quero começar do zero</span>
                             </label>
                             <label class="quiz-option" data-level="1">
-                                <input type="radio" name="q2" value="1">
+                                <input type="radio" name="q1" value="iniciante">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q2Opt2">Já experimentei algumas vezes, mas ainda tenho dificuldade</span>
+                                <span>Já experimentei algumas vezes, mas tenho dificuldade</span>
                             </label>
                             <label class="quiz-option" data-level="2">
-                                <input type="radio" name="q2" value="2">
+                                <input type="radio" name="q1" value="intermediario">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q2Opt3">Consigo surfar na espuma, quero evoluir para ondas maiores</span>
+                                <span>Consigo surfar na espuma, quero evoluir para ondas</span>
                             </label>
                             <label class="quiz-option" data-level="3">
-                                <input type="radio" name="q2" value="3">
+                                <input type="radio" name="q1" value="avancado">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q2Opt4">Já surfo ondas verdes, busco aperfeiçoar técnica e manobras</span>
+                                <span>Já surfo ondas verdes — busco técnica e manobras</span>
                             </label>
                         </div>
                     </div>
 
-                    <!-- Question 3 - O que mais te atrai -->
-                    <div class="quiz-question" data-question="3">
-                        <h3 data-i18n="q3Title">O que mais te atrai na ideia de fazer aulas de surf?</h3>
+                    <!-- Question 2 - O que busca -->
+                    <div class="quiz-question" data-question="2">
+                        <h3>O que você mais busca com as aulas?</h3>
                         <div class="quiz-options">
                             <label class="quiz-option" data-motivation="experience">
-                                <input type="radio" name="q3" value="experience">
+                                <input type="radio" name="q2" value="experience">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q3Opt1">Viver uma experiência única e criar memórias especiais</span>
+                                <span>Viver uma experiência única e criar memórias especiais</span>
                             </label>
                             <label class="quiz-option" data-motivation="evolution">
-                                <input type="radio" name="q3" value="evolution">
+                                <input type="radio" name="q2" value="evolution">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q3Opt2">Evolução técnica real e consistente no surf</span>
-                            </label>
-                            <label class="quiz-option" data-motivation="social">
-                                <input type="radio" name="q3" value="social">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q3Opt3">Conhecer pessoas com estilo de vida parecido</span>
+                                <span>Evolução técnica real e consistente no surf</span>
                             </label>
                             <label class="quiz-option" data-motivation="lifestyle">
-                                <input type="radio" name="q3" value="lifestyle">
+                                <input type="radio" name="q2" value="lifestyle">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q3Opt4">Adotar o surf como parte do meu estilo de vida</span>
+                                <span>Adotar o surf como parte do meu estilo de vida</span>
+                            </label>
+                            <label class="quiz-option" data-motivation="immersion">
+                                <input type="radio" name="q2" value="immersion">
+                                <span class="quiz-option-radio"></span>
+                                <span>Participar de uma imersão — surf + conexão + viagem</span>
                             </label>
                         </div>
                     </div>
 
-                    <!-- Question 4 - Disponibilidade -->
-                    <div class="quiz-question" data-question="4">
-                        <h3 data-i18n="q4Title">Como você imagina seu envolvimento com o surf?</h3>
+                    <!-- Question 3 - Frequência -->
+                    <div class="quiz-question" data-question="3">
+                        <h3>Como você imagina sua frequência?</h3>
                         <div class="quiz-options">
-                            <label class="quiz-option" data-commitment="casual" data-budget="low">
-                                <input type="radio" name="q4" value="casual">
+                            <label class="quiz-option" data-commitment="once">
+                                <input type="radio" name="q3" value="once">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q4Opt1">Uma experiência pontual quando visito a praia</span>
+                                <span>Uma aula pontual — quero experimentar</span>
                             </label>
-                            <label class="quiz-option" data-commitment="regular" data-budget="medium">
-                                <input type="radio" name="q4" value="regular">
+                            <label class="quiz-option" data-commitment="regular">
+                                <input type="radio" name="q3" value="regular">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q4Opt2">Aulas regulares quando tenho tempo (1-2x por mês)</span>
+                                <span>Regular: 1–2 aulas por mês</span>
                             </label>
-                            <label class="quiz-option" data-commitment="dedicated" data-budget="high">
-                                <input type="radio" name="q4" value="dedicated">
+                            <label class="quiz-option" data-commitment="dedicated">
+                                <input type="radio" name="q3" value="dedicated">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q4Opt3">Acompanhamento contínuo com programa estruturado</span>
+                                <span>Quero me dedicar de verdade — frequência semanal</span>
                             </label>
-                            <label class="quiz-option" data-commitment="immersion" data-budget="premium">
-                                <input type="radio" name="q4" value="immersion">
+                            <label class="quiz-option" data-commitment="immersion">
+                                <input type="radio" name="q3" value="immersion">
                                 <span class="quiz-option-radio"></span>
-                                <span data-i18n="q4Opt4">Imersão total: trips, treinos e evolução acelerada</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Question 5 - Tipo de praia -->
-                    <div class="quiz-question" data-question="5">
-                        <h3 data-i18n="q5Title">Qual ambiente de praia combina mais com você?</h3>
-                        <div class="quiz-options">
-                            <label class="quiz-option" data-beach="calm">
-                                <input type="radio" name="q5" value="calm">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q5Opt1">Praias tranquilas, sem multidão, contato com a natureza</span>
-                            </label>
-                            <label class="quiz-option" data-beach="family">
-                                <input type="radio" name="q5" value="family">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q5Opt2">Praias com estrutura, seguras e acolhedoras</span>
-                            </label>
-                            <label class="quiz-option" data-beach="challenge">
-                                <input type="radio" name="q5" value="challenge">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q5Opt3">Praias com ondas desafiadoras, mesmo que mais isoladas</span>
-                            </label>
-                            <label class="quiz-option" data-beach="variety">
-                                <input type="radio" name="q5" value="variety">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q5Opt4">Gosto de variar - cada dia uma praia diferente</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Question 6 - Condição física e natação -->
-                    <div class="quiz-question" data-question="6">
-                        <h3 data-i18n="q6Title">Como você avalia sua condição física e relação com a água?</h3>
-                        <div class="quiz-options">
-                            <label class="quiz-option" data-fitness="beginner" data-swimming="low">
-                                <input type="radio" name="q6" value="beginner">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q6Opt1">Sedentário(a) e não sei nadar bem - preciso de suporte total</span>
-                            </label>
-                            <label class="quiz-option" data-fitness="basic" data-swimming="medium">
-                                <input type="radio" name="q6" value="basic">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q6Opt2">Ativo(a) casualmente, nado razoavelmente mas sem confiança no mar</span>
-                            </label>
-                            <label class="quiz-option" data-fitness="good" data-swimming="good">
-                                <input type="radio" name="q6" value="good">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q6Opt3">Pratico exercícios regularmente e me sinto confortável nadando</span>
-                            </label>
-                            <label class="quiz-option" data-fitness="athlete" data-swimming="excellent">
-                                <input type="radio" name="q6" value="athlete">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q6Opt4">Muito ativo(a), atleta ou ex-atleta, excelente nadador(a)</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Question 7 - Medos e confiança -->
-                    <div class="quiz-question" data-question="7">
-                        <h3 data-i18n="q7Title">Qual seu maior receio ou desafio em relação ao surf?</h3>
-                        <div class="quiz-options">
-                            <label class="quiz-option" data-fear="water" data-confidence="low">
-                                <input type="radio" name="q7" value="water">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q7Opt1">Tenho medo do mar, das ondas ou de me machucar</span>
-                            </label>
-                            <label class="quiz-option" data-fear="failure" data-confidence="medium">
-                                <input type="radio" name="q7" value="failure">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q7Opt2">Medo de não conseguir, de parecer "ridículo" ou de frustração</span>
-                            </label>
-                            <label class="quiz-option" data-fear="technique" data-confidence="good">
-                                <input type="radio" name="q7" value="technique">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q7Opt3">Não tenho medo, mas quero entender a técnica correta desde o início</span>
-                            </label>
-                            <label class="quiz-option" data-fear="none" data-confidence="high">
-                                <input type="radio" name="q7" value="none">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q7Opt4">Sem receios - estou pronto(a) para o desafio, quero ir com tudo</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Question 8 - Disponibilidade de tempo -->
-                    <div class="quiz-question" data-question="8">
-                        <h3 data-i18n="q8Title">Qual sua disponibilidade real para dedicar ao surf?</h3>
-                        <div class="quiz-options">
-                            <label class="quiz-option" data-time="limited" data-schedule="tight">
-                                <input type="radio" name="q8" value="limited">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q8Opt1">Muito ocupado(a) - só consigo em datas específicas (férias, feriados)</span>
-                            </label>
-                            <label class="quiz-option" data-time="occasional" data-schedule="flexible">
-                                <input type="radio" name="q8" value="occasional">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q8Opt2">Agenda corrida, mas consigo encaixar 1-2 vezes por mês</span>
-                            </label>
-                            <label class="quiz-option" data-time="regular" data-schedule="open">
-                                <input type="radio" name="q8" value="regular">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q8Opt3">Tenho flexibilidade para treinar semanalmente</span>
-                            </label>
-                            <label class="quiz-option" data-time="full" data-schedule="free">
-                                <input type="radio" name="q8" value="full">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q8Opt4">Disponibilidade total - posso me dedicar intensivamente</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Question 9 - Estilo de aprendizado -->
-                    <div class="quiz-question" data-question="9">
-                        <h3 data-i18n="q9Title">Como você prefere aprender coisas novas?</h3>
-                        <div class="quiz-options">
-                            <label class="quiz-option" data-learning="guided" data-independence="low">
-                                <input type="radio" name="q9" value="guided">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q9Opt1">Passo a passo, com muito acompanhamento e feedbacks constantes</span>
-                            </label>
-                            <label class="quiz-option" data-learning="visual" data-independence="medium">
-                                <input type="radio" name="q9" value="visual">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q9Opt2">Preciso ver exemplos e vídeos - sou visual, aprendo observando</span>
-                            </label>
-                            <label class="quiz-option" data-learning="practical" data-independence="good">
-                                <input type="radio" name="q9" value="practical">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q9Opt3">Na prática! Prefiro errar e corrigir do que muita teoria</span>
-                            </label>
-                            <label class="quiz-option" data-learning="analytical" data-independence="high">
-                                <input type="radio" name="q9" value="analytical">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q9Opt4">Gosto de entender a mecânica por trás - análise técnica detalhada</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <!-- Question 10 - Objetivo de longo prazo -->
-                    <div class="quiz-question" data-question="10">
-                        <h3 data-i18n="q10Title">Daqui a 1 ano, onde você se vê no surf?</h3>
-                        <div class="quiz-options">
-                            <label class="quiz-option" data-goal="memory" data-ambition="low">
-                                <input type="radio" name="q10" value="memory">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q10Opt1">Quero apenas experimentar - ter a memória de ter surfado</span>
-                            </label>
-                            <label class="quiz-option" data-goal="hobby" data-ambition="medium">
-                                <input type="radio" name="q10" value="hobby">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q10Opt2">Surfando de forma independente quando vou à praia</span>
-                            </label>
-                            <label class="quiz-option" data-goal="lifestyle" data-ambition="high">
-                                <input type="radio" name="q10" value="lifestyle">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q10Opt3">Com o surf como parte da minha rotina e identidade</span>
-                            </label>
-                            <label class="quiz-option" data-goal="performance" data-ambition="very-high">
-                                <input type="radio" name="q10" value="performance">
-                                <span class="quiz-option-radio"></span>
-                                <span data-i18n="q10Opt4">Fazendo manobras, participando de trips e talvez competindo</span>
+                                <span>Imersão total: trips e pacote de evolução acelerada</span>
                             </label>
                         </div>
                     </div>
 
                     <div class="quiz-nav">
-                        <button type="button" class="btn btn-secondary" id="prevBtn" style="visibility: hidden;" data-i18n="quizPrev">Anterior</button>
-                        <button type="button" class="btn btn-primary" id="nextBtn" data-i18n="quizNext">Próxima</button>
+                        <button type="button" class="btn btn-secondary" id="prevBtn" style="visibility: hidden;">Anterior</button>
+                        <button type="button" class="btn btn-primary" id="nextBtn">Próxima</button>
                     </div>
                 </form>
 
                 <!-- Result Section -->
                 <div class="quiz-result" id="quizResult">
-                    <div class="result-level" id="resultEmoji">🏄</div>
-                    <h3 class="result-title" id="resultTitle">Seu Nível: Iniciante</h3>
-                    <p class="result-description" id="resultDesc">Você está começando sua jornada no surf!</p>
+                    <div class="result-level" id="resultEmoji">🤙</div>
+                    <h3 class="result-title">Que ótimo!</h3>
+                    <p class="result-description" id="resultDesc">Manda um oi pra gente no WhatsApp — a gente monta a melhor proposta pro seu perfil.</p>
 
-                    <div class="result-package">
-                        <h4 id="packageName">Pacote Recomendado: Batismo do Surf</h4>
-                        <p id="packageDesc">1 aula individual + teoria completa + equipamento incluso</p>
-                        <div class="price">A partir de R$ 250</div>
-                    </div>
-
-                    <a href="https://wa.me/5548996271507?text=Olá! Fiz o quiz no site e descobri meu nível de surf. Gostaria de saber mais sobre o pacote recomendado!" class="btn btn-whatsapp" target="_blank" rel="noopener" id="resultCta">
+                    <a href="https://wa.me/5548996271507?text=Olá! Fiz o quiz no site da Village Summer. Gostaria de saber mais!" class="btn btn-whatsapp" target="_blank" rel="noopener" id="resultCta" style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:0.75rem;">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Quero Este Pacote!
+                        Falar com a gente no WhatsApp
                     </a>
 
-                    <button type="button" class="btn btn-secondary" id="restartQuiz" style="margin-top: 1rem;">Refazer Quiz</button>
+                    <button type="button" class="btn btn-secondary" id="restartQuiz" style="margin-top: 1rem;">Refazer</button>
                 </div>
             </div>
         </div>
@@ -2847,7 +2965,7 @@
                     <a href="#" class="logo">
                         <img src="logo-village-summer.jpeg" alt="Village Summer Logo" class="logo-img" style="height: 70px;">
                     </a>
-                    <p data-i18n="footerDesc">Escola de surf premium em Florianópolis. +10 anos transformando vidas através da conexão com o mar.</p>
+                    <p data-i18n="footerDesc">20+ anos conectando pessoas ao mar. Somos a Village Summer Surf.</p>
                 </div>
 
                 <div class="footer-contact">
@@ -2857,7 +2975,6 @@
                         (48) 99627-1507
                     </a>
                     <a href="#">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
                         Sul de Florianópolis, SC
                     </a>
                 </div>
@@ -3637,7 +3754,17 @@
             document.querySelector('.quiz-progress').style.display = 'none';
             quizResult.classList.add('active');
 
-            // Collect all answers for comprehensive analysis
+            // Build WhatsApp message from 3 answers
+            const levelMap = { zero: 'Nunca surfei', iniciante: 'Iniciante', intermediario: 'Intermediário', avancado: 'Avançado' };
+            const motivMap = { experience: 'Experiência única', evolution: 'Evolução técnica', lifestyle: 'Estilo de vida', immersion: 'Imersão' };
+            const commitMap = { once: 'Aula pontual', regular: 'Regular (1-2x/mês)', dedicated: 'Semanal dedicado', immersion: 'Imersão total' };
+            const nivel = levelMap[answers.q1] || answers.q1 || '-';
+            const motiv = motivMap[answers.motivation] || answers.q2 || '-';
+            const commit = commitMap[answers.commitment] || answers.q3 || '-';
+            const msg = encodeURIComponent(`Olá! Fiz o quiz no site da Village Summer.\n\nMeu perfil:\n• Nível: ${nivel}\n• Busco: ${motiv}\n• Frequência: ${commit}\n\nGostaria de saber mais!`);
+            document.getElementById('resultCta').href = `https://wa.me/5548996271507?text=${msg}`;
+
+            // Simplified result — no complex scoring needed
             const level = answers.level || 0;
             const commitment = answers.commitment || 'casual';
             const motivation = answers.motivation || 'experience';
