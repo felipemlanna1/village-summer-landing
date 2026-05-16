@@ -80,10 +80,8 @@
     <meta name="ICBM" content="-27.5954, -48.5480">
 
     <!-- Favicon -->
-    <link rel="icon" href="./favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/logo village.png">
+    <link rel="apple-touch-icon" href="images/logo village.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -676,19 +674,28 @@
         .header-inner {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            gap: 1.75rem;
             padding: 0.85rem 0;
         }
 
         .logo {
-            font-family: var(--display);
-            font-size: 1.4rem;
-            font-weight: 400;
-            color: var(--branco);
-            letter-spacing: 0.08em;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--amarelo);
+            border: 1px solid var(--amarelo);
+            border-radius: 6px;
+            padding: 5px 14px;
+            white-space: nowrap;
+            flex-shrink: 0;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .logo:hover {
+            background: var(--amarelo);
+            color: var(--preto);
         }
 
         .logo-img {
@@ -706,7 +713,7 @@
 
         .nav-list {
             display: flex;
-            gap: 2rem;
+            gap: 1.5rem;
             list-style: none;
         }
 
@@ -771,6 +778,8 @@
             border: 1px solid rgba(255,255,255,0.12);
             border-radius: 2px;
             overflow: hidden;
+            margin-left: auto;
+            flex-shrink: 0;
         }
 
         .lang-selector a {
@@ -1877,33 +1886,27 @@
         /* ===== PRÓXIMA IMERSÃO & CALENDÁRIO SECTIONS ===== */
         .proxima-imersao-section {
             background: #1a1a1a;
+            padding: 80px 0;
         }
 
         .proxima-imersao-card {
             background: #222;
             border: 1px solid rgba(255, 189, 89, 0.15);
-            border-radius: 2px;
+            border-radius: 12px;
             overflow: hidden;
+            max-width: 700px;
+            margin: 0 auto;
         }
 
         .pi-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0;
-        }
-
-        @media (max-width: 768px) {
-            .pi-inner {
-                grid-template-columns: 1fr;
-            }
+            display: block;
         }
 
         .pi-info {
-            padding: 3.5rem;
+            padding: 2.5rem;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .pi-badge-date {
@@ -2006,138 +2009,180 @@
             display: block;
         }
 
-        /* Calendário */
-        .calendario-section {
-            background: var(--preto);
+        /* ===== AGENDA UNIFICADA ===== */
+        .agenda-section {
+            background: #1a1a1a;
+            padding: 120px 0;
         }
-
-        .calendario-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
-        }
-
-        .evento-card {
-            display: grid;
-            grid-template-columns: 120px 1fr auto;
-            align-items: center;
-            gap: 2rem;
-            background: #1e1e1e;
-            padding: 2rem 2.5rem;
-            border-left: 3px solid transparent;
-            transition: background 0.2s ease;
-        }
-
-        .evento-card:hover {
-            background: #252525;
-        }
-
-        .evento-card.esgotado {
-            opacity: 0.45;
-        }
-
-        .evento-card.tipo-imersao { border-left-color: var(--amarelo); }
-        .evento-card.tipo-cafe { border-left-color: rgba(250, 248, 243, 0.35); }
-        .evento-card.tipo-trip { border-left-color: #8a7a5a; }
-        .evento-card.tipo-outro { border-left-color: rgba(250, 248, 243, 0.2); }
 
         @media (max-width: 768px) {
-            .evento-card {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-                padding: 1.75rem 1.5rem;
-            }
+            .agenda-section { padding: 80px 0; }
         }
 
-        .evento-date {
-            font-family: var(--display);
-            font-size: clamp(1.1rem, 2vw, 1.5rem);
-            color: var(--amarelo);
-            line-height: 1.1;
+        .agenda-grid {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            gap: 16px;
+            align-items: start;
         }
 
-        .evento-body {}
+        @media (max-width: 768px) {
+            .agenda-grid { grid-template-columns: 1fr; }
+        }
 
-        .evento-tags {
+        .agenda-imersao,
+        .agenda-calendario {
+            background: #242424;
+            border-radius: 12px;
+            padding: 2.5rem;
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            margin-bottom: 0.5rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 1.25rem;
         }
 
-        .evento-tag {
+        .agenda-label {
             font-family: var(--body);
             font-size: 10px;
             font-weight: 600;
-            letter-spacing: 0.12em;
+            letter-spacing: 0.2em;
             text-transform: uppercase;
-            padding: 0.25rem 0.75rem;
-            border-radius: 2px;
+            color: var(--amarelo);
         }
 
-        .evento-tag.imersao {
+        .agenda-date-badge {
+            display: inline-block;
             background: var(--amarelo);
             color: var(--preto);
+            font-family: var(--body);
+            font-weight: 700;
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            padding: 0.35rem 1rem;
+            border-radius: 2px;
+            width: fit-content;
         }
 
-        .evento-tag.cafe {
-            background: rgba(250, 248, 243, 0.12);
-            color: var(--branco);
-            border: 1px solid rgba(250, 248, 243, 0.2);
-        }
-
-        .evento-tag.trip {
-            background: #3a3020;
-            color: #c9a85c;
-            border: 1px solid #4a4030;
-        }
-
-        .evento-tag.outro {
-            background: rgba(250, 248, 243, 0.06);
-            color: rgba(250, 248, 243, 0.6);
-            border: 1px solid rgba(250, 248, 243, 0.1);
-        }
-
-        .evento-tag.status-em-breve {
-            background: rgba(255, 189, 89, 0.08);
-            color: rgba(255, 189, 89, 0.7);
-            border: 1px solid rgba(255, 189, 89, 0.2);
-        }
-
-        .evento-tag.status-esgotado {
-            background: rgba(180, 60, 40, 0.12);
-            color: #e05a45;
-            border: 1px solid rgba(180, 60, 40, 0.25);
-        }
-
-        .evento-title {
+        .agenda-title {
             font-family: var(--display);
-            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            font-size: clamp(2rem, 3.5vw, 3rem);
+            line-height: 0.95;
             color: var(--branco);
-            letter-spacing: 0.02em;
-            margin-bottom: 0.25rem;
+            margin: 0;
         }
 
-        .evento-desc {
+        .agenda-desc {
             font-family: var(--body);
             font-weight: 300;
-            font-size: 0.9rem;
-            color: rgba(250, 248, 243, 0.55);
-            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: rgba(250, 248, 243, 0.8);
+            line-height: 1.65;
+            margin: 0;
         }
 
-        .evento-location {
+        .agenda-vagas {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
             font-family: var(--body);
-            font-size: 11px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: rgba(250, 248, 243, 0.35);
-            margin-bottom: 0.35rem;
+            font-weight: 600;
+            font-size: 13px;
+            color: var(--branco);
         }
 
-        .evento-cta {
+        .agenda-vagas-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ff5c47;
+            animation: pulse 1.5s infinite;
             flex-shrink: 0;
+        }
+
+        .agenda-cta {
+            width: fit-content;
+        }
+
+        /* Calendário coluna direita */
+        .agenda-cal-title {
+            font-family: var(--display);
+            font-size: clamp(1.4rem, 2vw, 1.9rem);
+            color: var(--branco);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .agenda-cal-sub {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.85rem;
+            color: rgba(250, 248, 243, 0.45);
+            margin: 0;
+        }
+
+        .agenda-evento {
+            display: flex;
+            gap: 1.25rem;
+            align-items: flex-start;
+        }
+
+        .agenda-evento-date {
+            font-family: var(--body);
+            font-weight: 700;
+            font-size: 0.8rem;
+            color: var(--amarelo);
+            letter-spacing: 0.04em;
+            min-width: 64px;
+            padding-top: 2px;
+        }
+
+        .agenda-evento-body {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .agenda-evento-tag {
+            font-family: var(--body);
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--amarelo);
+            background: rgba(255, 189, 89, 0.1);
+            border: 1px solid rgba(255, 189, 89, 0.2);
+            padding: 0.2rem 0.6rem;
+            border-radius: 2px;
+            width: fit-content;
+        }
+
+        .agenda-evento-title {
+            font-family: var(--body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--branco);
+            margin: 0;
+        }
+
+        .agenda-evento-desc {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.85rem;
+            color: rgba(250, 248, 243, 0.6);
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        .agenda-evento-cta {
+            padding: 10px 20px;
+            font-size: 12px;
+            width: fit-content;
+            margin-top: 0.25rem;
+        }
+
+        .agenda-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.08);
         }
 
         /* ===== FINAL CTA SECTION ===== */
@@ -2153,18 +2198,16 @@
         }
 
         .cta-bento {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4px;
+            display: block;
         }
 
         .ctab-title {
             background: var(--amarelo);
-            padding: clamp(2.5rem, 5vw, 4rem);
+            padding: clamp(2.5rem, 5vw, 5rem) clamp(2.5rem, 8vw, 8rem);
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            min-height: 360px;
+            align-items: center;
+            text-align: center;
         }
 
         .ctab-title h2 {
@@ -2180,53 +2223,18 @@
             font-weight: 300;
             color: rgba(39,39,39,0.7);
             font-size: 1rem;
-            margin-bottom: 0;
+            margin-bottom: 2rem;
         }
 
-        .ctab-cta {
-            background: #1a1a1a;
-            padding: clamp(2.5rem, 5vw, 4rem);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 1.25rem;
-        }
-
-        .ctab-stat {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .ctab-stat-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .ctab-stat-num {
-            font-family: var(--display);
-            font-size: 2rem;
-            color: var(--amarelo);
-            line-height: 1;
-        }
-
-        .ctab-stat-label {
-            font-family: var(--body);
-            font-weight: 300;
-            font-size: 0.75rem;
-            color: rgba(250,248,243,0.5);
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .cta-buttons {
+.cta-buttons {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
         }
 
         .cta-buttons .btn {
-            width: 100%;
+            width: auto;
+            min-width: 260px;
             justify-content: center;
         }
 
@@ -2237,123 +2245,181 @@
 
         .final-cta .btn-secondary {
             background: transparent;
-            color: var(--branco);
-            border: 1px solid rgba(250,248,243,0.25);
+            color: var(--preto);
+            border: 1px solid rgba(39,39,39,0.3);
         }
 
         .final-cta .btn-secondary:hover {
-            border-color: rgba(250,248,243,0.6);
-            background: rgba(250,248,243,0.05);
+            border-color: rgba(39,39,39,0.7);
+            background: rgba(39,39,39,0.08);
         }
 
         @media (max-width: 767px) {
-            .cta-bento { grid-template-columns: 1fr; }
-            .ctab-title { min-height: auto; }
+            .ctab-title { padding: 2.5rem 1.5rem; }
+            .cta-buttons .btn { min-width: 0; width: 100%; }
         }
 
         /* ===== FOOTER ===== */
+        /* ===== FOOTER ===== */
         .footer {
-            background: #1a1a1a;
+            background: #111111;
             color: var(--branco);
-            padding: 80px 0 2rem;
-            border-top: 1px solid rgba(255, 189, 89, 0.1);
+            padding: 80px 0 0;
         }
 
         .footer-grid {
             display: grid;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-brand .logo {
-            color: var(--branco);
-            margin-bottom: 1rem;
-        }
-
-        .footer-brand p {
-            font-family: var(--body);
-            font-weight: 300;
-            opacity: 0.6;
-            font-size: 0.9rem;
-        }
-
-        .footer-contact h4 {
-            font-family: var(--body);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 12px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--amarelo);
-        }
-
-        .footer-contact a {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-bottom: 0.75rem;
-            font-family: var(--body);
-            font-weight: 300;
-            opacity: 0.65;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .footer-contact a:hover {
-            opacity: 1;
-            color: var(--amarelo);
-        }
-
-        .footer-social h4 {
-            font-family: var(--body);
-            font-weight: 600;
-            margin-bottom: 1rem;
-            font-size: 12px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--amarelo);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .social-link {
-            width: 44px;
-            height: 44px;
-            background: rgba(255, 189, 89, 0.08);
-            border-radius: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(255, 189, 89, 0.15);
-        }
-
-        .social-link:hover {
-            background: var(--amarelo);
-            color: var(--preto);
-            transform: translateY(-3px);
-            border-color: var(--amarelo);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 189, 89, 0.1);
-            padding-top: 2rem;
-            text-align: center;
-            font-family: var(--body);
-            font-weight: 300;
-            opacity: 0.5;
-            font-size: 0.8rem;
-            letter-spacing: 0.04em;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            padding-bottom: 4rem;
         }
 
         @media (min-width: 768px) {
             .footer-grid {
-                grid-template-columns: 2fr 1fr 1fr;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 3rem;
             }
+        }
+
+        .footer-brand-img {
+            height: 52px;
+            width: auto;
+            display: block;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-brand-desc {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.875rem;
+            color: rgba(250,248,243,0.55);
+            line-height: 1.6;
+            max-width: 240px;
+        }
+
+        .footer-col-title {
+            font-family: var(--body);
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--amarelo);
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+
+        .footer-nav-link {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.875rem;
+            color: rgba(250,248,243,0.6);
+            text-decoration: none;
+            transition: color 0.2s ease, opacity 0.2s ease;
+        }
+
+        .footer-nav-link:hover {
+            color: var(--branco);
+        }
+
+        .footer-contact-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.875rem;
+            color: rgba(250,248,243,0.6);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-contact-item svg {
+            flex-shrink: 0;
+            opacity: 0.7;
+        }
+
+        a.footer-contact-item:hover {
+            color: var(--branco);
+        }
+
+        a.footer-contact-item:hover svg {
+            opacity: 1;
+        }
+
+        .footer-social-icons {
+            display: flex;
+            gap: 0.65rem;
+        }
+
+        .footer-social-icon {
+            width: 44px;
+            height: 44px;
+            background: rgba(250,248,243,0.07);
+            border: 1px solid rgba(250,248,243,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(250,248,243,0.7);
+            transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+
+        .footer-social-icon:hover {
+            background: var(--amarelo);
+            border-color: var(--amarelo);
+            color: var(--preto);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(250,248,243,0.08);
+            padding: 1.5rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .footer-copyright {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.8rem;
+            color: rgba(250,248,243,0.4);
+        }
+
+        .footer-legal {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.8rem;
+            color: rgba(250,248,243,0.4);
+        }
+
+        .footer-legal a {
+            color: rgba(250,248,243,0.4);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-legal a:hover {
+            color: rgba(250,248,243,0.8);
+        }
+
+        .footer-legal-dot {
+            opacity: 0.4;
         }
 
         /* ===== FLOATING WHATSAPP BUTTON ===== */
@@ -2816,9 +2882,7 @@
             gap: 4px;
         }
 
-        @media (min-width: 768px) {
-            .faq-grid { grid-template-columns: 1fr 1fr; }
-        }
+        .faq-grid { grid-template-columns: 1fr; }
 
         .faq-item {
             background: #181818;
@@ -3352,6 +3416,25 @@
         @media (max-width: 768px) {
             .insta-widget { padding: 4px 24px 60px; }
         }
+
+        /* Hide third-party widget watermarks */
+        .eapps-link,
+        .eapps-widget-toolbar,
+        .eapps-apps-bar,
+        [class*="eapps-"] a[href*="elfsight"],
+        [class*="eapps-link"],
+        [class*="eapps-app-toolbar"] {
+            display: none !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        [data-mc-src] + div,
+        .sb_instagram_branding,
+        .sbi_follow_btn ~ div,
+        a[href*="smashballoon"] {
+            display: none !important;
+        }
     </style>
 </head>
 <body>
@@ -3359,16 +3442,14 @@
     <header class="header" id="header">
         <div class="container">
             <div class="header-inner">
-                <a href="#" class="logo">
-                    <img src="images/logo village.png" alt="Village Summer - Escola de Surf Florianópolis" class="logo-img">
-                </a>
+                <a href="#" class="logo">Village Summer Surf</a>
 
                 <nav class="nav">
                     <ul class="nav-list">
-                        <li><a href="#aula-individual" class="nav-link" data-i18n="navLesson">Aula Individual</a></li>
-                        <li><a href="#metodologia" class="nav-link" data-i18n="navMethod">Metodologia</a></li>
+                        <li><a href="#aula-individual" class="nav-link" data-i18n="navLesson">Aulas</a></li>
+                        <li><a href="#metodo" class="nav-link" data-i18n="navMethod">Metodologia</a></li>
                         <li><a href="#depoimentos" class="nav-link" data-i18n="navTestimonials">Depoimentos</a></li>
-                        <li><a href="#trips" class="nav-link" data-i18n="navTrips">Trips</a></li>
+                        <li><a href="#trips" class="nav-link" data-i18n="navAgenda">Agenda</a></li>
                         <li><a href="#contato" class="nav-link" data-i18n="navContact">Contato</a></li>
                     </ul>
                 </nav>
@@ -3406,10 +3487,10 @@
             <a href="#" data-lang="es" style="padding: 0.5rem 1rem; border-radius: 4px;">ES</a>
         </div>
         <ul class="mobile-nav-list">
-            <li><a href="#aula-individual" data-i18n="navLesson">Aula Individual</a></li>
-            <li><a href="#metodologia" data-i18n="navMethod">Metodologia</a></li>
+            <li><a href="#aula-individual" data-i18n="navLesson">Aulas</a></li>
+            <li><a href="#metodo" data-i18n="navMethod">Metodologia</a></li>
             <li><a href="#depoimentos" data-i18n="navTestimonials">Depoimentos</a></li>
-            <li><a href="#trips" data-i18n="navTrips">Trips</a></li>
+            <li><a href="#trips" data-i18n="navAgenda">Agenda</a></li>
             <li><a href="#contato" data-i18n="navContact">Contato</a></li>
         </ul>
         <div class="mobile-menu-cta">
@@ -3555,7 +3636,7 @@
     </section>
 
     <!-- Método Desbloqueia Surf Section -->
-    <section class="section metodo-section">
+    <section class="section metodo-section" id="metodo">
         <div class="container">
             <div class="section-title">
                 <span class="section-label">Como a Gente Ensina</span>
@@ -3637,29 +3718,29 @@
             <div class="modalidades-grid">
                 <!-- Aula Avulsa: left, tall (spans 2 rows) -->
                 <div class="modalidade-card modalidade-card--tall animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1531722569936-825d3dd91b15?w=800&q=80" alt="Aula de surf avulsa individual em Florianópolis" loading="lazy">
+                    <img src="images/aula avulsa.jpg" alt="" loading="lazy" style="object-fit:cover;object-position:center;">
                     <div class="modalidade-overlay">
-                        <p class="modalidade-label">Uma Sessão · Tudo Incluso</p>
+                        <p class="modalidade-label">UMA SESSÃO · TUDO INCLUSO</p>
                         <h3 class="modalidade-title">Aula Avulsa</h3>
-                        <p class="modalidade-desc">Uma aula com a Ju ou o Kelvin. Equipamento, vídeo-análise e atenção total inclusos. Pra quem quer sentir antes de decidir, ou simplesmente surfar quando der.</p>
+                        <p class="modalidade-desc">Uma aula com a gente. Equipamento, fotos da sessão e atenção total inclusos. Pra quem quer sentir antes de decidir, ou simplesmente surfar quando der.</p>
                     </div>
                 </div>
 
                 <!-- Pacotes: top right -->
                 <div class="modalidade-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1476673160081-cf065607f449?w=800&q=80" alt="Pacotes de surf em Florianópolis" loading="lazy">
+                    <img src="images/pacotes.jpg" alt="" loading="lazy" style="object-fit:cover;object-position:center;">
                     <div class="modalidade-overlay">
-                        <p class="modalidade-label">Evolução Contínua</p>
+                        <p class="modalidade-label">EVOLUÇÃO CONTÍNUA</p>
                         <h3 class="modalidade-title">Pacotes</h3>
-                        <p class="modalidade-desc">De 5 a 10 aulas. Acompanhamento da sua evolução com vídeo-análise e ajuste de metas a cada sessão.</p>
+                        <p class="modalidade-desc">Pacotes de 4 ou 6 aulas. Acompanhamento da sua evolução com fotos de cada sessão e ajuste de metas conforme você avança.</p>
                     </div>
                 </div>
 
                 <!-- Surf Trip: bottom right -->
                 <div class="modalidade-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Surf Trip com Village Summer" loading="lazy">
+                    <img src="images/surftrip.JPG" alt="" loading="lazy" style="object-fit:cover;object-position:center;">
                     <div class="modalidade-overlay">
-                        <p class="modalidade-label">Viagem + Surf</p>
+                        <p class="modalidade-label">VIAGEM + SURF</p>
                         <h3 class="modalidade-title">Surf Trip</h3>
                         <p class="modalidade-desc">Viagens guiadas para os melhores destinos de surf. Mar, natureza e conexão em grupo.</p>
                     </div>
@@ -3668,38 +3749,62 @@
 
             <!-- Imersão: full width -->
             <div class="modalidade-card modalidade-card--wide animate-on-scroll" style="margin-top: 4px;">
-                <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=1400&q=80" alt="Imersão de surf Village Summer — dias intensivos" loading="lazy" style="object-position: center 40%;">
+                <img src="images/imersao.JPG" alt="" loading="lazy" style="object-fit:cover;object-position:center 70%;">
                 <div class="modalidade-overlay" style="background: linear-gradient(to right, rgba(39,39,39,0.95) 0%, rgba(39,39,39,0.6) 50%, rgba(39,39,39,0.2) 100%), linear-gradient(to top, rgba(39,39,39,0.7) 0%, transparent 60%);">
-                    <p class="modalidade-label">Dias Intensivos · Turmas Pequenas</p>
+                    <p class="modalidade-label">DIAS INTENSIVOS · TURMAS PEQUENAS</p>
                     <h3 class="modalidade-title" style="font-size: clamp(1.75rem, 3.5vw, 2.75rem);">Imersão de Surf</h3>
-                    <p class="modalidade-desc">4 dias de surf intenso, teoria e muita conexão com o mar. Acompanhamento total do início ao fim. Vagas limitadas.</p>
+                    <p class="modalidade-desc">Fins de semana e feriados de surf intenso, teoria e muita conexão com o mar. Acompanhamento total do início ao fim. Vagas limitadas.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Próxima Imersão em Destaque -->
-    <section class="section proxima-imersao-section" id="trips">
+    <!-- Agenda Unificada -->
+    <section class="agenda-section" id="trips">
         <div class="container">
-            <div class="section-title">
-                <span class="section-label">Próxima Imersão</span>
-                <h2>Em Destaque</h2>
-            </div>
-            <div class="proxima-imersao-card animate-on-scroll" id="proximaImersaoCard">
-                <!-- Preenchido via JS -->
-            </div>
-        </div>
-    </section>
+            <div class="agenda-grid animate-on-scroll">
 
-    <!-- Calendário de Eventos Village -->
-    <section class="section calendario-section">
-        <div class="container">
-            <div class="section-title">
-                <span class="section-label">Agenda 2026</span>
-                <h2>Calendário<br><span>Village</span></h2>
-            </div>
-            <div class="calendario-grid animate-on-scroll" id="calendarioGrid">
-                <!-- Preenchido via JS -->
+                <!-- Coluna esquerda: Próxima Imersão -->
+                <div class="agenda-imersao">
+                    <span class="agenda-label">PRÓXIMA IMERSÃO</span>
+                    <span class="agenda-date-badge">04 a 07 Jun</span>
+                    <h2 class="agenda-title">Imersão Matinhos, PR</h2>
+                    <p class="agenda-desc">Uma das ondas mais longas e consistentes do Sul do Brasil. Quatro dias de surf intenso, teoria e muita conexão com o mar.</p>
+                    <div class="agenda-vagas">
+                        <span class="agenda-vagas-dot"></span>
+                        Restam 6 vagas
+                    </div>
+                    <a href="https://villagesummersurf.com.br/imersao-parana" class="btn btn-primary agenda-cta" target="_blank" rel="noopener">Ver detalhes da imersão</a>
+                </div>
+
+                <!-- Coluna direita: Calendário -->
+                <div class="agenda-calendario">
+                    <span class="agenda-label">AGENDA VILLAGE</span>
+                    <h3 class="agenda-cal-title">Próximos eventos.</h3>
+                    <p class="agenda-cal-sub">A agenda sempre atualizada.</p>
+
+                    <div class="agenda-evento">
+                        <div class="agenda-evento-date">31 Mai</div>
+                        <div class="agenda-evento-body">
+                            <span class="agenda-evento-tag">CAFÉ COM SURF</span>
+                            <h4 class="agenda-evento-title">Café com Surf</h4>
+                            <p class="agenda-evento-desc">Encontro mensal da comunidade Village. Café, papo de surf e muito mar. Esse mês na lua cheia.</p>
+                            <a href="https://www.instagram.com/villagesummersurf" class="btn btn-primary agenda-evento-cta" target="_blank" rel="noopener">Ver detalhes</a>
+                        </div>
+                    </div>
+
+                    <div class="agenda-divider"></div>
+
+                    <div class="agenda-evento">
+                        <div class="agenda-evento-date">04 a 07 Jun</div>
+                        <div class="agenda-evento-body">
+                            <span class="agenda-evento-tag">IMERSÃO</span>
+                            <h4 class="agenda-evento-title">Imersão Matinhos, PR</h4>
+                            <p class="agenda-evento-desc">Matinhos, PR.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -3844,18 +3949,13 @@
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Os instrutores são certificados?</div>
-                    <div class="faq-answer">Sim! Todos os nossos instrutores são certificados e possuem formação como salva-vidas, garantindo sua segurança total durante as aulas.</div>
-                </div>
-
-                <div class="faq-item">
                     <div class="faq-question">O que está incluso na aula de surf?</div>
-                    <div class="faq-answer">Todas as aulas incluem equipamento completo (prancha, lycra, wetsuit se necessário), vídeo-análise da sua performance e acompanhamento personalizado da sua evolução.</div>
+                    <div class="faq-answer">Todas as aulas incluem equipamento completo (prancha, lycra, wetsuit se necessário), fotos da sua sessão e acompanhamento personalizado. Para alunos mais avançados, oferecemos também vídeo-análise da performance.</div>
                 </div>
 
                 <div class="faq-item">
                     <div class="faq-question">Em quais praias as aulas acontecem?</div>
-                    <div class="faq-answer">Atuamos nas melhores praias do Sul de Florianópolis: Campeche (nossa base principal), Armação e Matadeiro. A praia é escolhida de acordo com as condições do mar e seu nível.</div>
+                    <div class="faq-answer">A gente atua no Matadeiro, Armação e Solidão, no sul da ilha. A praia é escolhida conforme as condições do mar e o seu nível no dia.</div>
                 </div>
             </div>
         </div>
@@ -3865,28 +3965,9 @@
     <section class="section final-cta" id="contato">
         <div class="container">
             <div class="cta-bento">
-                <!-- Título -->
                 <div class="ctab-title">
                     <h2 data-i18n="ctaTitle">A sua próxima<br>onda começa<br>aqui.</h2>
                     <p data-i18n="ctaDesc">Fala com a gente. Sem compromisso. A gente entende o que você busca e indica o melhor caminho.</p>
-                </div>
-
-                <!-- Botões + stats -->
-                <div class="ctab-cta">
-                    <div class="ctab-stat">
-                        <div class="ctab-stat-item">
-                            <span class="ctab-stat-num">20+</span>
-                            <span class="ctab-stat-label">Anos no Mar</span>
-                        </div>
-                        <div class="ctab-stat-item">
-                            <span class="ctab-stat-num">1.000+</span>
-                            <span class="ctab-stat-label">Alunos Formados</span>
-                        </div>
-                        <div class="ctab-stat-item">
-                            <span class="ctab-stat-num">100%</span>
-                            <span class="ctab-stat-label">Salva-Vidas</span>
-                        </div>
-                    </div>
                     <div class="cta-buttons">
                         <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-whatsapp" target="_blank" rel="noopener">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -3927,39 +4008,69 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
+
+                <!-- Col 1: Brand -->
                 <div class="footer-brand">
-                    <a href="#" class="logo">
-                        <img src="logo-village-summer.jpeg" alt="Village Summer Logo" class="logo-img" style="height: 70px;">
+                    <a href="#" aria-label="Village Summer">
+                        <img src="images/logo village.png" alt="Village Summer" class="footer-brand-img">
                     </a>
-                    <p data-i18n="footerDesc">Escola de surf em Florianópolis. 20 anos conectando pessoas ao mar, do jeito certo.</p>
+                    <p class="footer-brand-desc">Escola de surf em Florianópolis. Conectando pessoas ao mar, do jeito certo.</p>
                 </div>
 
-                <div class="footer-contact">
-                    <h4 data-i18n="footerContact">Contato</h4>
-                    <a href="https://wa.me/554896899856" target="_blank" rel="noopener">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        (48) 99627-1507
-                    </a>
-                    <a href="#">
-                        Sul de Florianópolis, SC
-                    </a>
+                <!-- Col 2: Navegação -->
+                <div>
+                    <h4 class="footer-col-title">Navegação</h4>
+                    <nav class="footer-nav-links">
+                        <a href="#aula-individual" class="footer-nav-link">Aula Individual</a>
+                        <a href="#metodo" class="footer-nav-link">Metodologia</a>
+                        <a href="#depoimentos" class="footer-nav-link">Depoimentos</a>
+                        <a href="#trips" class="footer-nav-link">Agenda</a>
+                        <a href="#contato" class="footer-nav-link">Contato</a>
+                    </nav>
                 </div>
 
-                <div class="footer-social">
-                    <h4 data-i18n="footerSocial">Redes Sociais</h4>
-                    <div class="social-links">
-                        <a href="https://instagram.com/villagesummersurf" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                <!-- Col 3: Contato -->
+                <div>
+                    <h4 class="footer-col-title">Contato</h4>
+                    <div class="footer-contact-items">
+                        <a href="https://wa.me/554896899856" class="footer-contact-item" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            (48) 996899856
+                        </a>
+                        <span class="footer-contact-item">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Sul de Florianópolis, SC
+                        </span>
+                        <a href="https://instagram.com/villagesummersurf" class="footer-contact-item" target="_blank" rel="noopener">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            @villagesummersurf
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 4: Redes Sociais -->
+                <div>
+                    <h4 class="footer-col-title">Redes Sociais</h4>
+                    <div class="footer-social-icons">
+                        <a href="https://instagram.com/villagesummersurf" class="footer-social-icon" target="_blank" rel="noopener" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
-                        <a href="https://wa.me/554896899856" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <a href="https://wa.me/554896899856" class="footer-social-icon" target="_blank" rel="noopener" aria-label="WhatsApp">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         </a>
                     </div>
                 </div>
+
             </div>
 
+            <!-- Bottom bar -->
             <div class="footer-bottom">
-                <p data-i18n="footerCopyright">&copy; 2025 Village Summer - Surf Experience. Todos os direitos reservados.</p>
+                <p class="footer-copyright">&copy; 2026 Village Summer Surf. Todos os direitos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidade</a>
+                    <span class="footer-legal-dot">·</span>
+                    <a href="#">Termos de Uso</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -3977,13 +4088,13 @@
         // EDITE AQUI para atualizar a próxima imersão em destaque
         const proximaImersao = {
             dateLabel: "04 a 07 Jun",
-            title: "Imersão Matinhos, PR",
+            title: "Matinhos, PR",
             location: "Matinhos, PR",
-            description: "Uma das ondas mais longas e consistentes do Sul do Brasil. Com a Ju, o Kelvin e o Método Desbloqueia Surf. Quatro dias de surf intenso, teoria e muita conexão com o mar.",
+            description: "Uma das ondas mais longas e consistentes do Sul do Brasil. Quatro dias de surf intenso, teoria e muita conexão com o mar.",
             vagasRestantes: 6,
             totalVagas: null,
-            ctaLabel: "Ver detalhes da imersão",
-            ctaLink: "imersao-parana.html"
+            ctaLabel: "Ver detalhes da Imersão",
+            ctaLink: "https://villagesummersurf.com.br/imersao-parana"
         };
 
         // ===== CALENDÁRIO DE EVENTOS VILLAGE =====
@@ -3992,48 +4103,26 @@
         // Status disponíveis: "confirmado" | "em_breve" | "esgotado"
         const eventos = [
             {
+                type: "cafe",
+                dateLabel: "31 de Mai",
+                date: "2026-05-31",
+                title: "Café com Surf",
+                location: "Sul da Ilha, Florianópolis",
+                description: "Encontro mensal da família Village. Café, papo de surf e muito mar. Esse mês na lua cheia.",
+                status: "confirmado",
+                ctaLabel: "Ver detalhes",
+                ctaLink: "https://instagram.com/villagesummersurf"
+            },
+            {
                 type: "imersao",
                 dateLabel: "04 a 07 Jun",
                 date: "2026-06-04",
                 title: "Imersão Matinhos, PR",
                 location: "Matinhos, PR",
-                description: "Matinhos, uma das ondas mais longas e consistentes do Sul do Brasil.",
+                description: "Uma das ondas mais longas e consistentes do Sul do Brasil.",
                 status: "confirmado",
                 ctaLabel: "Ver detalhes",
-                ctaLink: "imersao-parana.html"
-            },
-            {
-                type: "cafe",
-                dateLabel: "Jun 2026",
-                date: "2026-06-15",
-                title: "Café com Surf",
-                location: "Sul da Ilha, Florianópolis",
-                description: "Encontro mensal da comunidade Village. Café, papo de surf e muito mar.",
-                status: "confirmado",
-                ctaLabel: null,
-                ctaLink: null
-            },
-            {
-                type: "imersao",
-                dateLabel: "13 a 16 Ago",
-                date: "2026-08-13",
-                title: "Imersão Campeche, Floripa",
-                location: "Campeche, Florianópolis",
-                description: "Sul da ilha em pleno inverno. Ondas consistentes e turmas pequenas.",
-                status: "em_breve",
-                ctaLabel: "Quero ser avisado",
-                ctaLink: "https://wa.me/554896899856?text=Olá! Tenho interesse na imersão de Agosto em Floripa."
-            },
-            {
-                type: "imersao",
-                dateLabel: "Out a Dez",
-                date: "2026-10-08",
-                title: "Imersões Outubro e Dezembro, Floripa",
-                location: "Campeche, Florianópolis",
-                description: "Encerrando o ano no Campeche. Detalhes em breve.",
-                status: "em_breve",
-                ctaLabel: "Quero ser avisado",
-                ctaLink: "https://wa.me/554896899856?text=Olá! Tenho interesse nas imersões de Outubro ou Dezembro em Floripa."
+                ctaLink: "https://villagesummersurf.com.br/imersao-parana"
             }
         ];
 
@@ -4049,7 +4138,6 @@
                         <div>
                             <span class="pi-badge-date">${p.dateLabel}</span>
                             <h3 class="pi-title">${p.title}</h3>
-                            <p class="pi-location">${p.location}</p>
                             <p class="pi-desc">${p.description}</p>
                         </div>
                         <div>
@@ -4057,18 +4145,15 @@
                                 <span class="pi-vagas-dot"></span>
                                 Restam ${p.vagasRestantes} vagas
                             </div>
-                            <a href="${p.ctaLink}" class="btn btn-primary">${p.ctaLabel}</a>
+                            <a href="${p.ctaLink}" class="btn btn-primary" target="_blank" rel="noopener">${p.ctaLabel}</a>
                         </div>
-                    </div>
-                    <div class="pi-visual">
-                        <img src="https://images.unsplash.com/photo-1504872578540-b000ad8e2b96?w=900&q=80" alt="${p.title}" loading="lazy">
                     </div>
                 </div>
             `;
         }
 
         function tipoLabel(type) {
-            const map = { imersao: 'Imersão', cafe: 'Café com Surf', trip: 'Surf Trip', outro: 'Evento' };
+            const map = { imersao: 'IMERSÃO', cafe: 'CAFÉ COM SURF', trip: 'SURF TRIP', outro: 'EVENTO' };
             return map[type] || 'Evento';
         }
 
@@ -4117,10 +4202,10 @@
         const translations = {
             pt: {
                 // Nav
-                navLesson: 'Aula Individual',
+                navLesson: 'Aulas',
                 navMethod: 'Metodologia',
                 navTestimonials: 'Depoimentos',
-                navTrips: 'Trips',
+                navAgenda: 'Agenda',
                 navContact: 'Contato',
                 navCta: 'Agendar Aula',
 
@@ -4285,17 +4370,17 @@
                 ctaInstagram: 'Seguir no Instagram',
 
                 // Footer
-                footerDesc: 'Escola de surf premium em Florianópolis. +20 anos transformando vidas através da conexão com o mar.',
+                footerDesc: 'Escola de surf em Florianópolis. 5 anos conectando pessoas ao mar, do jeito certo.',
                 footerContact: 'Contato',
                 footerSocial: 'Redes Sociais',
-                footerCopyright: '© 2025 Village Summer - Surf Experience. Todos os direitos reservados.'
+                footerCopyright: '© 2026 Village Summer - Surf Experience. Todos os direitos reservados.'
             },
             en: {
                 // Nav
-                navLesson: 'Private Lesson',
+                navLesson: 'Lessons',
                 navMethod: 'Methodology',
                 navTestimonials: 'Testimonials',
-                navTrips: 'Trips',
+                navAgenda: 'Schedule',
                 navContact: 'Contact',
                 navCta: 'Book Lesson',
 
@@ -4449,17 +4534,17 @@
                 ctaInstagram: 'Follow on Instagram',
 
                 // Footer
-                footerDesc: 'Premium surf school in Florianópolis. +20 years transforming lives through connection with the sea.',
+                footerDesc: 'Surf school in Florianópolis. 5 years connecting people to the sea, the right way.',
                 footerContact: 'Contact',
                 footerSocial: 'Social Media',
-                footerCopyright: '© 2025 Village Summer - Surf Experience. All rights reserved.'
+                footerCopyright: '© 2026 Village Summer - Surf Experience. All rights reserved.'
             },
             es: {
                 // Nav
-                navLesson: 'Clase Individual',
+                navLesson: 'Clases',
                 navMethod: 'Metodología',
                 navTestimonials: 'Testimonios',
-                navTrips: 'Trips',
+                navAgenda: 'Agenda',
                 navContact: 'Contacto',
                 navCta: 'Reservar Clase',
 
@@ -4613,10 +4698,10 @@
                 ctaInstagram: 'Seguir en Instagram',
 
                 // Footer
-                footerDesc: 'Escuela de surf premium en Florianópolis. +20 años transformando vidas a través de la conexión con el mar.',
+                footerDesc: 'Escuela de surf en Florianópolis. 5 años conectando personas al mar, de la manera correcta.',
                 footerContact: 'Contacto',
                 footerSocial: 'Redes Sociales',
-                footerCopyright: '© 2025 Village Summer - Surf Experience. Todos los derechos reservados.'
+                footerCopyright: '© 2026 Village Summer - Surf Experience. Todos los derechos reservados.'
             }
         };
 
@@ -4678,19 +4763,25 @@
             document.querySelector('meta[name="twitter:description"]').setAttribute('content', meta.ogDescription);
         }
 
-        // Initialize language on page load
-        document.addEventListener('DOMContentLoaded', () => {
+        // Initialize language — call immediately if DOM is ready, otherwise wait
+        function initI18n() {
             changeLanguage(currentLang);
-        });
 
-        // Language selector click handlers
-        document.querySelectorAll('.lang-selector a, .mobile-lang-selector a').forEach(a => {
-            a.addEventListener('click', (e) => {
-                e.preventDefault();
-                const lang = a.getAttribute('data-lang');
-                changeLanguage(lang);
+            // Attach click handlers to all language switcher buttons
+            document.querySelectorAll('[data-lang]').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const lang = btn.getAttribute('data-lang');
+                    if (lang) changeLanguage(lang);
+                });
             });
-        });
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initI18n);
+        } else {
+            initI18n();
+        }
 
         // Mobile Menu Toggle
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
