@@ -430,28 +430,10 @@
             --display: 'Bebas Neue', sans-serif;
             --body: 'Poppins', sans-serif;
 
-            /* Aliases para compatibilidade com código JS existente */
-            --gold: #FFBD59;
             --gold-light: #ffd080;
-            --black-deep: #272727;
-            --black-soft: #1e1e1e;
-            --black-lighter: #333333;
-            --bronze: #FFBD59;
-            --bronze-light: #ffd080;
-            --bronze-dark: #e6a840;
-            --ocean-deep: #272727;
-            --white: #FAF8F3;
-            --cream: #FAF8F3;
-            --text-light: rgba(250, 248, 243, 0.65);
             --gray-100: #333333;
-            --gray-200: #444444;
-
-            --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
-            --shadow-md: 0 4px 6px rgba(0,0,0,0.4);
-            --shadow-lg: 0 10px 25px rgba(0,0,0,0.5);
             --shadow-gold: 0 4px 14px rgba(255, 189, 89, 0.3);
-            --shadow-bronze: 0 4px 14px rgba(255, 189, 89, 0.3);
-            --shadow-orange: 0 4px 14px rgba(255, 189, 89, 0.3);
+            --radius: 12px;
         }
 
         /* ===== TYPOGRAPHY ===== */
@@ -469,11 +451,6 @@
             font-weight: 400;
             line-height: 1.1;
             letter-spacing: 0.02em;
-        }
-
-        .elegant-title {
-            font-family: var(--display);
-            letter-spacing: 0.05em;
         }
 
         p { margin-bottom: 1rem; }
@@ -554,14 +531,6 @@
             color: var(--branco);
         }
 
-        /* Sobre fundo claro, títulos escuros */
-        .section--light .section-title h2,
-        .section--light h2,
-        .section--light h3,
-        .section--light h4 {
-            color: var(--preto);
-        }
-
         .section-title h2 span {
             color: var(--amarelo);
         }
@@ -574,10 +543,6 @@
 
         .section-title.centered p {
             margin: 0 auto;
-        }
-
-        .section--light .section-title p {
-            color: var(--cinza);
         }
 
         /* ===== BOTÕES ===== */
@@ -618,27 +583,6 @@
         .btn-secondary:hover {
             border-color: var(--branco);
             background: rgba(250, 248, 243, 0.08);
-        }
-
-        /* Versão do botão secundário em fundo claro */
-        .section--light .btn-secondary {
-            color: var(--preto);
-            border-color: rgba(39, 39, 39, 0.3);
-        }
-
-        .section--light .btn-secondary:hover {
-            border-color: var(--preto);
-            background: rgba(39, 39, 39, 0.05);
-        }
-
-        .btn-bronze {
-            background: var(--amarelo);
-            color: var(--preto);
-        }
-
-        .btn-bronze:hover {
-            background: var(--gold-light);
-            transform: translateY(-2px);
         }
 
         .btn-whatsapp {
@@ -868,27 +812,20 @@
 
         .hero-content h1 {
             font-family: var(--display);
-            font-size: clamp(36px, 4vw, 64px);
-            line-height: 0.95;
+            font-size: clamp(44px, 6.5vw, 82px);
+            line-height: 0.93;
             letter-spacing: 0.01em;
             color: var(--branco);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-subtitle {
-            font-family: var(--body);
-            font-weight: 300;
-            font-size: clamp(0.9rem, 1.4vw, 1.05rem);
-            color: rgba(250, 248, 243, 0.8);
-            margin-bottom: 2.5rem;
-            line-height: 1.65;
+            margin-bottom: 1.75rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
         }
 
         .hero-cta {
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
             gap: 1rem;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .hero-btn-primary {
@@ -955,75 +892,36 @@
                 padding: 48px 24px 56px;
             }
 
+            .hero-content {
+                text-align: center;
+            }
+
             .hero-content h1 {
                 font-size: clamp(36px, 9vw, 52px);
             }
-        }
 
-        .hero-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.75rem;
-            margin-bottom: 2.5rem;
-        }
+            .hero-cta {
+                align-items: center;
+            }
 
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(255, 189, 89, 0.12);
-            backdrop-filter: blur(5px);
-            padding: 0.4rem 1rem;
-            border-radius: 2px;
-            font-family: var(--body);
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            border: 1px solid rgba(255, 189, 89, 0.25);
-            color: var(--amarelo);
-        }
-
-        .hero h1 {
-            font-family: var(--display);
-            font-size: clamp(44px, 6.5vw, 82px);
-            line-height: 0.93;
-            letter-spacing: 0.01em;
-            margin-bottom: 1.75rem;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
-        }
-
-        .hero h1 span {
-            color: var(--amarelo);
+            .hero-btn-primary,
+            .hero-btn-outline {
+                width: 100%;
+                justify-content: center;
+            }
         }
 
         .hero-subtitle {
             font-family: var(--body);
             font-weight: 300;
             font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: rgba(250, 248, 243, 0.8);
             opacity: 0.85;
+            line-height: 1.65;
             margin-bottom: 0.75rem;
             max-width: 680px;
             margin-left: auto;
             margin-right: auto;
-        }
-
-        .hero-location {
-            font-family: var(--body);
-            font-weight: 400;
-            font-size: 13px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            opacity: 0.6;
-            margin-bottom: 3rem;
-        }
-
-        .hero-cta {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            align-items: flex-start;
         }
 
         .hero-cta .btn {
@@ -1035,61 +933,6 @@
                 flex-direction: row;
                 justify-content: flex-start;
             }
-        }
-
-        /* ===== STATS SECTION ===== */
-        .stats {
-            background: #1e1e1e;
-            padding: 4rem 0;
-            position: relative;
-            z-index: 2;
-            border-top: 1px solid rgba(255, 189, 89, 0.1);
-            border-bottom: 1px solid rgba(255, 189, 89, 0.1);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 0;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem;
-            border-right: 1px solid rgba(255, 189, 89, 0.1);
-        }
-
-        .stat-item:last-child {
-            border-right: none;
-        }
-
-        .stat-number {
-            font-family: var(--display);
-            font-size: clamp(3rem, 6vw, 5rem);
-            font-weight: 400;
-            color: var(--amarelo);
-            line-height: 1;
-        }
-
-        .stat-label {
-            font-family: var(--body);
-            font-weight: 300;
-            color: rgba(250, 248, 243, 0.6);
-            font-size: 14px;
-            margin-top: 0.5rem;
-            letter-spacing: 0.04em;
-        }
-
-        .stats-tagline {
-            text-align: center;
-            font-family: var(--body);
-            font-weight: 400;
-            font-size: 14px;
-            letter-spacing: 0.08em;
-            color: rgba(250, 248, 243, 0.45);
-            text-transform: uppercase;
-            margin-top: 2rem;
-            margin-bottom: 0;
         }
 
         /* ===== INDIVIDUAL LESSON SECTION ===== */
@@ -1344,54 +1187,6 @@
             .wv-grid {
                 grid-template-columns: 1fr;
             }
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1px;
-            background: rgba(255, 189, 89, 0.1);
-            border: 1px solid rgba(255, 189, 89, 0.1);
-        }
-
-        .feature-card {
-            background: var(--preto);
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover {
-            background: #1e1e1e;
-        }
-
-        .feature-icon {
-            width: 64px;
-            height: 64px;
-            background: rgba(255, 189, 89, 0.12);
-            border: 1px solid rgba(255, 189, 89, 0.25);
-            border-radius: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 1.75rem;
-            color: var(--amarelo);
-        }
-
-        .feature-card h3 {
-            font-family: var(--display);
-            font-size: 1.5rem;
-            margin-bottom: 0.75rem;
-            color: var(--branco);
-        }
-
-        .feature-card p {
-            font-family: var(--body);
-            font-weight: 300;
-            opacity: 0.7;
-            font-size: 0.95rem;
-            margin-bottom: 0;
         }
 
         /* ===== VIDEO ANALYSIS SECTION ===== */
@@ -1660,17 +1455,6 @@
             margin-bottom: 0;
         }
 
-        .testimonial-placeholder {
-            background: var(--preto);
-            border: 1px dashed rgba(255, 189, 89, 0.2);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 200px;
-            text-align: center;
-            color: rgba(250, 248, 243, 0.4);
-        }
-
         @media (min-width: 768px) {
             .testimonials-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1753,260 +1537,9 @@
             .floripa-cards { grid-template-columns: 1fr; }
         }
 
-        /* ===== SURF TRIPS SECTION ===== */
-        .surf-trips {
-            background: var(--preto);
-            color: var(--branco);
-        }
-
-        .surf-trips .section-title h2 {
-            color: var(--branco);
-        }
-
-        .surf-trips .section-title p {
-            color: rgba(250, 248, 243, 0.7);
-        }
-
-        .trips-grid {
-            display: grid;
-            gap: 1px;
-            background: rgba(255, 189, 89, 0.08);
-        }
-
-        .trip-card {
-            background: var(--preto);
-            overflow: hidden;
-            color: var(--branco);
-            transition: background 0.3s ease;
-        }
-
-        .trip-card:hover {
-            background: #1e1e1e;
-        }
-
-        .trip-image {
-            position: relative;
-            height: 220px;
-            overflow: hidden;
-        }
-
-        .trip-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .trip-card:hover .trip-image img {
-            transform: scale(1.04);
-        }
-
-        .trip-date {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: var(--amarelo);
-            color: var(--preto);
-            padding: 0.35rem 0.85rem;
-            border-radius: 2px;
-            font-family: var(--body);
-            font-weight: 600;
-            font-size: 12px;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-        }
-
-        .trip-spots {
-            position: absolute;
-            bottom: 1rem;
-            left: 1rem;
-            background: rgba(0,0,0,0.75);
-            color: var(--branco);
-            padding: 0.2rem 0.65rem;
-            border-radius: 2px;
-            font-family: var(--body);
-            font-size: 11px;
-            letter-spacing: 0.04em;
-        }
-
-        .trip-content {
-            padding: 1.75rem;
-        }
-
-        .trip-content h3 {
-            font-family: var(--display);
-            font-size: 1.5rem;
-            color: var(--branco);
-            margin-bottom: 0.5rem;
-        }
-
-        .trip-content p {
-            font-family: var(--body);
-            font-weight: 300;
-            color: rgba(250, 248, 243, 0.6);
-            font-size: 0.9rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .trip-card .btn {
-            width: 100%;
-        }
-
-        .trip-placeholder {
-            background: rgba(255, 189, 89, 0.04);
-            border: 1px dashed rgba(255, 189, 89, 0.2);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 350px;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .trip-placeholder p {
-            font-family: var(--body);
-            font-weight: 300;
-            margin-bottom: 0;
-            opacity: 0.6;
-        }
-
-        @media (min-width: 768px) {
-            .trips-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .trips-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        /* ===== PRÓXIMA IMERSÃO & CALENDÁRIO SECTIONS ===== */
-        .proxima-imersao-section {
-            background: #1a1a1a;
-            padding: 80px 0;
-        }
-
-        .proxima-imersao-card {
-            background: #222;
-            border: 1px solid rgba(255, 189, 89, 0.15);
-            border-radius: 12px;
-            overflow: hidden;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .pi-inner {
-            display: block;
-        }
-
-        .pi-info {
-            padding: 2.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .pi-badge-date {
-            display: inline-block;
-            font-family: var(--body);
-            font-size: 12px;
-            font-weight: 600;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--preto);
-            background: var(--amarelo);
-            padding: 0.4rem 1rem;
-            border-radius: 2px;
-            margin-bottom: 1.5rem;
-        }
-
-        .pi-title {
-            font-family: var(--display);
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            line-height: 1;
-            color: var(--branco);
-            margin-bottom: 0.5rem;
-        }
-
-        .pi-location {
-            font-family: var(--body);
-            font-size: 13px;
-            font-weight: 400;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: rgba(250, 248, 243, 0.5);
-            margin-bottom: 1.5rem;
-        }
-
-        .pi-desc {
-            font-family: var(--body);
-            font-weight: 300;
-            font-size: 1rem;
-            color: rgba(250, 248, 243, 0.8);
-            line-height: 1.7;
-            margin-bottom: 0;
-        }
-
-        .pi-vagas {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-family: var(--body);
-            font-weight: 600;
-            font-size: 14px;
-            letter-spacing: 0.04em;
-            padding: 0.6rem 1.25rem;
-            border-radius: 2px;
-            margin-bottom: 1.5rem;
-            width: fit-content;
-        }
-
-        .pi-vagas.urgente {
-            background: rgba(220, 60, 40, 0.15);
-            color: #ff5c47;
-            border: 1px solid rgba(220, 60, 40, 0.3);
-        }
-
-        .pi-vagas.normal {
-            background: rgba(255, 189, 89, 0.1);
-            color: var(--amarelo);
-            border: 1px solid rgba(255, 189, 89, 0.25);
-        }
-
-        .pi-vagas-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: currentColor;
-            animation: pulse 1.5s infinite;
-        }
-
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.4; }
-        }
-
-        .pi-visual {
-            position: relative;
-            min-height: 400px;
-            overflow: hidden;
-            background: #2a2a2a;
-        }
-
-        @media (max-width: 768px) {
-            .pi-visual {
-                min-height: 250px;
-            }
-        }
-
-        .pi-visual img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
         }
 
         /* ===== AGENDA UNIFICADA ===== */
@@ -2260,7 +1793,6 @@
         }
 
         /* ===== FOOTER ===== */
-        /* ===== FOOTER ===== */
         .footer {
             background: #111111;
             color: var(--branco);
@@ -2513,17 +2045,6 @@
         }
 
         /* ===== ANIMATIONS ===== */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
@@ -2880,9 +2401,8 @@
         .faq-grid {
             display: grid;
             gap: 4px;
+            grid-template-columns: 1fr;
         }
-
-        .faq-grid { grid-template-columns: 1fr; }
 
         .faq-item {
             background: #181818;
@@ -3188,72 +2708,7 @@
             }
         }
 
-        /* ===== BENEFITS BENTO (WHY VILLAGE REDESIGN) ===== */
-        .benefits-bento {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 380px 280px;
-            gap: 4px;
-        }
-
-        .bento-text {
-            background: #181818;
-            padding: 2.5rem 2rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-        }
-
-        .bento-text h3 {
-            font-family: var(--display);
-            font-size: clamp(1.4rem, 2vw, 1.9rem);
-            line-height: 0.95;
-            color: var(--branco);
-            margin-bottom: 0.75rem;
-        }
-
-        .bento-text h3 span { color: var(--amarelo); }
-
-        .bento-text p {
-            font-family: var(--body);
-            font-weight: 300;
-            font-size: 0.875rem;
-            color: rgba(250,248,243,0.6);
-            margin-bottom: 0;
-            line-height: 1.6;
-        }
-
-        .bento-photo { overflow: hidden; }
-
-        .bento-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            display: block;
-        }
-
-        .bento-photo:hover img { transform: scale(1.04); }
-
-        @media (max-width: 1024px) {
-            .benefits-bento {
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
-            }
-            .bento-photo { height: 280px; }
-        }
-
-        @media (max-width: 768px) {
-            .benefits-bento {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-            }
-            .bento-photo { height: 260px; }
-            .bento-text { min-height: 220px; }
-        }
-
         /* ===== BORDER RADIUS GLOBAL ===== */
-        :root { --radius: 12px; }
 
         .lb-photo, .lb-header, .lb-benefits, .lb-cta,
         .vb-photo, .vb-header, .vb-step,
@@ -3460,7 +2915,7 @@
                     <a href="#" data-lang="es">ES</a>
                 </div>
 
-                <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn header-cta" target="_blank" rel="noopener" style="padding:10px 24px;font-size:12px;letter-spacing:0.1em;background:transparent;color:var(--amarelo);border:1px solid var(--amarelo);">
+                <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn header-cta" target="_blank" rel="noopener" style="padding:10px 24px;font-size:12px;letter-spacing:0.1em;background:transparent;color:var(--amarelo);border:1px solid var(--amarelo);" data-i18n="navCta">
                     Agendar Aula
                 </a>
 
@@ -3508,14 +2963,14 @@
     <section class="hero" id="hero">
         <div class="hero-left">
             <div class="hero-content">
-                <span class="hero-eyebrow">Escola de Surf · Sul de Florianópolis</span>
+                <span class="hero-eyebrow" data-i18n="heroEyebrow">Escola de Surf · Sul de Florianópolis</span>
 
                 <h1 data-i18n="heroTitle">Você não vai só aprender a surfar. Você vai se desbloquear.</h1>
 
                 <p class="hero-subtitle" data-i18n="heroSubtitle">A Ju cresceu no surf, o Kelvin dedicou mais de uma década ao mar. A Village nasceu dessa história.</p>
 
                 <div class="hero-cta">
-                    <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="hero-btn-primary" target="_blank" rel="noopener">
+                    <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="hero-btn-primary" target="_blank" rel="noopener" data-i18n="heroCta">
                         Agendar Minha Aula
                     </a>
                     <a href="https://instagram.com/villagesummersurf" class="hero-btn-outline" target="_blank" rel="noopener">
@@ -3540,21 +2995,21 @@
 
                 <!-- Título + descrição -->
                 <div class="lb-header">
-                    <span class="section-label" style="color:var(--amarelo);margin-bottom:1rem;display:block;">AULA INDIVIDUAL</span>
+                    <span class="section-label" style="color:var(--amarelo);margin-bottom:1rem;display:block;" data-i18n="lessonLabel">AULA INDIVIDUAL</span>
                     <h2 data-i18n="lessonTitle">Sua aula, seu ritmo, sua evolução.</h2>
                     <p data-i18n="lessonDesc">Na Village, cada sessão é desenhada pra você: seu nível, seu corpo, seu objetivo. Seja em aula individual ou em pequenos grupos, a gente garante atenção real ao seu desenvolvimento, do começo ao fim.</p>
                 </div>
 
                 <!-- Benefícios -->
                 <div class="lb-benefits">
-                    <p style="font-family:var(--body);font-weight:300;font-size:0.95rem;color:rgba(250,248,243,0.85);line-height:1.7;margin:0;">Atenção focada em você do início ao fim, progressão no seu ritmo, correção técnica na hora certa e horários que cabem na sua rotina. Todo mundo sai com foto da sessão.</p>
+                    <p style="font-family:var(--body);font-weight:300;font-size:0.95rem;color:rgba(250,248,243,0.85);line-height:1.7;margin:0;" data-i18n="lessonBenefitsText">Atenção focada em você do início ao fim, progressão no seu ritmo, correção técnica na hora certa e horários que cabem na sua rotina. Todo mundo sai com foto da sessão.</p>
                 </div>
 
                 <!-- Incluso -->
                 <div class="lb-cta">
                     <div class="lb-cta-includes">
-                        <p class="lb-includes-label">O que está incluso:</p>
-                        <p class="lb-includes-text">Equipamento completo (prancha, lycra, wetsuit se necessário), fotos da sua sessão e acompanhamento personalizado da sua evolução.</p>
+                        <p class="lb-includes-label" data-i18n="lessonIncludesTitle">O que está incluso:</p>
+                        <p class="lb-includes-text" data-i18n="lessonIncludesDesc">Equipamento completo (prancha, lycra, wetsuit se necessário), fotos da sua sessão e acompanhamento personalizado da sua evolução.</p>
                     </div>
                 </div>
             </div>
@@ -3565,8 +3020,8 @@
     <section class="section why-village" id="metodologia">
         <div class="container">
             <div class="section-title">
-                <span class="section-label">POR QUE A VILLAGE SUMMER?</span>
-                <h2>Surf de verdade, do jeito certo.</h2>
+                <span class="section-label" data-i18n="whyLabel">POR QUE A VILLAGE SUMMER?</span>
+                <h2 data-i18n="whyH2">Surf de verdade, do jeito certo.</h2>
             </div>
 
             <div class="wv-grid animate-on-scroll">
@@ -3580,16 +3035,16 @@
                     <img src="images/secao 3 - 3.jpg" alt="" loading="lazy">
                 </div>
                 <div class="wv-text">
-                    <h3>É você no centro</h3>
-                    <p>Cada aula começa de onde você está. Não existe protocolo padrão aqui. Existe o seu surf, com atenção real de quem está na água com você.</p>
+                    <h3 data-i18n="wvTitle1">É você no centro</h3>
+                    <p data-i18n="wvDesc1">Cada aula começa de onde você está. Não existe protocolo padrão aqui. Existe o seu surf, com atenção real de quem está na água com você.</p>
                 </div>
                 <div class="wv-text">
-                    <h3>Evolução com vídeo</h3>
-                    <p>Quando você já tem a base, a gente vai fundo. Filmamos suas ondas e analisamos cada movimento junto com você, pra identificar o que ajustar e acelerar sua evolução.</p>
+                    <h3 data-i18n="wvTitle2">Evolução com vídeo</h3>
+                    <p data-i18n="wvDesc2">Quando você já tem a base, a gente vai fundo. Filmamos suas ondas e analisamos cada movimento junto com você, pra identificar o que ajustar e acelerar sua evolução.</p>
                 </div>
                 <div class="wv-text">
-                    <h3>A Ju e o Kelvin na água com você</h3>
-                    <p>Mais de uma década no mar e uma presença que faz diferença dentro e fora da água. Segurança e técnica andam sempre juntas.</p>
+                    <h3 data-i18n="wvTitle3">A Ju e o Kelvin na água com você</h3>
+                    <p data-i18n="wvDesc3">Mais de uma década no mar e uma presença que faz diferença dentro e fora da água. Segurança e técnica andam sempre juntas.</p>
                 </div>
             </div>
         </div>
@@ -3639,23 +3094,23 @@
     <section class="section metodo-section" id="metodo">
         <div class="container">
             <div class="section-title">
-                <span class="section-label">Como a Gente Ensina</span>
-                <h2>O Método<br><span>Desbloqueia Surf</span></h2>
-                <p>A Village desenvolveu o Método Desbloqueia Surf ao longo dos anos. Esse é um caminho que integra técnica, consciência corporal e conexão com o oceano, pra você evoluir de dentro pra fora.</p>
+                <span class="section-label" data-i18n="metodLabel">Como a Gente Ensina</span>
+                <h2 data-i18n="metodH2">O Método<br><span>Desbloqueia Surf</span></h2>
+                <p data-i18n="metodDesc">A Village desenvolveu o Método Desbloqueia Surf ao longo dos anos. Esse é um caminho que integra técnica, consciência corporal e conexão com o oceano, pra você evoluir de dentro pra fora.</p>
             </div>
 
             <div class="metodo-cards animate-on-scroll">
                 <div class="metodo-card">
-                    <h3>Técnica</h3>
-                    <p>Cada movimento tem uma razão. A gente explica o porquê, não só o como.</p>
+                    <h3 data-i18n="metodCard1Title">Técnica</h3>
+                    <p data-i18n="metodCard1Desc">Cada movimento tem uma razão. A gente explica o porquê, não só o como.</p>
                 </div>
                 <div class="metodo-card">
-                    <h3>Mente</h3>
-                    <p>Medo, bloqueio, insegurança. A gente trabalha isso junto com a técnica, não separado dela.</p>
+                    <h3 data-i18n="metodCard2Title">Mente</h3>
+                    <p data-i18n="metodCard2Desc">Medo, bloqueio, insegurança. A gente trabalha isso junto com a técnica, não separado dela.</p>
                 </div>
                 <div class="metodo-card">
-                    <h3>Mar</h3>
-                    <p>O oceano é o ambiente, não o obstáculo. Aprender a ler as ondas faz parte do método.</p>
+                    <h3 data-i18n="metodCard3Title">Mar</h3>
+                    <p data-i18n="metodCard3Desc">O oceano é o ambiente, não o obstáculo. Aprender a ler as ondas faz parte do método.</p>
                 </div>
             </div>
         </div>
@@ -3671,7 +3126,6 @@
 
             <div>
                 <!-- Elfsight Google Reviews | Untitled Google Reviews -->
-                <script src="https://elfsightcdn.com/platform.js" async></script>
                 <div class="elfsight-app-d8956e95-d124-4ce3-8a79-6d08b020fb16" data-elfsight-app-lazy></div>
             </div>
         </div>
@@ -3681,9 +3135,9 @@
     <section class="section floripa">
         <div class="container">
             <div class="section-title animate-on-scroll">
-                <span class="section-label">SUL DE FLORIANÓPOLIS</span>
-                <h2>O mar aqui é assim.</h2>
-                <p>Matadeiro, Armação, Solidão. Cada praia tem sua personalidade, e a gente escolhe a certa pra você conforme as condições do dia. É assim que funciona surfar numa ilha.</p>
+                <span class="section-label" data-i18n="floripaLabel">SUL DE FLORIANÓPOLIS</span>
+                <h2 data-i18n="floripaH2">O mar aqui é assim.</h2>
+                <p data-i18n="floripaIntro">Matadeiro, Armação, Solidão. Cada praia tem sua personalidade, e a gente escolhe a certa pra você conforme as condições do dia. É assim que funciona surfar numa ilha.</p>
             </div>
 
             <div class="floripa-photo animate-on-scroll">
@@ -3692,16 +3146,16 @@
 
             <div class="floripa-cards animate-on-scroll">
                 <div class="floripa-card">
-                    <h4>Matadeiro</h4>
-                    <p>Ondas com mais força, pra quem já tem base e quer evoluir.</p>
+                    <h4 data-i18n="beach1H4">Matadeiro</h4>
+                    <p data-i18n="beach1P">Ondas com mais força, pra quem já tem base e quer evoluir.</p>
                 </div>
                 <div class="floripa-card">
-                    <h4>Armação</h4>
-                    <p>Ambiente tranquilo, ondas suaves. Boa pra quem está começando.</p>
+                    <h4 data-i18n="beach2H4">Armação</h4>
+                    <p data-i18n="beach2P">Ambiente tranquilo, ondas suaves. Boa pra quem está começando.</p>
                 </div>
                 <div class="floripa-card">
-                    <h4>Solidão</h4>
-                    <p>Uma das praias mais bonitas da ilha. Ondas que surpreendem.</p>
+                    <h4 data-i18n="beach3H4">Solidão</h4>
+                    <p data-i18n="beach3P">Uma das praias mais bonitas da ilha. Ondas que surpreendem.</p>
                 </div>
             </div>
         </div>
@@ -3711,8 +3165,8 @@
     <section class="modalidades" id="modalidades">
         <div class="container">
             <div class="section-title">
-                <span class="section-label">Como surfar com a gente</span>
-                <h2>Nossas<br><span>Experiências</span></h2>
+                <span class="section-label" data-i18n="modalLabel">Como surfar com a gente</span>
+                <h2 data-i18n="modalH2">Nossas<br><span>Experiências</span></h2>
             </div>
 
             <div class="modalidades-grid">
@@ -3720,9 +3174,9 @@
                 <div class="modalidade-card modalidade-card--tall animate-on-scroll">
                     <img src="images/aula avulsa.jpg" alt="" loading="lazy" style="object-fit:cover;object-position:center;">
                     <div class="modalidade-overlay">
-                        <p class="modalidade-label">UMA SESSÃO · TUDO INCLUSO</p>
-                        <h3 class="modalidade-title">Aula Avulsa</h3>
-                        <p class="modalidade-desc">Uma aula com a gente. Equipamento, fotos da sessão e atenção total inclusos. Pra quem quer sentir antes de decidir, ou simplesmente surfar quando der.</p>
+                        <p class="modalidade-label" data-i18n="modal1Label">UMA SESSÃO · TUDO INCLUSO</p>
+                        <h3 class="modalidade-title" data-i18n="modal1Title">Aula Avulsa</h3>
+                        <p class="modalidade-desc" data-i18n="modal1Desc">Uma aula com a gente. Equipamento, fotos da sessão e atenção total inclusos. Pra quem quer sentir antes de decidir, ou simplesmente surfar quando der.</p>
                     </div>
                 </div>
 
@@ -3730,9 +3184,9 @@
                 <div class="modalidade-card animate-on-scroll">
                     <img src="images/pacotes.jpg" alt="" loading="lazy" style="object-fit:cover;object-position:center;">
                     <div class="modalidade-overlay">
-                        <p class="modalidade-label">EVOLUÇÃO CONTÍNUA</p>
-                        <h3 class="modalidade-title">Pacotes</h3>
-                        <p class="modalidade-desc">Pacotes de 4 ou 6 aulas. Acompanhamento da sua evolução com fotos de cada sessão e ajuste de metas conforme você avança.</p>
+                        <p class="modalidade-label" data-i18n="modal2Label">EVOLUÇÃO CONTÍNUA</p>
+                        <h3 class="modalidade-title" data-i18n="modal2Title">Pacotes</h3>
+                        <p class="modalidade-desc" data-i18n="modal2Desc">Pacotes de 4 ou 6 aulas. Acompanhamento da sua evolução com fotos de cada sessão e ajuste de metas conforme você avança.</p>
                     </div>
                 </div>
 
@@ -3740,9 +3194,9 @@
                 <div class="modalidade-card animate-on-scroll">
                     <img src="images/surftrip.JPG" alt="" loading="lazy" style="object-fit:cover;object-position:center;">
                     <div class="modalidade-overlay">
-                        <p class="modalidade-label">VIAGEM + SURF</p>
-                        <h3 class="modalidade-title">Surf Trip</h3>
-                        <p class="modalidade-desc">Viagens guiadas para os melhores destinos de surf. Mar, natureza e conexão em grupo.</p>
+                        <p class="modalidade-label" data-i18n="modal3Label">VIAGEM + SURF</p>
+                        <h3 class="modalidade-title" data-i18n="modal3Title">Surf Trip</h3>
+                        <p class="modalidade-desc" data-i18n="modal3Desc">Viagens guiadas para os melhores destinos de surf. Mar, natureza e conexão em grupo.</p>
                     </div>
                 </div>
             </div>
@@ -3751,9 +3205,9 @@
             <div class="modalidade-card modalidade-card--wide animate-on-scroll" style="margin-top: 4px;">
                 <img src="images/imersao.JPG" alt="" loading="lazy" style="object-fit:cover;object-position:center 70%;">
                 <div class="modalidade-overlay" style="background: linear-gradient(to right, rgba(39,39,39,0.95) 0%, rgba(39,39,39,0.6) 50%, rgba(39,39,39,0.2) 100%), linear-gradient(to top, rgba(39,39,39,0.7) 0%, transparent 60%);">
-                    <p class="modalidade-label">DIAS INTENSIVOS · TURMAS PEQUENAS</p>
-                    <h3 class="modalidade-title" style="font-size: clamp(1.75rem, 3.5vw, 2.75rem);">Imersão de Surf</h3>
-                    <p class="modalidade-desc">Fins de semana e feriados de surf intenso, teoria e muita conexão com o mar. Acompanhamento total do início ao fim. Vagas limitadas.</p>
+                    <p class="modalidade-label" data-i18n="modal4Label">DIAS INTENSIVOS · TURMAS PEQUENAS</p>
+                    <h3 class="modalidade-title" style="font-size: clamp(1.75rem, 3.5vw, 2.75rem);" data-i18n="modal4Title">Imersão de Surf</h3>
+                    <p class="modalidade-desc" data-i18n="modal4Desc">Fins de semana e feriados de surf intenso, teoria e muita conexão com o mar. Acompanhamento total do início ao fim. Vagas limitadas.</p>
                 </div>
             </div>
         </div>
@@ -3766,7 +3220,7 @@
 
                 <!-- Coluna esquerda: Próxima Imersão -->
                 <div class="agenda-imersao">
-                    <span class="agenda-label">PRÓXIMA IMERSÃO</span>
+                    <span class="agenda-label" data-i18n="agendaImmersionLabel">PRÓXIMA IMERSÃO</span>
                     <span class="agenda-date-badge">04 a 07 Jun</span>
                     <h2 class="agenda-title">Imersão Matinhos, PR</h2>
                     <p class="agenda-desc">Uma das ondas mais longas e consistentes do Sul do Brasil. Quatro dias de surf intenso, teoria e muita conexão com o mar.</p>
@@ -3779,9 +3233,9 @@
 
                 <!-- Coluna direita: Calendário -->
                 <div class="agenda-calendario">
-                    <span class="agenda-label">AGENDA VILLAGE</span>
-                    <h3 class="agenda-cal-title">Próximos eventos.</h3>
-                    <p class="agenda-cal-sub">A agenda sempre atualizada.</p>
+                    <span class="agenda-label" data-i18n="agendaCalLabel">AGENDA VILLAGE</span>
+                    <h3 class="agenda-cal-title" data-i18n="agendaCalTitle">Próximos eventos.</h3>
+                    <p class="agenda-cal-sub" data-i18n="agendaCalSub">A agenda sempre atualizada.</p>
 
                     <div class="agenda-evento">
                         <div class="agenda-evento-date">31 Mai</div>
@@ -3814,8 +3268,8 @@
         <div class="container">
             <div class="quiz-container">
                 <div class="quiz-header">
-                    <h2>Qual é o seu perfil?</h2>
-                    <p>3 perguntas pra gente entender onde você tá e pra onde quer ir.</p>
+                    <h2 data-i18n="quizH2">Qual é o seu perfil?</h2>
+                    <p data-i18n="quizIntro">3 perguntas pra gente entender onde você tá e pra onde quer ir.</p>
                 </div>
 
                 <div class="quiz-progress" id="quizProgress">
@@ -3827,103 +3281,103 @@
                 <form id="quizForm">
                     <!-- Question 1 - Nível -->
                     <div class="quiz-question active" data-question="1">
-                        <h3>Qual é seu nível atual no surf?</h3>
+                        <h3 data-i18n="quizQ1Title">Qual é seu nível atual no surf?</h3>
                         <div class="quiz-options">
                             <label class="quiz-option" data-level="0">
                                 <input type="radio" name="q1" value="zero">
                                 <span class="quiz-option-radio"></span>
-                                <span>Nunca surfei — quero começar do zero</span>
+                                <span data-i18n="quizQ1Opt1">Nunca surfei — quero começar do zero</span>
                             </label>
                             <label class="quiz-option" data-level="1">
                                 <input type="radio" name="q1" value="iniciante">
                                 <span class="quiz-option-radio"></span>
-                                <span>Já experimentei algumas vezes, mas tenho dificuldade</span>
+                                <span data-i18n="quizQ1Opt2">Já experimentei algumas vezes, mas tenho dificuldade</span>
                             </label>
                             <label class="quiz-option" data-level="2">
                                 <input type="radio" name="q1" value="intermediario">
                                 <span class="quiz-option-radio"></span>
-                                <span>Consigo surfar na espuma, quero evoluir para ondas</span>
+                                <span data-i18n="quizQ1Opt3">Consigo surfar na espuma, quero evoluir para ondas</span>
                             </label>
                             <label class="quiz-option" data-level="3">
                                 <input type="radio" name="q1" value="avancado">
                                 <span class="quiz-option-radio"></span>
-                                <span>Já surfo ondas verdes — busco técnica e manobras</span>
+                                <span data-i18n="quizQ1Opt4">Já surfo ondas verdes — busco técnica e manobras</span>
                             </label>
                         </div>
                     </div>
 
                     <!-- Question 2 - O que busca -->
                     <div class="quiz-question" data-question="2">
-                        <h3>O que você mais busca com as aulas?</h3>
+                        <h3 data-i18n="quizQ2Title">O que você mais busca com as aulas?</h3>
                         <div class="quiz-options">
                             <label class="quiz-option" data-motivation="experience">
                                 <input type="radio" name="q2" value="experience">
                                 <span class="quiz-option-radio"></span>
-                                <span>Viver uma experiência única e criar memórias especiais</span>
+                                <span data-i18n="quizQ2Opt1">Viver uma experiência única e criar memórias especiais</span>
                             </label>
                             <label class="quiz-option" data-motivation="evolution">
                                 <input type="radio" name="q2" value="evolution">
                                 <span class="quiz-option-radio"></span>
-                                <span>Evolução técnica real e consistente no surf</span>
+                                <span data-i18n="quizQ2Opt2">Evolução técnica real e consistente no surf</span>
                             </label>
                             <label class="quiz-option" data-motivation="lifestyle">
                                 <input type="radio" name="q2" value="lifestyle">
                                 <span class="quiz-option-radio"></span>
-                                <span>Adotar o surf como parte do meu estilo de vida</span>
+                                <span data-i18n="quizQ2Opt3">Adotar o surf como parte do meu estilo de vida</span>
                             </label>
                             <label class="quiz-option" data-motivation="immersion">
                                 <input type="radio" name="q2" value="immersion">
                                 <span class="quiz-option-radio"></span>
-                                <span>Participar de uma imersão — surf + conexão + viagem</span>
+                                <span data-i18n="quizQ2Opt4">Participar de uma imersão — surf + conexão + viagem</span>
                             </label>
                         </div>
                     </div>
 
                     <!-- Question 3 - Frequência -->
                     <div class="quiz-question" data-question="3">
-                        <h3>Como você imagina sua frequência?</h3>
+                        <h3 data-i18n="quizQ3Title">Como você imagina sua frequência?</h3>
                         <div class="quiz-options">
                             <label class="quiz-option" data-commitment="once">
                                 <input type="radio" name="q3" value="once">
                                 <span class="quiz-option-radio"></span>
-                                <span>Uma aula pontual — quero experimentar</span>
+                                <span data-i18n="quizQ3Opt1">Uma aula pontual — quero experimentar</span>
                             </label>
                             <label class="quiz-option" data-commitment="regular">
                                 <input type="radio" name="q3" value="regular">
                                 <span class="quiz-option-radio"></span>
-                                <span>Regular: 1–2 aulas por mês</span>
+                                <span data-i18n="quizQ3Opt2">Regular: 1–2 aulas por mês</span>
                             </label>
                             <label class="quiz-option" data-commitment="dedicated">
                                 <input type="radio" name="q3" value="dedicated">
                                 <span class="quiz-option-radio"></span>
-                                <span>Quero me dedicar de verdade — frequência semanal</span>
+                                <span data-i18n="quizQ3Opt3">Quero me dedicar de verdade — frequência semanal</span>
                             </label>
                             <label class="quiz-option" data-commitment="immersion">
                                 <input type="radio" name="q3" value="immersion">
                                 <span class="quiz-option-radio"></span>
-                                <span>Imersão total: trips e pacote de evolução acelerada</span>
+                                <span data-i18n="quizQ3Opt4">Imersão total: trips e pacote de evolução acelerada</span>
                             </label>
                         </div>
                     </div>
 
                     <div class="quiz-nav">
-                        <button type="button" class="btn btn-secondary" id="prevBtn" style="visibility: hidden;">Anterior</button>
-                        <button type="button" class="btn btn-primary" id="nextBtn">Próxima</button>
+                        <button type="button" class="btn btn-secondary" id="prevBtn" style="visibility: hidden;" data-i18n="quizPrev">Anterior</button>
+                        <button type="button" class="btn btn-primary" id="nextBtn" data-i18n="quizNext">Próxima</button>
                     </div>
                 </form>
 
                 <!-- Result Section -->
                 <div class="quiz-result" id="quizResult">
                     <div class="result-level" id="resultEmoji">🤙</div>
-                    <h3 class="result-title">Que ótimo!</h3>
-                    <p class="result-description" id="resultDesc">Manda um oi pra gente no WhatsApp — a gente monta a melhor proposta pro seu perfil.</p>
+                    <h3 class="result-title" data-i18n="quizResultTitle">Que ótimo!</h3>
+                    <p class="result-description" id="resultDesc" data-i18n="quizResultDesc">Manda um oi pra gente no WhatsApp — a gente monta a melhor proposta pro seu perfil.</p>
 
                     <a href="https://wa.me/554896899856?text=Olá! Fiz o quiz no site da Village Summer. Gostaria de saber mais!" class="btn btn-whatsapp" target="_blank" rel="noopener" id="resultCta" style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:0.75rem;">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        Falar com a gente no WhatsApp
+                        <span data-i18n="quizResultCta2">Falar com a gente no WhatsApp</span>
                     </a>
 
-                    <button type="button" class="btn btn-secondary" id="restartQuiz" style="margin-top: 1rem;">Refazer</button>
+                    <button type="button" class="btn btn-secondary" id="restartQuiz" style="margin-top: 1rem;" data-i18n="quizRestart">Refazer</button>
                 </div>
             </div>
         </div>
@@ -3933,29 +3387,29 @@
     <section class="faq-section">
         <div class="container">
             <div class="section-title">
-                <h2>Perguntas Frequentes</h2>
-                <p>Tire suas dúvidas sobre nossas aulas de surf</p>
+                <h2 data-i18n="faqTitle">Perguntas Frequentes</h2>
+                <p data-i18n="faqSubtitle">Tire suas dúvidas sobre nossas aulas de surf</p>
             </div>
 
             <div class="faq-grid">
                 <div class="faq-item">
-                    <div class="faq-question">Quanto custa uma aula de surf individual?</div>
-                    <div class="faq-answer">Os valores variam de acordo com o pacote escolhido. Oferecemos desde aulas avulsas até pacotes de evolução contínua. Entre em contato pelo WhatsApp para receber uma proposta personalizada para seu nível.</div>
+                    <div class="faq-question" data-i18n="faq1Q">Quanto custa uma aula de surf individual?</div>
+                    <div class="faq-answer" data-i18n="faq1A">Os valores variam de acordo com o pacote escolhido. Oferecemos desde aulas avulsas até pacotes de evolução contínua. Entre em contato pelo WhatsApp para receber uma proposta personalizada para seu nível.</div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Preciso ter experiência prévia para fazer aula?</div>
-                    <div class="faq-answer">Não! Na Village Summer atendemos desde pessoas que nunca surfaram até surfistas avançados. Nossa metodologia é adaptada para cada nível, garantindo evolução segura e eficiente.</div>
+                    <div class="faq-question" data-i18n="faq2Q">Preciso ter experiência prévia para fazer aula?</div>
+                    <div class="faq-answer" data-i18n="faq2A">Não! Na Village Summer atendemos desde pessoas que nunca surfaram até surfistas avançados. Nossa metodologia é adaptada para cada nível, garantindo evolução segura e eficiente.</div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">O que está incluso na aula de surf?</div>
-                    <div class="faq-answer">Todas as aulas incluem equipamento completo (prancha, lycra, wetsuit se necessário), fotos da sua sessão e acompanhamento personalizado. Para alunos mais avançados, oferecemos também vídeo-análise da performance.</div>
+                    <div class="faq-question" data-i18n="faq3Q">O que está incluso na aula de surf?</div>
+                    <div class="faq-answer" data-i18n="faq3A">Todas as aulas incluem equipamento completo (prancha, lycra, wetsuit se necessário), fotos da sua sessão e acompanhamento personalizado. Para alunos mais avançados, oferecemos também vídeo-análise da performance.</div>
                 </div>
 
                 <div class="faq-item">
-                    <div class="faq-question">Em quais praias as aulas acontecem?</div>
-                    <div class="faq-answer">A gente atua no Matadeiro, Armação e Solidão, no sul da ilha. A praia é escolhida conforme as condições do mar e o seu nível no dia.</div>
+                    <div class="faq-question" data-i18n="faq4Q">Em quais praias as aulas acontecem?</div>
+                    <div class="faq-answer" data-i18n="faq4A">A gente atua no Matadeiro, Armação e Solidão, no sul da ilha. A praia é escolhida conforme as condições do mar e o seu nível no dia.</div>
                 </div>
             </div>
         </div>
@@ -4014,24 +3468,24 @@
                     <a href="#" aria-label="Village Summer">
                         <img src="images/logo village.png" alt="Village Summer" class="footer-brand-img">
                     </a>
-                    <p class="footer-brand-desc">Escola de surf em Florianópolis. Conectando pessoas ao mar, do jeito certo.</p>
+                    <p class="footer-brand-desc" data-i18n="footerDesc">Escola de surf em Florianópolis. Conectando pessoas ao mar, do jeito certo.</p>
                 </div>
 
                 <!-- Col 2: Navegação -->
                 <div>
-                    <h4 class="footer-col-title">Navegação</h4>
+                    <h4 class="footer-col-title" data-i18n="footerNav">Navegação</h4>
                     <nav class="footer-nav-links">
-                        <a href="#aula-individual" class="footer-nav-link">Aula Individual</a>
-                        <a href="#metodo" class="footer-nav-link">Metodologia</a>
-                        <a href="#depoimentos" class="footer-nav-link">Depoimentos</a>
-                        <a href="#trips" class="footer-nav-link">Agenda</a>
-                        <a href="#contato" class="footer-nav-link">Contato</a>
+                        <a href="#aula-individual" class="footer-nav-link" data-i18n="footerNavLesson">Aula Individual</a>
+                        <a href="#metodo" class="footer-nav-link" data-i18n="footerNavMethod">Metodologia</a>
+                        <a href="#depoimentos" class="footer-nav-link" data-i18n="footerNavTestimonials">Depoimentos</a>
+                        <a href="#trips" class="footer-nav-link" data-i18n="footerNavAgenda">Agenda</a>
+                        <a href="#contato" class="footer-nav-link" data-i18n="footerNavContact">Contato</a>
                     </nav>
                 </div>
 
                 <!-- Col 3: Contato -->
                 <div>
-                    <h4 class="footer-col-title">Contato</h4>
+                    <h4 class="footer-col-title" data-i18n="footerContact">Contato</h4>
                     <div class="footer-contact-items">
                         <a href="https://wa.me/554896899856" class="footer-contact-item" target="_blank" rel="noopener">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -4050,7 +3504,7 @@
 
                 <!-- Col 4: Redes Sociais -->
                 <div>
-                    <h4 class="footer-col-title">Redes Sociais</h4>
+                    <h4 class="footer-col-title" data-i18n="footerSocial">Redes Sociais</h4>
                     <div class="footer-social-icons">
                         <a href="https://instagram.com/villagesummersurf" class="footer-social-icon" target="_blank" rel="noopener" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -4065,7 +3519,7 @@
 
             <!-- Bottom bar -->
             <div class="footer-bottom">
-                <p class="footer-copyright">&copy; 2026 Village Summer Surf. Todos os direitos reservados.</p>
+                <p class="footer-copyright" data-i18n="footerCopyright">&copy; 2026 Village Summer Surf. Todos os direitos reservados.</p>
                 <div class="footer-legal">
                     <a href="#">Política de Privacidade</a>
                     <span class="footer-legal-dot">·</span>
@@ -4216,7 +3670,8 @@
                 heroTitle: 'Você não vai só aprender a surfar. Você vai se desbloquear.',
                 heroSubtitle: 'A Ju cresceu no surf, o Kelvin dedicou mais de uma década ao mar. A Village nasceu dessa história.',
                 heroLocation: 'Aulas particulares em Campeche, Armação e Matadeiro',
-                heroCta: 'AGENDAR MINHA AULA INDIVIDUAL',
+                heroEyebrow: 'Escola de Surf · Sul de Florianópolis',
+                heroCta: 'Agendar Minha Aula',
                 heroCtaSecondary: 'Conheça no Instagram',
 
                 // Stats
@@ -4364,16 +3819,115 @@
                 q10Opt4: 'Fazendo manobras, participando de trips e talvez competindo',
 
                 // Final CTA
-                ctaTitle: 'Sua Onda Está Esperando',
-                ctaDesc: 'Agende sua aula individual e comece sua jornada de transformação através do surf.',
+                ctaTitle: 'A sua próxima<br>onda começa<br>aqui.',
+                ctaDesc: 'Fala com a gente. Sem compromisso. A gente entende o que você busca e indica o melhor caminho.',
                 ctaWhatsapp: 'Agendar pelo WhatsApp',
                 ctaInstagram: 'Seguir no Instagram',
 
                 // Footer
-                footerDesc: 'Escola de surf em Florianópolis. 5 anos conectando pessoas ao mar, do jeito certo.',
+                footerDesc: 'Escola de surf em Florianópolis. Conectando pessoas ao mar, do jeito certo.',
                 footerContact: 'Contato',
                 footerSocial: 'Redes Sociais',
-                footerCopyright: '© 2026 Village Summer - Surf Experience. Todos os direitos reservados.'
+                footerNav: 'Navegação',
+                footerNavLesson: 'Aula Individual',
+                footerNavMethod: 'Metodologia',
+                footerNavTestimonials: 'Depoimentos',
+                footerNavAgenda: 'Agenda',
+                footerNavContact: 'Contato',
+                footerCopyright: '© 2026 Village Summer Surf. Todos os direitos reservados.',
+
+                // Lesson (additional)
+                lessonLabel: 'AULA INDIVIDUAL',
+                lessonBenefitsText: 'Atenção focada em você do início ao fim, progressão no seu ritmo, correção técnica na hora certa e horários que cabem na sua rotina. Todo mundo sai com foto da sessão.',
+
+                // Why Village (actual content)
+                whyLabel: 'POR QUE A VILLAGE SUMMER?',
+                whyH2: 'Surf de verdade, do jeito certo.',
+                wvTitle1: 'É você no centro',
+                wvDesc1: 'Cada aula começa de onde você está. Não existe protocolo padrão aqui. Existe o seu surf, com atenção real de quem está na água com você.',
+                wvTitle2: 'Evolução com vídeo',
+                wvDesc2: 'Quando você já tem a base, a gente vai fundo. Filmamos suas ondas e analisamos cada movimento junto com você, pra identificar o que ajustar e acelerar sua evolução.',
+                wvTitle3: 'A Ju e o Kelvin na água com você',
+                wvDesc3: 'Mais de uma década no mar e uma presença que faz diferença dentro e fora da água. Segurança e técnica andam sempre juntas.',
+
+                // Método Desbloqueia Surf
+                metodLabel: 'Como a Gente Ensina',
+                metodH2: 'O Método<br><span>Desbloqueia Surf</span>',
+                metodDesc: 'A Village desenvolveu o Método Desbloqueia Surf ao longo dos anos. Esse é um caminho que integra técnica, consciência corporal e conexão com o oceano, pra você evoluir de dentro pra fora.',
+                metodCard1Title: 'Técnica',
+                metodCard1Desc: 'Cada movimento tem uma razão. A gente explica o porquê, não só o como.',
+                metodCard2Title: 'Mente',
+                metodCard2Desc: 'Medo, bloqueio, insegurança. A gente trabalha isso junto com a técnica, não separado dela.',
+                metodCard3Title: 'Mar',
+                metodCard3Desc: 'O oceano é o ambiente, não o obstáculo. Aprender a ler as ondas faz parte do método.',
+
+                // Floripa (actual content)
+                floripaLabel: 'SUL DE FLORIANÓPOLIS',
+                floripaH2: 'O mar aqui é assim.',
+                floripaIntro: 'Matadeiro, Armação, Solidão. Cada praia tem sua personalidade, e a gente escolhe a certa pra você conforme as condições do dia. É assim que funciona surfar numa ilha.',
+                beach1H4: 'Matadeiro',
+                beach1P: 'Ondas com mais força, pra quem já tem base e quer evoluir.',
+                beach2H4: 'Armação',
+                beach2P: 'Ambiente tranquilo, ondas suaves. Boa pra quem está começando.',
+                beach3H4: 'Solidão',
+                beach3P: 'Uma das praias mais bonitas da ilha. Ondas que surpreendem.',
+
+                // Modalidades
+                modalLabel: 'Como surfar com a gente',
+                modalH2: 'Nossas<br><span>Experiências</span>',
+                modal1Label: 'UMA SESSÃO · TUDO INCLUSO',
+                modal1Title: 'Aula Avulsa',
+                modal1Desc: 'Uma aula com a gente. Equipamento, fotos da sessão e atenção total inclusos. Pra quem quer sentir antes de decidir, ou simplesmente surfar quando der.',
+                modal2Label: 'EVOLUÇÃO CONTÍNUA',
+                modal2Title: 'Pacotes',
+                modal2Desc: 'Pacotes de 4 ou 6 aulas. Acompanhamento da sua evolução com fotos de cada sessão e ajuste de metas conforme você avança.',
+                modal3Label: 'VIAGEM + SURF',
+                modal3Title: 'Surf Trip',
+                modal3Desc: 'Viagens guiadas para os melhores destinos de surf. Mar, natureza e conexão em grupo.',
+                modal4Label: 'DIAS INTENSIVOS · TURMAS PEQUENAS',
+                modal4Title: 'Imersão de Surf',
+                modal4Desc: 'Fins de semana e feriados de surf intenso, teoria e muita conexão com o mar. Acompanhamento total do início ao fim. Vagas limitadas.',
+
+                // Agenda
+                agendaImmersionLabel: 'PRÓXIMA IMERSÃO',
+                agendaCalLabel: 'AGENDA VILLAGE',
+                agendaCalTitle: 'Próximos eventos.',
+                agendaCalSub: 'A agenda sempre atualizada.',
+
+                // Quiz (3-question version)
+                quizH2: 'Qual é o seu perfil?',
+                quizIntro: '3 perguntas pra gente entender onde você tá e pra onde quer ir.',
+                quizQ1Title: 'Qual é seu nível atual no surf?',
+                quizQ1Opt1: 'Nunca surfei — quero começar do zero',
+                quizQ1Opt2: 'Já experimentei algumas vezes, mas tenho dificuldade',
+                quizQ1Opt3: 'Consigo surfar na espuma, quero evoluir para ondas',
+                quizQ1Opt4: 'Já surfo ondas verdes — busco técnica e manobras',
+                quizQ2Title: 'O que você mais busca com as aulas?',
+                quizQ2Opt1: 'Viver uma experiência única e criar memórias especiais',
+                quizQ2Opt2: 'Evolução técnica real e consistente no surf',
+                quizQ2Opt3: 'Adotar o surf como parte do meu estilo de vida',
+                quizQ2Opt4: 'Participar de uma imersão — surf + conexão + viagem',
+                quizQ3Title: 'Como você imagina sua frequência?',
+                quizQ3Opt1: 'Uma aula pontual — quero experimentar',
+                quizQ3Opt2: 'Regular: 1–2 aulas por mês',
+                quizQ3Opt3: 'Quero me dedicar de verdade — frequência semanal',
+                quizQ3Opt4: 'Imersão total: trips e pacote de evolução acelerada',
+                quizResultTitle: 'Que ótimo!',
+                quizResultDesc: 'Manda um oi pra gente no WhatsApp — a gente monta a melhor proposta pro seu perfil.',
+                quizResultCta2: 'Falar com a gente no WhatsApp',
+                quizRestart: 'Refazer',
+
+                // FAQ
+                faqTitle: 'Perguntas Frequentes',
+                faqSubtitle: 'Tire suas dúvidas sobre nossas aulas de surf',
+                faq1Q: 'Quanto custa uma aula de surf individual?',
+                faq1A: 'Os valores variam de acordo com o pacote escolhido. Oferecemos desde aulas avulsas até pacotes de evolução contínua. Entre em contato pelo WhatsApp para receber uma proposta personalizada para seu nível.',
+                faq2Q: 'Preciso ter experiência prévia para fazer aula?',
+                faq2A: 'Não! Na Village Summer atendemos desde pessoas que nunca surfaram até surfistas avançados. Nossa metodologia é adaptada para cada nível, garantindo evolução segura e eficiente.',
+                faq3Q: 'O que está incluso na aula de surf?',
+                faq3A: 'Todas as aulas incluem equipamento completo (prancha, lycra, wetsuit se necessário), fotos da sua sessão e acompanhamento personalizado. Para alunos mais avançados, oferecemos também vídeo-análise da performance.',
+                faq4Q: 'Em quais praias as aulas acontecem?',
+                faq4A: 'A gente atua no Matadeiro, Armação e Solidão, no sul da ilha. A praia é escolhida conforme as condições do mar e o seu nível no dia.'
             },
             en: {
                 // Nav
@@ -4391,7 +3945,8 @@
                 heroTitle: 'Surf with those<br>who love the sea.',
                 heroSubtitle: 'One-on-one lessons with exclusive methodology and professional video analysis. Campeche, Armação and Matadeiro.',
                 heroLocation: 'Private lessons in Campeche, Armação and Matadeiro',
-                heroCta: 'BOOK MY PRIVATE LESSON',
+                heroEyebrow: 'Surf School · South Florianópolis',
+                heroCta: 'Book My Lesson',
                 heroCtaSecondary: 'Follow on Instagram',
 
                 // Stats
@@ -4534,10 +4089,109 @@
                 ctaInstagram: 'Follow on Instagram',
 
                 // Footer
-                footerDesc: 'Surf school in Florianópolis. 5 years connecting people to the sea, the right way.',
+                footerDesc: 'Surf school in Florianópolis. Connecting people to the sea, the right way.',
                 footerContact: 'Contact',
                 footerSocial: 'Social Media',
-                footerCopyright: '© 2026 Village Summer - Surf Experience. All rights reserved.'
+                footerNav: 'Navigation',
+                footerNavLesson: 'Private Lesson',
+                footerNavMethod: 'Methodology',
+                footerNavTestimonials: 'Testimonials',
+                footerNavAgenda: 'Schedule',
+                footerNavContact: 'Contact',
+                footerCopyright: '© 2026 Village Summer Surf. All rights reserved.',
+
+                // Lesson (additional)
+                lessonLabel: 'PRIVATE LESSON',
+                lessonBenefitsText: 'Full attention from start to finish, progression at your own pace, technical correction at the right moment, and hours that fit your routine. Everyone leaves with session photos.',
+
+                // Why Village (actual content)
+                whyLabel: 'WHY VILLAGE SUMMER?',
+                whyH2: 'Real surf, done right.',
+                wvTitle1: "You're the center",
+                wvDesc1: "Each lesson starts from where you are. There's no standard protocol here. It's your surf, with real attention from someone in the water with you.",
+                wvTitle2: 'Evolution with video',
+                wvDesc2: "When you have the foundation, we go deep. We film your waves and analyze every movement together, identifying what to adjust to accelerate your evolution.",
+                wvTitle3: 'Ju and Kelvin in the water with you',
+                wvDesc3: 'More than a decade at sea and a presence that makes a difference in and out of the water. Safety and technique always go hand in hand.',
+
+                // Método Desbloqueia Surf
+                metodLabel: 'How We Teach',
+                metodH2: 'The Unlock<br><span>Surf Method</span>',
+                metodDesc: 'Village developed the Desbloqueia Surf Method over the years. This is a path that integrates technique, body awareness and connection with the ocean, so you evolve from the inside out.',
+                metodCard1Title: 'Technique',
+                metodCard1Desc: 'Every movement has a reason. We explain the why, not just the how.',
+                metodCard2Title: 'Mind',
+                metodCard2Desc: 'Fear, blockage, insecurity. We work on this alongside technique, not separate from it.',
+                metodCard3Title: 'Ocean',
+                metodCard3Desc: "The ocean is the environment, not the obstacle. Learning to read the waves is part of the method.",
+
+                // Floripa (actual content)
+                floripaLabel: 'SOUTH FLORIANÓPOLIS',
+                floripaH2: 'The ocean here is like this.',
+                floripaIntro: "Matadeiro, Armação, Solidão. Each beach has its own personality, and we choose the right one for you based on the day's conditions. That's what surfing on an island is all about.",
+                beach1H4: 'Matadeiro',
+                beach1P: 'More powerful waves, for those with a foundation looking to evolve.',
+                beach2H4: 'Armação',
+                beach2P: 'Calm environment, gentle waves. Great for beginners.',
+                beach3H4: 'Solidão',
+                beach3P: 'One of the most beautiful beaches on the island. Waves that surprise.',
+
+                // Modalidades
+                modalLabel: 'How to surf with us',
+                modalH2: 'Our<br><span>Experiences</span>',
+                modal1Label: 'ONE SESSION · ALL INCLUDED',
+                modal1Title: 'Single Lesson',
+                modal1Desc: 'One lesson with us. Equipment, session photos and full attention included. For those who want to feel it before deciding, or simply surf when they can.',
+                modal2Label: 'CONTINUOUS EVOLUTION',
+                modal2Title: 'Packages',
+                modal2Desc: '4 or 6 lesson packages. Track your evolution with photos from each session and goal adjustments as you progress.',
+                modal3Label: 'TRAVEL + SURF',
+                modal3Title: 'Surf Trip',
+                modal3Desc: 'Guided trips to the best surf destinations. Ocean, nature and group connection.',
+                modal4Label: 'INTENSIVE DAYS · SMALL GROUPS',
+                modal4Title: 'Surf Immersion',
+                modal4Desc: 'Weekends and holidays of intense surf, theory and deep ocean connection. Full support from start to finish. Limited spots.',
+
+                // Agenda
+                agendaImmersionLabel: 'NEXT IMMERSION',
+                agendaCalLabel: 'VILLAGE SCHEDULE',
+                agendaCalTitle: 'Upcoming events.',
+                agendaCalSub: 'Always up to date.',
+
+                // Quiz (3-question version)
+                quizH2: "What's your profile?",
+                quizIntro: '3 questions so we can understand where you are and where you want to go.',
+                quizQ1Title: 'What is your current surf level?',
+                quizQ1Opt1: 'Never surfed — want to start from scratch',
+                quizQ1Opt2: 'Tried a few times, but still struggling',
+                quizQ1Opt3: 'Can surf the whitewash, want to evolve to waves',
+                quizQ1Opt4: 'Already surf green waves — seeking technique and maneuvers',
+                quizQ2Title: 'What do you most want from lessons?',
+                quizQ2Opt1: 'Live a unique experience and create special memories',
+                quizQ2Opt2: 'Real and consistent technical evolution in surfing',
+                quizQ2Opt3: 'Adopt surfing as part of my lifestyle',
+                quizQ2Opt4: 'Join an immersion — surf + connection + travel',
+                quizQ3Title: 'How do you imagine your frequency?',
+                quizQ3Opt1: 'A one-time lesson — I want to try it',
+                quizQ3Opt2: 'Regular: 1–2 lessons per month',
+                quizQ3Opt3: 'I want to truly commit — weekly frequency',
+                quizQ3Opt4: 'Total immersion: trips and accelerated evolution package',
+                quizResultTitle: 'Great!',
+                quizResultDesc: 'Send us a message on WhatsApp — we\'ll put together the best proposal for your profile.',
+                quizResultCta2: 'Talk to us on WhatsApp',
+                quizRestart: 'Retake',
+
+                // FAQ
+                faqTitle: 'Frequently Asked Questions',
+                faqSubtitle: 'Get your questions answered about our surf lessons',
+                faq1Q: 'How much does a private surf lesson cost?',
+                faq1A: 'Prices vary according to the chosen package. We offer everything from single lessons to continuous evolution packages. Contact us on WhatsApp to receive a personalized proposal for your level.',
+                faq2Q: 'Do I need prior experience to take a lesson?',
+                faq2A: 'No! At Village Summer we serve everyone from first-timers to advanced surfers. Our methodology is adapted for each level, ensuring safe and efficient evolution.',
+                faq3Q: 'What is included in the surf lesson?',
+                faq3A: 'All lessons include complete equipment (board, rashguard, wetsuit if needed), session photos and personalized coaching. For more advanced students, we also offer video analysis of performance.',
+                faq4Q: 'Which beaches do lessons take place at?',
+                faq4A: 'We operate at Matadeiro, Armação and Solidão, in the south of the island. The beach is chosen according to sea conditions and your level on the day.'
             },
             es: {
                 // Nav
@@ -4555,7 +4209,8 @@
                 heroTitle: 'Surfe con quienes<br>aman el mar.',
                 heroSubtitle: 'Clases individuales con metodología exclusiva y videoanálisis profesional. Campeche, Armação y Matadeiro.',
                 heroLocation: 'Clases particulares en Campeche, Armação y Matadeiro',
-                heroCta: 'RESERVAR MI CLASE INDIVIDUAL',
+                heroEyebrow: 'Escuela de Surf · Sur de Florianópolis',
+                heroCta: 'Reservar Mi Clase',
                 heroCtaSecondary: 'Conocer en Instagram',
 
                 // Stats
@@ -4692,16 +4347,115 @@
                 q10Opt4: 'Haciendo maniobras, participando en trips y tal vez compitiendo',
 
                 // Final CTA
-                ctaTitle: 'Tu Ola Te Está Esperando',
-                ctaDesc: 'Reserva tu clase individual y comienza tu viaje de transformación a través del surf.',
+                ctaTitle: 'Tu Ola<br>Te Está<br>Esperando.',
+                ctaDesc: 'Habla con nosotros. Sin compromiso. Entendemos lo que buscas y te indicamos el mejor camino.',
                 ctaWhatsapp: 'Reservar por WhatsApp',
                 ctaInstagram: 'Seguir en Instagram',
 
                 // Footer
-                footerDesc: 'Escuela de surf en Florianópolis. 5 años conectando personas al mar, de la manera correcta.',
+                footerDesc: 'Escuela de surf en Florianópolis. Conectando personas al mar, de la manera correcta.',
                 footerContact: 'Contacto',
                 footerSocial: 'Redes Sociales',
-                footerCopyright: '© 2026 Village Summer - Surf Experience. Todos los derechos reservados.'
+                footerNav: 'Navegación',
+                footerNavLesson: 'Clase Individual',
+                footerNavMethod: 'Metodología',
+                footerNavTestimonials: 'Testimonios',
+                footerNavAgenda: 'Agenda',
+                footerNavContact: 'Contacto',
+                footerCopyright: '© 2026 Village Summer Surf. Todos los derechos reservados.',
+
+                // Lesson (additional)
+                lessonLabel: 'CLASE INDIVIDUAL',
+                lessonBenefitsText: 'Atención total de principio a fin, progresión a tu ritmo, corrección técnica en el momento adecuado y horarios que se adaptan a tu rutina. Todos se van con fotos de la sesión.',
+
+                // Why Village (actual content)
+                whyLabel: '¿POR QUÉ VILLAGE SUMMER?',
+                whyH2: 'Surf de verdad, a la manera correcta.',
+                wvTitle1: 'Tú eres el centro',
+                wvDesc1: 'Cada clase comienza desde donde estás. No hay protocolo estándar aquí. Es tu surf, con atención real de quien está en el agua contigo.',
+                wvTitle2: 'Evolución con video',
+                wvDesc2: 'Cuando ya tienes la base, vamos a fondo. Filmamos tus olas y analizamos cada movimiento contigo, para identificar qué ajustar y acelerar tu evolución.',
+                wvTitle3: 'Ju y Kelvin en el agua contigo',
+                wvDesc3: 'Más de una década en el mar y una presencia que marca la diferencia dentro y fuera del agua. Seguridad y técnica siempre van juntas.',
+
+                // Método Desbloqueia Surf
+                metodLabel: 'Cómo Enseñamos',
+                metodH2: 'El Método<br><span>Desbloquea Surf</span>',
+                metodDesc: 'Village desarrolló el Método Desbloqueia Surf a lo largo de los años. Este es un camino que integra técnica, conciencia corporal y conexión con el océano, para que evoluciones desde adentro hacia afuera.',
+                metodCard1Title: 'Técnica',
+                metodCard1Desc: 'Cada movimiento tiene una razón. Explicamos el porqué, no solo el cómo.',
+                metodCard2Title: 'Mente',
+                metodCard2Desc: 'Miedo, bloqueo, inseguridad. Trabajamos esto junto con la técnica, no separado de ella.',
+                metodCard3Title: 'Mar',
+                metodCard3Desc: 'El océano es el entorno, no el obstáculo. Aprender a leer las olas es parte del método.',
+
+                // Floripa (actual content)
+                floripaLabel: 'SUR DE FLORIANÓPOLIS',
+                floripaH2: 'El mar aquí es así.',
+                floripaIntro: 'Matadeiro, Armação, Solidão. Cada playa tiene su propia personalidad, y elegimos la correcta para ti según las condiciones del día. Así es como funciona surfear en una isla.',
+                beach1H4: 'Matadeiro',
+                beach1P: 'Olas con más fuerza, para quienes ya tienen base y quieren evolucionar.',
+                beach2H4: 'Armação',
+                beach2P: 'Ambiente tranquilo, olas suaves. Buena para quienes están empezando.',
+                beach3H4: 'Solidão',
+                beach3P: 'Una de las playas más bonitas de la isla. Olas que sorprenden.',
+
+                // Modalidades
+                modalLabel: 'Cómo surfear con nosotros',
+                modalH2: 'Nuestras<br><span>Experiencias</span>',
+                modal1Label: 'UNA SESIÓN · TODO INCLUIDO',
+                modal1Title: 'Clase Individual',
+                modal1Desc: 'Una clase con nosotros. Equipo, fotos de la sesión y atención total incluidos. Para quienes quieren sentirlo antes de decidir, o simplemente surfear cuando puedan.',
+                modal2Label: 'EVOLUCIÓN CONTINUA',
+                modal2Title: 'Paquetes',
+                modal2Desc: 'Paquetes de 4 o 6 clases. Seguimiento de tu evolución con fotos de cada sesión y ajuste de metas conforme avanzas.',
+                modal3Label: 'VIAJE + SURF',
+                modal3Title: 'Surf Trip',
+                modal3Desc: 'Viajes guiados a los mejores destinos de surf. Mar, naturaleza y conexión en grupo.',
+                modal4Label: 'DÍAS INTENSIVOS · GRUPOS PEQUEÑOS',
+                modal4Title: 'Inmersión de Surf',
+                modal4Desc: 'Fines de semana y feriados de surf intenso, teoría y mucha conexión con el mar. Acompañamiento total de principio a fin. Plazas limitadas.',
+
+                // Agenda
+                agendaImmersionLabel: 'PRÓXIMA INMERSIÓN',
+                agendaCalLabel: 'AGENDA VILLAGE',
+                agendaCalTitle: 'Próximos eventos.',
+                agendaCalSub: 'La agenda siempre actualizada.',
+
+                // Quiz (3-question version)
+                quizH2: '¿Cuál es tu perfil?',
+                quizIntro: '3 preguntas para que entendamos dónde estás y hacia dónde quieres ir.',
+                quizQ1Title: '¿Cuál es tu nivel actual en el surf?',
+                quizQ1Opt1: 'Nunca surfeé — quiero empezar desde cero',
+                quizQ1Opt2: 'Lo intenté algunas veces, pero aún tengo dificultad',
+                quizQ1Opt3: 'Puedo surfear la espuma, quiero evolucionar hacia olas',
+                quizQ1Opt4: 'Ya surfeo olas verdes — busco técnica y maniobras',
+                quizQ2Title: '¿Qué buscas más con las clases?',
+                quizQ2Opt1: 'Vivir una experiencia única y crear recuerdos especiales',
+                quizQ2Opt2: 'Evolución técnica real y consistente en el surf',
+                quizQ2Opt3: 'Adoptar el surf como parte de mi estilo de vida',
+                quizQ2Opt4: 'Participar de una inmersión — surf + conexión + viaje',
+                quizQ3Title: '¿Cómo imaginas tu frecuencia?',
+                quizQ3Opt1: 'Una clase puntual — quiero experimentar',
+                quizQ3Opt2: 'Regular: 1–2 clases por mes',
+                quizQ3Opt3: 'Quiero dedicarme de verdad — frecuencia semanal',
+                quizQ3Opt4: 'Inmersión total: trips y paquete de evolución acelerada',
+                quizResultTitle: '¡Genial!',
+                quizResultDesc: 'Mándanos un saludo en WhatsApp — armamos la mejor propuesta para tu perfil.',
+                quizResultCta2: 'Hablar con nosotros en WhatsApp',
+                quizRestart: 'Reiniciar',
+
+                // FAQ
+                faqTitle: 'Preguntas Frecuentes',
+                faqSubtitle: 'Resuelve tus dudas sobre nuestras clases de surf',
+                faq1Q: '¿Cuánto cuesta una clase de surf individual?',
+                faq1A: 'Los valores varían según el paquete elegido. Ofrecemos desde clases sueltas hasta paquetes de evolución continua. Contáctanos por WhatsApp para recibir una propuesta personalizada para tu nivel.',
+                faq2Q: '¿Necesito experiencia previa para tomar una clase?',
+                faq2A: '¡No! En Village Summer atendemos desde personas que nunca han surfeado hasta surfistas avanzados. Nuestra metodología está adaptada para cada nivel, garantizando una evolución segura y eficiente.',
+                faq3Q: '¿Qué está incluido en la clase de surf?',
+                faq3A: 'Todas las clases incluyen equipo completo (tabla, lycra, wetsuit si es necesario), fotos de tu sesión y acompañamiento personalizado. Para alumnos más avanzados, también ofrecemos videoanálisis del desempeño.',
+                faq4Q: '¿En qué playas se realizan las clases?',
+                faq4A: 'Operamos en Matadeiro, Armação y Solidão, en el sur de la isla. La playa se elige según las condiciones del mar y tu nivel en el día.'
             }
         };
 
