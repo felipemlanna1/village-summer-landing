@@ -19,6 +19,9 @@
     /></noscript>
     <!-- End Meta Pixel Code -->
 
+    <!-- Elfsight Instagram Feed -->
+    <script src="https://elfsightcdn.com/platform.js" async></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -37,7 +40,7 @@
 
     <!-- SEO Meta Tags - Português (Default) -->
     <title>Aula de Surf Individual Florianópolis | Escola de Surf Campeche | Village Summer</title>
-    <meta name="description" content="Aulas de surf individuais no Sul de Florianópolis. Campeche, Armação, Matadeiro. +10 anos de experiência, +1000 alunos formados, instrutores salva-vidas certificados. Metodologia exclusiva com vídeo-análise profissional. A melhor escola de surf de Floripa!">
+    <meta name="description" content="Aulas de surf individuais no Sul de Florianópolis. Campeche, Armação, Matadeiro. 20+ anos de experiência, +1000 alunos formados, instrutores salva-vidas certificados. Método Desbloqueia Surf com vídeo-análise profissional. A melhor escola de surf de Floripa!">
     <meta name="keywords" content="aula de surf individual florianópolis, aula de surf campeche, escola de surf sul da ilha, aula particular surf floripa, surf armação, surf matadeiro, aula de surf florianópolis, escola de surf florianópolis, surf lesson florianopolis, clases de surf florianopolis, aula surf iniciante floripa, melhor escola surf floripa, surf school brazil, learn to surf florianopolis, private surf lessons brazil, escuela de surf brasil, clases de surf florianopolis, surf camp floripa, video analysis surf, beginner surf lessons">
     <meta name="author" content="Village Summer - Surf Experience">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
@@ -57,7 +60,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://felipemlanna1.github.io/village-summer-landing/">
     <meta property="og:title" content="Aula de Surf Individual Florianópolis | Village Summer">
-    <meta property="og:description" content="Aulas de surf individuais no Sul de Florianópolis. +10 anos, +1000 alunos, instrutores salva-vidas. Metodologia exclusiva com vídeo-análise profissional.">
+    <meta property="og:description" content="Aulas de surf individuais no Sul de Florianópolis. 20+ anos, +1000 alunos, instrutores salva-vidas. Método Desbloqueia Surf com vídeo-análise profissional.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=1200">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Village Summer - Surf Experience">
@@ -66,7 +69,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://felipemlanna1.github.io/village-summer-landing/">
     <meta name="twitter:title" content="Aula de Surf Individual Florianópolis | Village Summer">
-    <meta name="twitter:description" content="Aulas de surf individuais no Sul de Florianópolis. +10 anos, +1000 alunos, instrutores salva-vidas. Metodologia exclusiva com vídeo-análise.">
+    <meta name="twitter:description" content="Aulas de surf individuais no Sul de Florianópolis. 20+ anos, +1000 alunos, instrutores salva-vidas. Método Desbloqueia Surf com vídeo-análise.">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=1200">
     <meta name="twitter:creator" content="@villagesummersurf">
 
@@ -108,7 +111,7 @@
         },
         "sameAs": [
             "https://instagram.com/villagesummersurf",
-            "https://wa.me/5548996271507"
+            "https://wa.me/554896899856"
         ]
     }
     </script>
@@ -658,23 +661,23 @@
             left: 0;
             right: 0;
             z-index: 1000;
-            background: rgba(39, 39, 39, 0.96);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 189, 89, 0.1);
-            transition: all 0.3s ease;
+            background: rgba(0, 0, 0, 0.6);
+            border-bottom: none;
+            transition: background 0.4s ease, box-shadow 0.4s ease;
         }
 
         .header.scrolled {
-            background: rgba(39, 39, 39, 0.98);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-            border-bottom-color: rgba(255, 189, 89, 0.2);
+            background: rgba(22, 22, 22, 0.96);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
         }
 
         .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 1rem 0;
+            padding: 0.85rem 0;
         }
 
         .logo {
@@ -710,15 +713,32 @@
         .nav-link {
             font-family: var(--body);
             font-weight: 400;
-            font-size: 14px;
-            letter-spacing: 0.06em;
+            font-size: 12px;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: rgba(250, 248, 243, 0.8);
+            color: #ffffff;
             transition: color 0.3s ease;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--amarelo);
+            transition: width 0.3s ease;
         }
 
         .nav-link:hover {
-            color: var(--amarelo);
+            color: #ffffff;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
         }
 
         .header-cta {
@@ -746,26 +766,31 @@
 
         .lang-selector {
             display: flex;
-            gap: 0.25rem;
+            gap: 0;
             font-size: 0.8rem;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 2px;
+            overflow: hidden;
         }
 
         .lang-selector a {
             font-family: var(--body);
             font-weight: 500;
-            font-size: 12px;
-            letter-spacing: 0.06em;
+            font-size: 11px;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: rgba(250, 248, 243, 0.5);
-            padding: 0.25rem 0.5rem;
-            border-radius: 2px;
-            transition: all 0.3s ease;
+            color: rgba(255, 255, 255, 0.4);
+            padding: 0.3rem 0.6rem;
+            transition: all 0.2s ease;
+            border-right: 1px solid rgba(255,255,255,0.08);
         }
+
+        .lang-selector a:last-child { border-right: none; }
 
         .lang-selector a:hover,
         .lang-selector a.active {
-            color: var(--amarelo);
-            background: rgba(255, 189, 89, 0.1);
+            color: var(--preto);
+            background: var(--amarelo);
         }
 
         @media (min-width: 768px) {
@@ -786,41 +811,144 @@
 
         /* ===== HERO SECTION ===== */
         .hero {
-            position: relative;
-            min-height: 100vh;
             display: flex;
-            align-items: center;
-            background: var(--preto);
+            height: 100vh;
+            min-height: 560px;
             overflow: hidden;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1455729552865-3658a5d39692?w=1920&q=80') center/cover;
-            opacity: 0.18;
+        .hero-left {
+            flex: 0 0 50%;
+            background: #1a1a1a;
+            display: flex;
+            align-items: center;
+            padding: 120px 80px 80px;
         }
 
-        .hero::after {
-            content: '';
+        .hero-right {
+            flex: 0 0 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-right img {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 280px;
-            background: linear-gradient(to top, var(--preto), transparent);
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
         }
 
         .hero-content {
-            position: relative;
-            z-index: 1;
             color: var(--branco);
-            text-align: center;
-            padding: 8rem 0 4rem;
+            max-width: 520px;
+            width: 100%;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--body);
+            font-size: 10px;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--amarelo);
+            margin-bottom: 2rem;
+            display: block;
+        }
+
+        .hero-content h1 {
+            font-family: var(--display);
+            font-size: clamp(36px, 4vw, 64px);
+            line-height: 0.95;
+            letter-spacing: 0.01em;
+            color: var(--branco);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+            color: rgba(250, 248, 243, 0.8);
+            margin-bottom: 2.5rem;
+            line-height: 1.65;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .hero-btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            font-family: var(--body);
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: var(--amarelo);
+            color: var(--preto);
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s ease, transform 0.25s ease;
+        }
+
+        .hero-btn-primary:hover {
+            background: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        .hero-btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 36px;
+            font-family: var(--body);
+            font-weight: 500;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            background: transparent;
+            color: var(--branco);
+            border: 1px solid var(--amarelo);
+            border-radius: 2px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.25s ease, color 0.25s ease;
+        }
+
+        .hero-btn-outline:hover {
+            background: rgba(255, 189, 89, 0.1);
+        }
+
+        @media (max-width: 767px) {
+            .hero {
+                flex-direction: column;
+                height: auto;
+                min-height: 100svh;
+            }
+
+            .hero-right {
+                flex: 0 0 50vh;
+                order: -1;
+            }
+
+            .hero-left {
+                flex: 1;
+                padding: 48px 24px 56px;
+            }
+
+            .hero-content h1 {
+                font-size: clamp(36px, 9vw, 52px);
+            }
         }
 
         .hero-badges {
@@ -850,11 +978,11 @@
 
         .hero h1 {
             font-family: var(--display);
-            font-size: clamp(80px, 12vw, 160px);
-            line-height: 0.92;
+            font-size: clamp(44px, 6.5vw, 82px);
+            line-height: 0.93;
             letter-spacing: 0.01em;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            margin-bottom: 1.75rem;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.4);
         }
 
         .hero h1 span {
@@ -886,17 +1014,17 @@
             display: flex;
             flex-direction: column;
             gap: 1rem;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .hero-cta .btn {
-            min-width: 280px;
+            min-width: 260px;
         }
 
         @media (min-width: 768px) {
             .hero-cta {
                 flex-direction: row;
-                justify-content: center;
+                justify-content: flex-start;
             }
         }
 
@@ -943,6 +1071,18 @@
             letter-spacing: 0.04em;
         }
 
+        .stats-tagline {
+            text-align: center;
+            font-family: var(--body);
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 0.08em;
+            color: rgba(250, 248, 243, 0.45);
+            text-transform: uppercase;
+            margin-top: 2rem;
+            margin-bottom: 0;
+        }
+
         /* ===== INDIVIDUAL LESSON SECTION ===== */
         .individual-lesson {
             background: var(--branco);
@@ -957,106 +1097,184 @@
             background: var(--amarelo);
         }
 
-        .lesson-grid {
+        /* ===== LESSON BENTO ===== */
+        .lesson-bento {
             display: grid;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 260px 340px;
+            gap: 12px;
         }
 
-        .lesson-image {
-            border-radius: 0;
+        .lb-photo {
+            grid-column: 1;
+            grid-row: 1 / 3;
             overflow: hidden;
-            box-shadow: var(--shadow-lg);
         }
 
-        .lesson-image img {
+        .lb-photo img {
             width: 100%;
-            height: 480px;
+            height: 100%;
             object-fit: cover;
+            display: block;
         }
 
-        .lesson-content h2 {
+        .lb-header {
+            grid-column: 2 / 4;
+            grid-row: 1;
+            background: #f5f4f0;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lb-header h2 {
             font-family: var(--display);
-            font-size: clamp(40px, 5vw, 72px);
+            font-size: clamp(32px, 3.5vw, 56px);
             color: var(--preto);
-            margin-bottom: 1.5rem;
             line-height: 0.95;
+            margin-bottom: 1rem;
         }
 
-        .lesson-content h2 span {
-            color: var(--amarelo);
-        }
-
-        .lesson-content p {
+        .lb-header p {
             font-family: var(--body);
             font-weight: 300;
             color: var(--cinza);
+            margin-bottom: 0;
+            max-width: 520px;
+            font-size: 0.9rem;
+            line-height: 1.65;
+        }
+
+        .lb-benefits {
+            grid-column: 2;
+            grid-row: 2;
+            background: #1a1a1a;
+            padding: 2rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lb-cta {
+            grid-column: 3;
+            grid-row: 2;
+            background: var(--amarelo);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 0;
+        }
+
+        .lb-cta-includes {
+            flex: 1;
+            padding: 2rem 1.75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .lb-includes-label {
+            font-family: var(--body);
+            font-weight: 500;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(39, 39, 39, 0.55);
+            margin-bottom: 0.6rem;
+        }
+
+        .lb-includes-text {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.875rem;
+            color: var(--preto);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        .lb-cta-btn {
+            display: block;
+            width: 100%;
+            padding: 20px 24px;
+            background: var(--preto);
+            color: var(--branco);
+            font-family: var(--body);
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.25s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .lb-cta-btn:hover {
+            background: #111111;
         }
 
         .lesson-benefits {
             list-style: none;
-            margin: 2rem 0;
+            margin: 0;
         }
 
         .lesson-benefits li {
             display: flex;
             align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 1.25rem;
+            gap: 0.75rem;
+            margin-bottom: 0.85rem;
             font-family: var(--body);
             font-weight: 300;
-            font-size: 1rem;
-            color: var(--preto);
+            font-size: 0.875rem;
+            color: rgba(250, 248, 243, 0.85);
+            line-height: 1.4;
         }
+
+        .lesson-benefits li:last-child { margin-bottom: 0; }
 
         .lesson-benefits li::before {
             content: '✓';
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 26px;
-            height: 26px;
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
             background: var(--amarelo);
             color: var(--preto);
             border-radius: 2px;
             font-weight: 700;
-            font-size: 14px;
-            flex-shrink: 0;
+            font-size: 11px;
+            margin-top: 1px;
         }
 
-        .lesson-includes {
-            background: rgba(39, 39, 39, 0.05);
-            padding: 1.5rem;
-            border-radius: 0;
-            margin-top: 2rem;
-            border-left: 3px solid var(--amarelo);
-        }
-
-        .lesson-includes h4 {
-            font-family: var(--body);
-            font-weight: 600;
-            color: var(--preto);
-            margin-bottom: 0.75rem;
-            font-size: 1rem;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
-
-        .lesson-includes p {
-            color: var(--cinza);
-            margin-bottom: 0;
-            font-size: 0.95rem;
-        }
-
-        @media (min-width: 768px) {
-            .lesson-grid {
+        @media (max-width: 1023px) {
+            .lesson-bento {
                 grid-template-columns: 1fr 1fr;
+                grid-template-rows: 280px auto auto;
             }
+            .lb-photo { grid-column: 1 / 3; grid-row: 1; }
+            .lb-header { grid-column: 1 / 3; grid-row: 2; }
+            .lb-benefits { grid-column: 1; grid-row: 3; }
+            .lb-cta { grid-column: 2; grid-row: 3; }
+        }
+
+        @media (max-width: 599px) {
+            .lesson-bento {
+                grid-template-columns: 1fr;
+                grid-template-rows: 260px auto auto auto;
+            }
+            .lb-photo { grid-column: 1; grid-row: 1; }
+            .lb-header { grid-column: 1; grid-row: 2; }
+            .lb-benefits { grid-column: 1; grid-row: 3; }
+            .lb-cta { grid-column: 1; grid-row: 4; }
         }
 
         /* ===== WHY VILLAGE SECTION ===== */
         .why-village {
-            background: var(--preto);
+            background: #1a1a1a;
             color: var(--branco);
         }
 
@@ -1066,6 +1284,57 @@
 
         .why-village .section-title p {
             color: rgba(250, 248, 243, 0.7);
+        }
+
+        /* WHY VILLAGE GRID */
+        .wv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .wv-photo {
+            aspect-ratio: 16 / 9;
+            overflow: hidden;
+            border-radius: 12px;
+            background: #111;
+        }
+
+        .wv-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .wv-text {
+            background: #111;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .wv-text h3 {
+            font-family: var(--body);
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--branco);
+            margin-bottom: 0.65rem;
+            line-height: 1.3;
+        }
+
+        .wv-text p {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: rgba(250, 248, 243, 0.8);
+            line-height: 1.65;
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 768px) {
+            .wv-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .features-grid {
@@ -1122,23 +1391,30 @@
             color: var(--preto);
         }
 
-        .analysis-grid {
+        /* ===== VIDEO ANALYSIS BENTO ===== */
+        .video-bento {
             display: grid;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 280px 280px;
+            gap: 4px;
         }
 
-        .analysis-image {
+        .vb-photo {
+            grid-column: 1;
+            grid-row: 1 / 3;
             position: relative;
             overflow: hidden;
-            box-shadow: var(--shadow-lg);
         }
 
-        .analysis-image img {
+        .vb-photo img {
             width: 100%;
-            height: 480px;
+            height: 100%;
             object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
         }
+
+        .vb-photo:hover img { transform: scale(1.04); }
 
         .analysis-badge {
             position: absolute;
@@ -1153,39 +1429,51 @@
             font-size: 12px;
             letter-spacing: 0.08em;
             text-transform: uppercase;
+            z-index: 1;
         }
 
-        .analysis-content h2 {
+        .vb-header {
+            grid-column: 2;
+            grid-row: 1;
+            background: #f5f4f0;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .vb-header h2 {
             font-family: var(--display);
-            font-size: clamp(40px, 5vw, 72px);
+            font-size: clamp(36px, 3.5vw, 58px);
             color: var(--preto);
-            margin-bottom: 1.5rem;
             line-height: 0.95;
+            margin-bottom: 0.75rem;
         }
 
-        .analysis-content h2 span {
-            color: var(--amarelo);
-        }
-
-        .analysis-content p {
+        .vb-header p {
             font-family: var(--body);
             font-weight: 300;
             color: var(--cinza);
+            margin-bottom: 0;
+            font-size: 0.925rem;
+            line-height: 1.6;
         }
 
-        .analysis-steps {
-            margin: 2rem 0;
-        }
-
-        .analysis-step {
+        .vb-step {
+            background: #1a1a1a;
+            padding: 2.25rem 2rem;
             display: flex;
-            gap: 1.25rem;
-            margin-bottom: 1.75rem;
+            flex-direction: column;
+            justify-content: flex-end;
         }
 
-        .step-number {
-            width: 40px;
-            height: 40px;
+        .vb-step-1 { grid-column: 3; grid-row: 1; }
+        .vb-step-2 { grid-column: 2; grid-row: 2; }
+        .vb-step-3 { grid-column: 3; grid-row: 2; background: var(--preto); }
+
+        .vb-step .step-number {
+            width: 36px;
+            height: 36px;
             background: var(--amarelo);
             color: var(--preto);
             border-radius: 2px;
@@ -1193,37 +1481,93 @@
             align-items: center;
             justify-content: center;
             font-family: var(--display);
-            font-size: 1.25rem;
-            font-weight: 400;
-            flex-shrink: 0;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
 
-        .step-content h4 {
+        .vb-step h4 {
             font-family: var(--body);
             font-weight: 600;
-            color: var(--preto);
-            margin-bottom: 0.25rem;
-            font-size: 1rem;
+            color: var(--branco);
+            margin-bottom: 0.4rem;
+            font-size: 0.95rem;
         }
 
-        .step-content p {
-            color: var(--cinza);
+        .vb-step p {
+            color: rgba(250,248,243,0.6);
             margin-bottom: 0;
-            font-size: 0.9rem;
+            font-size: 0.875rem;
+            line-height: 1.6;
         }
 
-        @media (min-width: 768px) {
-            .analysis-grid {
+        @media (max-width: 1023px) {
+            .video-bento {
                 grid-template-columns: 1fr 1fr;
+                grid-template-rows: 260px auto auto;
             }
+            .vb-photo { grid-column: 1 / 3; grid-row: 1; }
+            .vb-header { grid-column: 1; grid-row: 2; }
+            .vb-step-1 { grid-column: 2; grid-row: 2; }
+            .vb-step-2 { grid-column: 1; grid-row: 3; }
+            .vb-step-3 { grid-column: 2; grid-row: 3; }
+        }
 
-            .analysis-grid.reverse {
-                direction: rtl;
+        @media (max-width: 599px) {
+            .video-bento {
+                grid-template-columns: 1fr;
+                grid-template-rows: 240px auto auto auto auto;
             }
+            .vb-photo { grid-column: 1; grid-row: 1; }
+            .vb-header { grid-column: 1; grid-row: 2; }
+            .vb-step-1 { grid-column: 1; grid-row: 3; }
+            .vb-step-2 { grid-column: 1; grid-row: 4; }
+            .vb-step-3 { grid-column: 1; grid-row: 5; }
+        }
 
-            .analysis-grid.reverse > * {
-                direction: ltr;
+        /* ===== MÉTODO DESBLOQUEIA SURF SECTION ===== */
+        .metodo-section {
+            background: #1a1a1a;
+        }
+
+        .metodo-section .section-title p {
+            max-width: 620px;
+        }
+
+        .metodo-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .metodo-cards {
+                grid-template-columns: 1fr;
+                gap: 12px;
             }
+        }
+
+        .metodo-card {
+            background: #242424;
+            padding: 2.5rem;
+            border-radius: 12px;
+        }
+
+        .metodo-card h3 {
+            font-family: var(--body);
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--branco);
+            margin-bottom: 0.75rem;
+            letter-spacing: 0;
+        }
+
+        .metodo-card p {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.95rem;
+            color: rgba(250, 248, 243, 0.75);
+            margin-bottom: 0;
+            line-height: 1.65;
         }
 
         /* ===== TESTIMONIALS SECTION ===== */
@@ -1345,96 +1689,59 @@
             overflow: hidden;
         }
 
-        .floripa-grid {
+        /* ===== FLORIPA LAYOUT ===== */
+        .floripa .section-title h2 { color: var(--preto); }
+        .floripa .section-title p   { color: var(--cinza); }
+        .floripa .section-label     { color: var(--amarelo); }
+
+        .floripa-photo {
+            width: 100%;
+            aspect-ratio: 21 / 9;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .floripa-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .floripa-cards {
             display: grid;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
         }
 
-        .floripa-content h2 {
-            font-family: var(--display);
-            font-size: clamp(40px, 5vw, 72px);
-            color: var(--preto);
-            margin-bottom: 1.5rem;
-            line-height: 0.95;
+        .floripa-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 2rem;
         }
 
-        .floripa-content h2 span {
-            color: var(--amarelo);
-        }
-
-        .floripa-content p {
-            font-family: var(--body);
-            font-weight: 300;
-            color: var(--cinza);
-        }
-
-        .beaches-list {
-            display: grid;
-            gap: 0.75rem;
-            margin-top: 2rem;
-        }
-
-        .beach-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 1.25rem;
-            background: rgba(39, 39, 39, 0.04);
-            border-left: 3px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .beach-item:hover {
-            border-left-color: var(--amarelo);
-            background: rgba(39, 39, 39, 0.07);
-            transform: translateX(4px);
-        }
-
-        .beach-icon {
-            font-size: 1.75rem;
-        }
-
-        .beach-info h4 {
+        .floripa-card h4 {
             font-family: var(--body);
             font-weight: 600;
-            color: var(--preto);
-            margin-bottom: 0.15rem;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            color: var(--branco);
+            margin-bottom: 0.6rem;
         }
 
-        .beach-info p {
-            color: var(--cinza);
-            font-size: 0.85rem;
+        .floripa-card p {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: rgba(250, 248, 243, 0.75);
+            line-height: 1.6;
             margin-bottom: 0;
         }
 
-        .floripa-images {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.75rem;
-        }
-
-        .floripa-images img {
-            border-radius: 0;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-
-        .floripa-images img:hover {
-            transform: scale(1.03);
-        }
-
-        .floripa-images img:first-child {
-            grid-row: span 2;
-            height: 100%;
-        }
-
-        @media (min-width: 768px) {
-            .floripa-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+        @media (max-width: 768px) {
+            .floripa-photo { aspect-ratio: 4 / 3; }
+            .floripa-cards { grid-template-columns: 1fr; }
         }
 
         /* ===== SURF TRIPS SECTION ===== */
@@ -1567,72 +1874,381 @@
             }
         }
 
-        /* ===== FINAL CTA SECTION ===== */
-        .final-cta {
+        /* ===== PRÓXIMA IMERSÃO & CALENDÁRIO SECTIONS ===== */
+        .proxima-imersao-section {
+            background: #1a1a1a;
+        }
+
+        .proxima-imersao-card {
+            background: #222;
+            border: 1px solid rgba(255, 189, 89, 0.15);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .pi-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        @media (max-width: 768px) {
+            .pi-inner {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pi-info {
+            padding: 3.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .pi-badge-date {
+            display: inline-block;
+            font-family: var(--body);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--preto);
             background: var(--amarelo);
-            text-align: center;
-            color: var(--preto);
+            padding: 0.4rem 1rem;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
         }
 
-        .final-cta h2 {
+        .pi-title {
             font-family: var(--display);
-            font-size: clamp(52px, 7vw, 100px);
-            color: var(--preto);
-            line-height: 0.92;
-            margin-bottom: 1.25rem;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            line-height: 1;
+            color: var(--branco);
+            margin-bottom: 0.5rem;
         }
 
-        .final-cta h2 span {
-            color: var(--preto);
-            text-decoration: underline;
-            text-decoration-thickness: 3px;
+        .pi-location {
+            font-family: var(--body);
+            font-size: 13px;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(250, 248, 243, 0.5);
+            margin-bottom: 1.5rem;
         }
 
-        .final-cta > .container > p {
+        .pi-desc {
             font-family: var(--body);
             font-weight: 300;
-            color: rgba(39, 39, 39, 0.7);
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin: 0 auto 2.5rem;
+            font-size: 1rem;
+            color: rgba(250, 248, 243, 0.8);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .pi-vagas {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--body);
+            font-weight: 600;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            padding: 0.6rem 1.25rem;
+            border-radius: 2px;
+            margin-bottom: 1.5rem;
+            width: fit-content;
+        }
+
+        .pi-vagas.urgente {
+            background: rgba(220, 60, 40, 0.15);
+            color: #ff5c47;
+            border: 1px solid rgba(220, 60, 40, 0.3);
+        }
+
+        .pi-vagas.normal {
+            background: rgba(255, 189, 89, 0.1);
+            color: var(--amarelo);
+            border: 1px solid rgba(255, 189, 89, 0.25);
+        }
+
+        .pi-vagas-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .pi-visual {
+            position: relative;
+            min-height: 400px;
+            overflow: hidden;
+            background: #2a2a2a;
+        }
+
+        @media (max-width: 768px) {
+            .pi-visual {
+                min-height: 250px;
+            }
+        }
+
+        .pi-visual img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Calendário */
+        .calendario-section {
+            background: var(--preto);
+        }
+
+        .calendario-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .evento-card {
+            display: grid;
+            grid-template-columns: 120px 1fr auto;
+            align-items: center;
+            gap: 2rem;
+            background: #1e1e1e;
+            padding: 2rem 2.5rem;
+            border-left: 3px solid transparent;
+            transition: background 0.2s ease;
+        }
+
+        .evento-card:hover {
+            background: #252525;
+        }
+
+        .evento-card.esgotado {
+            opacity: 0.45;
+        }
+
+        .evento-card.tipo-imersao { border-left-color: var(--amarelo); }
+        .evento-card.tipo-cafe { border-left-color: rgba(250, 248, 243, 0.35); }
+        .evento-card.tipo-trip { border-left-color: #8a7a5a; }
+        .evento-card.tipo-outro { border-left-color: rgba(250, 248, 243, 0.2); }
+
+        @media (max-width: 768px) {
+            .evento-card {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1.75rem 1.5rem;
+            }
+        }
+
+        .evento-date {
+            font-family: var(--display);
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            color: var(--amarelo);
+            line-height: 1.1;
+        }
+
+        .evento-body {}
+
+        .evento-tags {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .evento-tag {
+            font-family: var(--body);
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2px;
+        }
+
+        .evento-tag.imersao {
+            background: var(--amarelo);
+            color: var(--preto);
+        }
+
+        .evento-tag.cafe {
+            background: rgba(250, 248, 243, 0.12);
+            color: var(--branco);
+            border: 1px solid rgba(250, 248, 243, 0.2);
+        }
+
+        .evento-tag.trip {
+            background: #3a3020;
+            color: #c9a85c;
+            border: 1px solid #4a4030;
+        }
+
+        .evento-tag.outro {
+            background: rgba(250, 248, 243, 0.06);
+            color: rgba(250, 248, 243, 0.6);
+            border: 1px solid rgba(250, 248, 243, 0.1);
+        }
+
+        .evento-tag.status-em-breve {
+            background: rgba(255, 189, 89, 0.08);
+            color: rgba(255, 189, 89, 0.7);
+            border: 1px solid rgba(255, 189, 89, 0.2);
+        }
+
+        .evento-tag.status-esgotado {
+            background: rgba(180, 60, 40, 0.12);
+            color: #e05a45;
+            border: 1px solid rgba(180, 60, 40, 0.25);
+        }
+
+        .evento-title {
+            font-family: var(--display);
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            color: var(--branco);
+            letter-spacing: 0.02em;
+            margin-bottom: 0.25rem;
+        }
+
+        .evento-desc {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.9rem;
+            color: rgba(250, 248, 243, 0.55);
+            margin-bottom: 0;
+        }
+
+        .evento-location {
+            font-family: var(--body);
+            font-size: 11px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: rgba(250, 248, 243, 0.35);
+            margin-bottom: 0.35rem;
+        }
+
+        .evento-cta {
+            flex-shrink: 0;
+        }
+
+        /* ===== FINAL CTA SECTION ===== */
+        .final-cta {
+            background: var(--preto);
+            color: var(--branco);
+            padding: 0;
+        }
+
+        .final-cta .container {
+            padding: 0;
+            max-width: 100%;
+        }
+
+        .cta-bento {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px;
+        }
+
+        .ctab-title {
+            background: var(--amarelo);
+            padding: clamp(2.5rem, 5vw, 4rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 360px;
+        }
+
+        .ctab-title h2 {
+            font-family: var(--display);
+            font-size: clamp(52px, 6.5vw, 96px);
+            color: var(--preto);
+            line-height: 0.92;
+            margin-bottom: 0.75rem;
+        }
+
+        .ctab-title p {
+            font-family: var(--body);
+            font-weight: 300;
+            color: rgba(39,39,39,0.7);
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .ctab-cta {
+            background: #1a1a1a;
+            padding: clamp(2.5rem, 5vw, 4rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.25rem;
+        }
+
+        .ctab-stat {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .ctab-stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .ctab-stat-num {
+            font-family: var(--display);
+            font-size: 2rem;
+            color: var(--amarelo);
+            line-height: 1;
+        }
+
+        .ctab-stat-label {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.75rem;
+            color: rgba(250,248,243,0.5);
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
         }
 
         .cta-buttons {
             display: flex;
             flex-direction: column;
-            gap: 1rem;
-            align-items: center;
+            gap: 0.75rem;
         }
 
         .cta-buttons .btn {
-            min-width: 280px;
+            width: 100%;
+            justify-content: center;
         }
 
-        .final-cta .btn-primary {
-            background: var(--preto);
+        .final-cta .btn-whatsapp {
+            background: #25D366;
             color: var(--branco);
-        }
-
-        .final-cta .btn-primary:hover {
-            background: #3a3a3a;
         }
 
         .final-cta .btn-secondary {
             background: transparent;
-            color: var(--preto);
-            border: 1px solid rgba(39, 39, 39, 0.4);
+            color: var(--branco);
+            border: 1px solid rgba(250,248,243,0.25);
         }
 
         .final-cta .btn-secondary:hover {
-            border-color: var(--preto);
-            background: rgba(39, 39, 39, 0.08);
+            border-color: rgba(250,248,243,0.6);
+            background: rgba(250,248,243,0.05);
         }
 
-        @media (min-width: 768px) {
-            .cta-buttons {
-                flex-direction: row;
-                justify-content: center;
-            }
+        @media (max-width: 767px) {
+            .cta-bento { grid-template-columns: 1fr; }
+            .ctab-title { min-height: auto; }
         }
 
         /* ===== FOOTER ===== */
@@ -1882,65 +2498,55 @@
 
         /* ===== SAFETY SECTION (SALVA-VIDAS) ===== */
         .safety-section {
-            background: var(--amarelo);
-            color: var(--preto);
-            padding: 3.5rem 0;
+            background: #1a1a1a;
+            color: var(--branco);
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(255,189,89,0.1);
         }
 
         .safety-content {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 2.5rem;
+            justify-content: space-between;
+            gap: 2rem;
             flex-wrap: wrap;
-            text-align: center;
-        }
-
-        .safety-icon {
-            width: 72px;
-            height: 72px;
-            background: rgba(39, 39, 39, 0.1);
-            border-radius: 2px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.25rem;
-            border: 1px solid rgba(39, 39, 39, 0.15);
         }
 
         .safety-text h3 {
             font-family: var(--display);
-            font-size: 1.75rem;
-            margin-bottom: 0.4rem;
-            color: var(--preto);
+            font-size: 1.1rem;
+            margin-bottom: 0.1rem;
+            color: var(--branco);
+            letter-spacing: 0.03em;
         }
 
         .safety-text p {
             font-family: var(--body);
             font-weight: 300;
-            color: rgba(39, 39, 39, 0.75);
+            color: rgba(250, 248, 243, 0.55);
             margin-bottom: 0;
+            font-size: 0.8rem;
         }
 
         .safety-badges {
             display: flex;
-            gap: 0.75rem;
+            gap: 0.5rem;
             flex-wrap: wrap;
-            justify-content: center;
         }
 
         .safety-badge {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(39, 39, 39, 0.1);
-            padding: 0.4rem 0.9rem;
+            background: rgba(255, 189, 89, 0.07);
+            padding: 0.35rem 0.85rem;
             border-radius: 2px;
             font-family: var(--body);
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 500;
-            border: 1px solid rgba(39, 39, 39, 0.15);
-            color: var(--preto);
+            letter-spacing: 0.04em;
+            border: 1px solid rgba(255, 189, 89, 0.18);
+            color: rgba(250, 248, 243, 0.75);
         }
 
         /* ===== QUIZ/FORM SECTION ===== */
@@ -2206,24 +2812,34 @@
         }
 
         .faq-grid {
-            max-width: 800px;
-            margin: 0 auto;
+            display: grid;
+            gap: 4px;
+        }
+
+        @media (min-width: 768px) {
+            .faq-grid { grid-template-columns: 1fr 1fr; }
         }
 
         .faq-item {
-            border-bottom: 1px solid rgba(255, 189, 89, 0.15);
-            padding: 1.5rem 0;
+            background: #181818;
+            border-bottom: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
         }
 
         .faq-question {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
+            gap: 1rem;
             cursor: pointer;
             font-family: var(--body);
             font-weight: 500;
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--branco);
+            padding: 1.75rem 1.75rem 0;
+            line-height: 1.5;
         }
 
         .faq-question::after {
@@ -2232,6 +2848,7 @@
             color: var(--amarelo);
             transition: transform 0.3s ease;
             flex-shrink: 0;
+            margin-top: -2px;
         }
 
         .faq-item.open .faq-question::after {
@@ -2244,14 +2861,15 @@
             transition: max-height 0.35s ease;
             font-family: var(--body);
             font-weight: 300;
-            color: rgba(250, 248, 243, 0.65);
-            font-size: 0.95rem;
+            color: rgba(250, 248, 243, 0.6);
+            font-size: 0.9rem;
             line-height: 1.7;
+            padding: 0 1.75rem;
         }
 
         .faq-item.open .faq-answer {
             max-height: 300px;
-            padding-top: 1rem;
+            padding: 0.75rem 1.75rem 1.75rem;
         }
 
         /* ===== RESPONSIVE - SAFETY, QUIZ, FAQ ===== */
@@ -2401,6 +3019,339 @@
                 font-size: 0.75rem;
             }
         }
+
+        /* ===== MODALIDADES SECTION ===== */
+        .modalidades {
+            background: var(--branco);
+            padding: 120px 0;
+        }
+
+        @media (max-width: 768px) {
+            .modalidades { padding: 80px 0; }
+        }
+
+        .modalidades .section-title h2 { color: var(--preto); }
+        .modalidades .section-label { color: var(--amarelo); }
+        .modalidades .section-label::before { background: var(--amarelo); }
+
+        .modalidades-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 420px 280px;
+            gap: 4px;
+        }
+
+        .modalidade-card {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .modalidade-card--tall { grid-row: span 2; }
+
+        .modalidade-card--wide {
+            grid-column: span 2;
+            height: 280px;
+        }
+
+        .modalidade-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+            display: block;
+        }
+
+        .modalidade-card:hover img { transform: scale(1.05); }
+
+        .modalidade-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.75rem 2rem;
+            background: linear-gradient(to top, rgba(39,39,39,0.96) 0%, rgba(39,39,39,0.55) 55%, transparent 100%);
+        }
+
+        .modalidade-label {
+            font-family: var(--body);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--amarelo);
+            margin-bottom: 0.3rem;
+        }
+
+        .modalidade-title {
+            font-family: var(--display);
+            font-size: clamp(1.5rem, 2.5vw, 2rem);
+            color: var(--branco);
+            margin-bottom: 0.4rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .modalidade-title::after {
+            content: '»';
+            font-size: 0.7em;
+            color: var(--amarelo);
+        }
+
+        .modalidade-desc {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.875rem;
+            color: rgba(250,248,243,0.8);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .modalidades-grid {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+
+            .modalidade-card,
+            .modalidade-card--tall,
+            .modalidade-card--wide {
+                grid-column: span 1;
+                grid-row: span 1;
+                height: 280px;
+            }
+        }
+
+        /* ===== BENEFITS BENTO (WHY VILLAGE REDESIGN) ===== */
+        .benefits-bento {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 380px 280px;
+            gap: 4px;
+        }
+
+        .bento-text {
+            background: #181818;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .bento-text h3 {
+            font-family: var(--display);
+            font-size: clamp(1.4rem, 2vw, 1.9rem);
+            line-height: 0.95;
+            color: var(--branco);
+            margin-bottom: 0.75rem;
+        }
+
+        .bento-text h3 span { color: var(--amarelo); }
+
+        .bento-text p {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.875rem;
+            color: rgba(250,248,243,0.6);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        .bento-photo { overflow: hidden; }
+
+        .bento-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+
+        .bento-photo:hover img { transform: scale(1.04); }
+
+        @media (max-width: 1024px) {
+            .benefits-bento {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+            }
+            .bento-photo { height: 280px; }
+        }
+
+        @media (max-width: 768px) {
+            .benefits-bento {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto;
+            }
+            .bento-photo { height: 260px; }
+            .bento-text { min-height: 220px; }
+        }
+
+        /* ===== BORDER RADIUS GLOBAL ===== */
+        :root { --radius: 12px; }
+
+        .lb-photo, .lb-header, .lb-benefits, .lb-cta,
+        .vb-photo, .vb-header, .vb-step,
+        .fb-photo, .fb-header, .fb-beach,
+        .bento-text, .bento-photo,
+        .modalidade-card, .trip-card,
+        .testimonial-card, .faq-item,
+        .ctab-title, .ctab-cta,
+        .stat-item, .quiz-container,
+        .insta-card, .insta-header {
+            border-radius: var(--radius);
+        }
+
+        /* Garante que imagens respeitem o arredondamento */
+        .lb-photo, .vb-photo, .fb-photo, .bento-photo, .modalidade-card, .trip-image { overflow: hidden; }
+        .lb-photo img, .vb-photo img, .fb-photo img { border-radius: var(--radius); }
+
+        /* Elementos menores: arredondamento menor */
+        .analysis-badge, .trip-date, .trip-spots,
+        .safety-badge, .section-label, .modalidade-label,
+        .btn { border-radius: 6px; }
+
+        /* ===== INSTAGRAM SECTION ===== */
+        .insta-section {
+            background: var(--preto);
+            padding: 100px 0 0;
+            overflow: hidden;
+        }
+
+        .insta-header {
+            background: #181818;
+            padding: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 0 80px 4px;
+        }
+
+        @media (max-width: 768px) {
+            .insta-header { margin: 0 24px 4px; }
+        }
+
+        .insta-handle {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .insta-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--amarelo);
+        }
+
+        .insta-name {
+            font-family: var(--display);
+            font-size: 1.4rem;
+            color: var(--branco);
+            letter-spacing: 0.02em;
+            display: block;
+        }
+
+        .insta-sub {
+            font-family: var(--body);
+            font-weight: 300;
+            font-size: 0.8rem;
+            color: rgba(250,248,243,0.5);
+            display: block;
+        }
+
+        .insta-follow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--amarelo);
+            color: var(--preto);
+            font-family: var(--body);
+            font-weight: 600;
+            font-size: 0.875rem;
+            padding: 0.6rem 1.4rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .insta-follow:hover { opacity: 0.85; }
+
+        .insta-strip {
+            display: flex;
+            gap: 4px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            padding: 0 80px 0;
+        }
+
+        .insta-strip::-webkit-scrollbar { display: none; }
+
+        @media (max-width: 768px) {
+            .insta-strip { padding: 0 24px 0; }
+        }
+
+        .insta-card {
+            flex: 0 0 280px;
+            height: 280px;
+            scroll-snap-align: start;
+            overflow: hidden;
+            position: relative;
+            background: #1a1a1a;
+            display: block;
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            .insta-card { flex: 0 0 220px; height: 220px; }
+        }
+
+        .insta-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .insta-card:hover img { transform: scale(1.06); }
+
+        .insta-card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(39,39,39,0);
+            transition: background 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius);
+        }
+
+        .insta-card:hover .insta-card-overlay {
+            background: rgba(39,39,39,0.5);
+        }
+
+        .insta-card-overlay svg {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: var(--branco);
+        }
+
+        .insta-card:hover .insta-card-overlay svg { opacity: 1; }
+
+        .insta-widget {
+            padding: 4px 80px 80px;
+        }
+
+        @media (max-width: 768px) {
+            .insta-widget { padding: 4px 24px 60px; }
+        }
     </style>
 </head>
 <body>
@@ -2409,7 +3360,7 @@
         <div class="container">
             <div class="header-inner">
                 <a href="#" class="logo">
-                    <img src="apple-touch-icon.png" alt="Village Summer - Escola de Surf Florianópolis" class="logo-img">
+                    <img src="images/logo village.png" alt="Village Summer - Escola de Surf Florianópolis" class="logo-img">
                 </a>
 
                 <nav class="nav">
@@ -2428,7 +3379,7 @@
                     <a href="#" data-lang="es">ES</a>
                 </div>
 
-                <a href="https://wa.me/5548996271507?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-primary header-cta" target="_blank" rel="noopener">
+                <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn header-cta" target="_blank" rel="noopener" style="padding:10px 24px;font-size:12px;letter-spacing:0.1em;background:transparent;color:var(--amarelo);border:1px solid var(--amarelo);">
                     Agendar Aula
                 </a>
 
@@ -2462,7 +3413,7 @@
             <li><a href="#contato" data-i18n="navContact">Contato</a></li>
         </ul>
         <div class="mobile-menu-cta">
-            <a href="https://wa.me/5548996271507?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-whatsapp" target="_blank" rel="noopener">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                 WhatsApp
             </a>
@@ -2474,96 +3425,56 @@
 
     <!-- Hero Section -->
     <section class="hero" id="hero">
-        <div class="container">
+        <div class="hero-left">
             <div class="hero-content">
-                <div class="hero-badges">
-                    <span class="hero-badge" data-i18n="badge1">+10 Anos de Experiência</span>
-                    <span class="hero-badge" data-i18n="badge2">+1.000 Alunos</span>
-                    <span class="hero-badge" data-i18n="badge3">Sul de Florianópolis</span>
-                </div>
+                <span class="hero-eyebrow">Escola de Surf · Sul de Florianópolis</span>
 
-                <h1 data-i18n="heroTitle">Aula de Surf Individual<br>em Florianópolis</h1>
+                <h1 data-i18n="heroTitle">Você não vai só aprender a surfar. Você vai se desbloquear.</h1>
 
-                <p class="hero-subtitle" data-i18n="heroSubtitle">Evolução técnica real com metodologia exclusiva e vídeo-análise profissional</p>
-
-                <p class="hero-location" data-i18n="heroLocation">Aulas particulares em Campeche, Armação e Matadeiro</p>
+                <p class="hero-subtitle" data-i18n="heroSubtitle">A Ju cresceu no surf, o Kelvin dedicou mais de uma década ao mar. A Village nasceu dessa história.</p>
 
                 <div class="hero-cta">
-                    <a href="https://wa.me/5548996271507?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-primary" target="_blank" rel="noopener">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        AGENDAR MINHA AULA INDIVIDUAL
+                    <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="hero-btn-primary" target="_blank" rel="noopener">
+                        Agendar Minha Aula
                     </a>
-                    <a href="https://instagram.com/villagesummersurf" class="btn btn-secondary" target="_blank" rel="noopener">
-                        Conheça no Instagram
+                    <a href="https://instagram.com/villagesummersurf" class="hero-btn-outline" target="_blank" rel="noopener">
+                        @villagesummersurf
                     </a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stats-grid animate-on-scroll">
-                <div class="stat-item">
-                    <div class="stat-number">20+ ANOS NO MAR</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">MÉTODO EXCLUSIVO</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">SUL DE FLORIANÓPOLIS</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Safety/Lifeguard Section -->
-    <section class="safety-section">
-        <div class="container">
-            <div class="safety-content">
-                <div class="safety-icon">🛟</div>
-                <div class="safety-text">
-                    <h3 data-i18n="safetyTitle">Sua Segurança em Primeiro Lugar</h3>
-                    <p data-i18n="safetyDesc">Todos os nossos instrutores são certificados como salva-vidas profissionais</p>
-                </div>
-                <div class="safety-badges">
-                    <span class="safety-badge">🏅 Salva-Vidas Certificados</span>
-                    <span class="safety-badge">🩺 Primeiros Socorros</span>
-                    <span class="safety-badge">🎓 ISA Certified</span>
-                </div>
-            </div>
+        <div class="hero-right">
+            <img src="images/hero.jpg" alt="Ju e Kelvin na praia — Village Summer Surf" loading="eager" fetchpriority="high">
         </div>
     </section>
 
     <!-- Individual Lesson Section -->
     <section class="section individual-lesson" id="aula-individual">
         <div class="container">
-            <div class="lesson-grid">
-                <div class="lesson-image animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1531722569936-825d3dd91b15?w=800&q=80" alt="Aula de surf individual em Florianópolis - instrutor e aluno na praia do Campeche" loading="lazy">
+            <div class="lesson-bento animate-on-scroll">
+                <!-- Foto -->
+                <div class="lb-photo">
+                    <img src="images/secao 2.jpg" alt="Aula de surf individual Village Summer" loading="lazy" style="object-fit:cover;width:100%;height:100%;">
                 </div>
-                <div class="lesson-content animate-on-scroll">
-                    <h2 data-i18n="lessonTitle">Sua Aula, Seu Ritmo, Sua Evolução</h2>
-                    <p data-i18n="lessonDesc">Na Village Summer, cada aula individual é uma experiência única, desenhada especialmente para você. Nossos instrutores dedicam 100% da atenção ao seu desenvolvimento.</p>
-                    <p data-i18n="lessonDescSeo">Como a melhor <strong>escola de surf em Florianópolis</strong>, oferecemos <strong>aulas de surf no Campeche</strong>, Armação e Matadeiro. Seja você iniciante buscando sua primeira <strong>surf lesson em Florianopolis</strong> ou surfista experiente, nossa metodologia se adapta ao seu nível para garantir evolução real.</p>
 
-                    <ul class="lesson-benefits">
-                        <li data-i18n="lessonBenefit1">Atenção 100% focada em você durante toda a aula</li>
-                        <li data-i18n="lessonBenefit2">Progressão personalizada no seu ritmo</li>
-                        <li data-i18n="lessonBenefit3">Correção técnica imediata e feedback constante</li>
-                        <li data-i18n="lessonBenefit4">Horários flexíveis para sua agenda</li>
-                        <li data-i18n="lessonBenefit5">Vídeo-análise profissional inclusa</li>
-                    </ul>
+                <!-- Título + descrição -->
+                <div class="lb-header">
+                    <span class="section-label" style="color:var(--amarelo);margin-bottom:1rem;display:block;">AULA INDIVIDUAL</span>
+                    <h2 data-i18n="lessonTitle">Sua aula, seu ritmo, sua evolução.</h2>
+                    <p data-i18n="lessonDesc">Na Village, cada sessão é desenhada pra você: seu nível, seu corpo, seu objetivo. Seja em aula individual ou em pequenos grupos, a gente garante atenção real ao seu desenvolvimento, do começo ao fim.</p>
+                </div>
 
-                    <div class="lesson-includes">
-                        <h4 data-i18n="lessonIncludesTitle">O que está incluso:</h4>
-                        <p data-i18n="lessonIncludesDesc">Equipamento completo (prancha, lycra, wetsuit se necessário), vídeo-análise da sua performance e acompanhamento personalizado da sua evolução.</p>
+                <!-- Benefícios -->
+                <div class="lb-benefits">
+                    <p style="font-family:var(--body);font-weight:300;font-size:0.95rem;color:rgba(250,248,243,0.85);line-height:1.7;margin:0;">Atenção focada em você do início ao fim, progressão no seu ritmo, correção técnica na hora certa e horários que cabem na sua rotina. Todo mundo sai com foto da sessão.</p>
+                </div>
+
+                <!-- Incluso -->
+                <div class="lb-cta">
+                    <div class="lb-cta-includes">
+                        <p class="lb-includes-label">O que está incluso:</p>
+                        <p class="lb-includes-text">Equipamento completo (prancha, lycra, wetsuit se necessário), fotos da sua sessão e acompanhamento personalizado da sua evolução.</p>
                     </div>
-
-                    <a href="https://wa.me/5548996271507?text=Olá! Gostaria de saber mais sobre as aulas individuais." class="btn btn-primary" style="margin-top: 2rem;" target="_blank" rel="noopener" data-i18n="lessonCta">
-                        Quero Minha Aula Individual
-                    </a>
                 </div>
             </div>
         </div>
@@ -2573,33 +3484,31 @@
     <section class="section why-village" id="metodologia">
         <div class="container">
             <div class="section-title">
-                <h2 data-i18n="whyTitle">Por que a Village Summer?</h2>
-                <p data-i18n="whyDesc">Mais do que aulas de surf, oferecemos uma experiência transformadora que conecta você com o mar e consigo mesmo.</p>
+                <span class="section-label">POR QUE A VILLAGE SUMMER?</span>
+                <h2>Surf de verdade, do jeito certo.</h2>
             </div>
 
-            <div class="features-grid">
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">🎯</div>
-                    <h3 data-i18n="feature1Title">Metodologia Exclusiva</h3>
-                    <p data-i18n="feature1Desc">Desenvolvemos uma metodologia própria que combina técnica, consciência corporal e conexão com o mar para acelerar seu aprendizado.</p>
+            <div class="wv-grid animate-on-scroll">
+                <div class="wv-photo">
+                    <img src="images/secao 3 - 1.jpg" alt="" loading="lazy">
                 </div>
-
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">🏆</div>
-                    <h3 data-i18n="feature2Title">Instrutores Certificados</h3>
-                    <p data-i18n="feature2Desc">Nossa equipe é formada por profissionais certificados com anos de experiência no ensino do surf.</p>
+                <div class="wv-photo">
+                    <img src="images/secao 3 - 2.jpg" alt="" loading="lazy">
                 </div>
-
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">📍</div>
-                    <h3 data-i18n="feature3Title">Localização Privilegiada</h3>
-                    <p data-i18n="feature3Desc">Atuamos nas melhores praias do Sul de Florianópolis: Campeche, Armação e Matadeiro.</p>
+                <div class="wv-photo">
+                    <img src="images/secao 3 - 3.jpg" alt="" loading="lazy">
                 </div>
-
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">💎</div>
-                    <h3 data-i18n="feature4Title">Experiência Premium</h3>
-                    <p data-i18n="feature4Desc">Atendimento personalizado para profissionais que buscam qualidade e evolução real no surf.</p>
+                <div class="wv-text">
+                    <h3>É você no centro</h3>
+                    <p>Cada aula começa de onde você está. Não existe protocolo padrão aqui. Existe o seu surf, com atenção real de quem está na água com você.</p>
+                </div>
+                <div class="wv-text">
+                    <h3>Evolução com vídeo</h3>
+                    <p>Quando você já tem a base, a gente vai fundo. Filmamos suas ondas e analisamos cada movimento junto com você, pra identificar o que ajustar e acelerar sua evolução.</p>
+                </div>
+                <div class="wv-text">
+                    <h3>A Ju e o Kelvin na água com você</h3>
+                    <p>Mais de uma década no mar e uma presença que faz diferença dentro e fora da água. Segurança e técnica andam sempre juntas.</p>
                 </div>
             </div>
         </div>
@@ -2608,40 +3517,64 @@
     <!-- Video Analysis Section -->
     <section class="section video-analysis">
         <div class="container">
-            <div class="analysis-grid reverse">
-                <div class="analysis-image animate-on-scroll">
-                    <span class="analysis-badge" data-i18n="videoBadge">Diferencial Village</span>
-                    <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=800&q=80" alt="Aula de surf em Florianópolis com vídeo-análise profissional - metodologia exclusiva Village Summer" loading="lazy">
+            <div class="video-bento animate-on-scroll">
+                <!-- Foto -->
+                <div class="vb-photo">
+                    <span class="analysis-badge" data-i18n="videoBadge">DIFERENCIAL VILLAGE</span>
+                    <img src="images/secao 4.jpg" alt="" loading="lazy" style="object-position:center;">
                 </div>
-                <div class="analysis-content animate-on-scroll">
-                    <h2 data-i18n="videoTitle">Vídeo-Análise Profissional</h2>
-                    <p data-i18n="videoDesc">Não é apenas uma aula, é evolução técnica monitorada. Gravamos sua performance e analisamos cada movimento para acelerar seu progresso.</p>
 
-                    <div class="analysis-steps">
-                        <div class="analysis-step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h4 data-i18n="videoStep1Title">Gravação Profissional</h4>
-                                <p data-i18n="videoStep1Desc">Filmamos sua sessão com equipamento de qualidade para capturar cada detalhe.</p>
-                            </div>
-                        </div>
+                <!-- Título -->
+                <div class="vb-header">
+                    <h2 data-i18n="videoTitle">Todo mundo sai com foto.</h2>
+                    <p data-i18n="videoDesc">Desde a primeira aula, a gente registra sua sessão. Não é só lembrança, é parte do processo. Você vê sua evolução acontecendo, sessão a sessão.</p>
+                </div>
 
-                        <div class="analysis-step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h4 data-i18n="videoStep2Title">Análise Técnica Detalhada</h4>
-                                <p data-i18n="videoStep2Desc">Nossos instrutores analisam cada movimento, identificando pontos de melhoria.</p>
-                            </div>
-                        </div>
+                <!-- Passo 1 -->
+                <div class="vb-step vb-step-1">
+                    <div class="step-number">1</div>
+                    <h4 data-i18n="videoStep1Title">Fotos da sua sessão</h4>
+                    <p data-i18n="videoStep1Desc">A gente registra suas ondas em toda aula. Você sai com as fotos no mesmo dia.</p>
+                </div>
 
-                        <div class="analysis-step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h4 data-i18n="videoStep3Title">Feedback Personalizado</h4>
-                                <p data-i18n="videoStep3Desc">Você recebe o vídeo com comentários e dicas específicas para sua evolução.</p>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Passo 2 -->
+                <div class="vb-step vb-step-2">
+                    <div class="step-number">2</div>
+                    <h4 data-i18n="videoStep2Title">Você vê sua evolução</h4>
+                    <p data-i18n="videoStep2Desc">Com o tempo, as fotos contam uma história. Dá pra ver exatamente o quanto você evoluiu.</p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="vb-step vb-step-3">
+                    <div class="step-number">3</div>
+                    <h4 data-i18n="videoStep3Title">Vídeo-análise quando você estiver pronto</h4>
+                    <p data-i18n="videoStep3Desc">Quando você já tem a base, a gente filma suas ondas e analisa cada movimento junto com você, pra ir mais fundo na evolução.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Método Desbloqueia Surf Section -->
+    <section class="section metodo-section">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-label">Como a Gente Ensina</span>
+                <h2>O Método<br><span>Desbloqueia Surf</span></h2>
+                <p>A Village desenvolveu o Método Desbloqueia Surf ao longo dos anos. Esse é um caminho que integra técnica, consciência corporal e conexão com o oceano, pra você evoluir de dentro pra fora.</p>
+            </div>
+
+            <div class="metodo-cards animate-on-scroll">
+                <div class="metodo-card">
+                    <h3>Técnica</h3>
+                    <p>Cada movimento tem uma razão. A gente explica o porquê, não só o como.</p>
+                </div>
+                <div class="metodo-card">
+                    <h3>Mente</h3>
+                    <p>Medo, bloqueio, insegurança. A gente trabalha isso junto com a técnica, não separado dela.</p>
+                </div>
+                <div class="metodo-card">
+                    <h3>Mar</h3>
+                    <p>O oceano é o ambiente, não o obstáculo. Aprender a ler as ondas faz parte do método.</p>
                 </div>
             </div>
         </div>
@@ -2655,25 +3588,10 @@
                 <p data-i18n="testimonialsDesc">Histórias reais de transformação e conexão com o mar.</p>
             </div>
 
-            <div class="testimonials-grid">
-                <div class="testimonial-card featured animate-on-scroll">
-                    <p class="testimonial-text" data-i18n="testimonial1">"Vocês mudaram minha vida... volto mais fissurada, corajosa e leve. A metodologia da Village Summer me fez evoluir de uma forma que eu nunca imaginei ser possível."</p>
-                    <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&q=80" alt="Vitória Mecca - Médica e aluna Village Summer" class="author-avatar">
-                        <div class="author-info">
-                            <h4>Vitória Mecca</h4>
-                            <p>Médica</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card testimonial-placeholder animate-on-scroll">
-                    <p data-i18n="testimonialPlaceholder">Espaço reservado para mais depoimentos</p>
-                </div>
-
-                <div class="testimonial-card testimonial-placeholder animate-on-scroll">
-                    <p data-i18n="testimonialPlaceholder">Espaço reservado para mais depoimentos</p>
-                </div>
+            <div>
+                <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+                <script src="https://elfsightcdn.com/platform.js" async></script>
+                <div class="elfsight-app-d8956e95-d124-4ce3-8a79-6d08b020fb16" data-elfsight-app-lazy></div>
             </div>
         </div>
     </section>
@@ -2681,102 +3599,107 @@
     <!-- Floripa Section -->
     <section class="section floripa">
         <div class="container">
-            <div class="floripa-grid">
-                <div class="floripa-content animate-on-scroll">
-                    <h2 data-i18n="floripaTitle">Por que Florianópolis?</h2>
-                    <p data-i18n="floripaDesc1">Florianópolis, a Ilha da Magia, é um dos melhores destinos de surf do Brasil. Com mais de 40 praias e ondas para todos os níveis, é o lugar perfeito para aprender e evoluir.</p>
-                    <p data-i18n="floripaDesc2">No Sul da Ilha, você encontra praias menos lotadas, natureza preservada e ondas consistentes durante todo o ano.</p>
+            <div class="section-title animate-on-scroll">
+                <span class="section-label">SUL DE FLORIANÓPOLIS</span>
+                <h2>O mar aqui é assim.</h2>
+                <p>Matadeiro, Armação, Solidão. Cada praia tem sua personalidade, e a gente escolhe a certa pra você conforme as condições do dia. É assim que funciona surfar numa ilha.</p>
+            </div>
 
-                    <div class="beaches-list">
-                        <div class="beach-item">
-                            <span class="beach-icon">🏖️</span>
-                            <div class="beach-info">
-                                <h4 data-i18n="beach1Name">Campeche</h4>
-                                <p data-i18n="beach1Desc">Ondas consistentes, ideal para todos os níveis. Nossa praia principal.</p>
-                            </div>
-                        </div>
-                        <div class="beach-item">
-                            <span class="beach-icon">🌊</span>
-                            <div class="beach-info">
-                                <h4 data-i18n="beach2Name">Armação</h4>
-                                <p data-i18n="beach2Desc">Praia familiar com ondas suaves, perfeita para iniciantes.</p>
-                            </div>
-                        </div>
-                        <div class="beach-item">
-                            <span class="beach-icon">🏄</span>
-                            <div class="beach-info">
-                                <h4 data-i18n="beach3Name">Matadeiro</h4>
-                                <p data-i18n="beach3Desc">Ondas mais desafiadoras para alunos intermediários e avançados.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="floripa-photo animate-on-scroll">
+                <img src="images/secao 5.jpg" alt="" loading="lazy">
+            </div>
+
+            <div class="floripa-cards animate-on-scroll">
+                <div class="floripa-card">
+                    <h4>Matadeiro</h4>
+                    <p>Ondas com mais força, pra quem já tem base e quer evoluir.</p>
                 </div>
-
-                <div class="floripa-images animate-on-scroll">
-                    <div style="background:#d4cfc8;display:flex;align-items:center;justify-content:center;color:#7a7570;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:1rem;">FOTO: Praia do Campeche — vista aérea</div>
-                    <div style="background:#c8c3bc;display:flex;align-items:center;justify-content:center;color:#7a7570;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:1rem;">FOTO: Aluno surfando no sul da ilha</div>
-                    <div style="background:#bfbab3;display:flex;align-items:center;justify-content:center;color:#7a7570;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;text-align:center;padding:1rem;">FOTO: Ondas do Campeche ao entardecer</div>
+                <div class="floripa-card">
+                    <h4>Armação</h4>
+                    <p>Ambiente tranquilo, ondas suaves. Boa pra quem está começando.</p>
+                </div>
+                <div class="floripa-card">
+                    <h4>Solidão</h4>
+                    <p>Uma das praias mais bonitas da ilha. Ondas que surpreendem.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Imersões 2026 Section -->
-    <section class="section surf-trips" id="trips">
+    <!-- Nossas Modalidades / Experiências -->
+    <section class="modalidades" id="modalidades">
         <div class="container">
             <div class="section-title">
-                <h2>IMERSÕES 2026</h2>
-                <p>Quatro dias de surf intenso, conexão e evolução. Vagas limitadas por imersão.</p>
+                <span class="section-label">Como surfar com a gente</span>
+                <h2>Nossas<br><span>Experiências</span></h2>
             </div>
 
-            <div class="trips-grid">
-                <!-- Junho — Paraná -->
-                <div class="trip-card animate-on-scroll">
-                    <div class="trip-image">
-                        <div style="background:#2a2a2a;height:200px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;">FOTO: Imersão Paraná — alunos na água</div>
-                        <span class="trip-date">04–07 Jun</span>
-                        <span class="trip-spots" style="background:var(--amarelo);color:var(--preto);font-weight:600;">VAGAS LIMITADAS</span>
-                    </div>
-                    <div class="trip-content">
-                        <h3>Junho · Paraná</h3>
-                        <p>Matinhos, PR. Uma das ondas mais longas e consistentes do Sul do Brasil. Com o Kelvin, a Júlia e o Método Desbloqueia Surf.</p>
-                        <a href="imersao-parana.html" class="btn btn-primary">
-                            Ver detalhes da imersão
-                        </a>
+            <div class="modalidades-grid">
+                <!-- Aula Avulsa: left, tall (spans 2 rows) -->
+                <div class="modalidade-card modalidade-card--tall animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1531722569936-825d3dd91b15?w=800&q=80" alt="Aula de surf avulsa individual em Florianópolis" loading="lazy">
+                    <div class="modalidade-overlay">
+                        <p class="modalidade-label">Uma Sessão · Tudo Incluso</p>
+                        <h3 class="modalidade-title">Aula Avulsa</h3>
+                        <p class="modalidade-desc">Uma aula com a Ju ou o Kelvin. Equipamento, vídeo-análise e atenção total inclusos. Pra quem quer sentir antes de decidir, ou simplesmente surfar quando der.</p>
                     </div>
                 </div>
 
-                <!-- Agosto — Floripa -->
-                <div class="trip-card animate-on-scroll">
-                    <div class="trip-image">
-                        <div style="background:#2a2a2a;height:200px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;">FOTO: Imersão Floripa — surf no Campeche</div>
-                        <span class="trip-date">13–16 Ago</span>
-                        <span class="trip-spots">EM BREVE</span>
-                    </div>
-                    <div class="trip-content">
-                        <h3>Agosto · Floripa</h3>
-                        <p>Campeche, Florianópolis. Sul da Ilha em pleno inverno — ondas consistentes e turmas pequenas com acompanhamento total.</p>
-                        <a href="https://wa.me/5548996271507?text=Olá! Tenho interesse na imersão de Agosto em Floripa." class="btn btn-primary" target="_blank" rel="noopener">
-                            Quero ser avisado
-                        </a>
+                <!-- Pacotes: top right -->
+                <div class="modalidade-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1476673160081-cf065607f449?w=800&q=80" alt="Pacotes de surf em Florianópolis" loading="lazy">
+                    <div class="modalidade-overlay">
+                        <p class="modalidade-label">Evolução Contínua</p>
+                        <h3 class="modalidade-title">Pacotes</h3>
+                        <p class="modalidade-desc">De 5 a 10 aulas. Acompanhamento da sua evolução com vídeo-análise e ajuste de metas a cada sessão.</p>
                     </div>
                 </div>
 
-                <!-- Outubro e Dezembro — Floripa -->
-                <div class="trip-card animate-on-scroll">
-                    <div class="trip-image">
-                        <div style="background:#2a2a2a;height:200px;display:flex;align-items:center;justify-content:center;color:#666;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;">FOTO: Imersão Floripa — pôr do sol</div>
-                        <span class="trip-date">Out · Dez</span>
-                        <span class="trip-spots">EM BREVE</span>
-                    </div>
-                    <div class="trip-content">
-                        <h3>Outubro · Dezembro · Floripa</h3>
-                        <p><strong>08–12 Out</strong> e <strong>10–13 Dez</strong> — encerrando o ano no Campeche. Detalhes em breve.</p>
-                        <a href="https://wa.me/5548996271507?text=Olá! Tenho interesse nas imersões de Outubro ou Dezembro em Floripa." class="btn btn-primary" target="_blank" rel="noopener">
-                            Quero ser avisado
-                        </a>
+                <!-- Surf Trip: bottom right -->
+                <div class="modalidade-card animate-on-scroll">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" alt="Surf Trip com Village Summer" loading="lazy">
+                    <div class="modalidade-overlay">
+                        <p class="modalidade-label">Viagem + Surf</p>
+                        <h3 class="modalidade-title">Surf Trip</h3>
+                        <p class="modalidade-desc">Viagens guiadas para os melhores destinos de surf. Mar, natureza e conexão em grupo.</p>
                     </div>
                 </div>
+            </div>
+
+            <!-- Imersão: full width -->
+            <div class="modalidade-card modalidade-card--wide animate-on-scroll" style="margin-top: 4px;">
+                <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=1400&q=80" alt="Imersão de surf Village Summer — dias intensivos" loading="lazy" style="object-position: center 40%;">
+                <div class="modalidade-overlay" style="background: linear-gradient(to right, rgba(39,39,39,0.95) 0%, rgba(39,39,39,0.6) 50%, rgba(39,39,39,0.2) 100%), linear-gradient(to top, rgba(39,39,39,0.7) 0%, transparent 60%);">
+                    <p class="modalidade-label">Dias Intensivos · Turmas Pequenas</p>
+                    <h3 class="modalidade-title" style="font-size: clamp(1.75rem, 3.5vw, 2.75rem);">Imersão de Surf</h3>
+                    <p class="modalidade-desc">4 dias de surf intenso, teoria e muita conexão com o mar. Acompanhamento total do início ao fim. Vagas limitadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Próxima Imersão em Destaque -->
+    <section class="section proxima-imersao-section" id="trips">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-label">Próxima Imersão</span>
+                <h2>Em Destaque</h2>
+            </div>
+            <div class="proxima-imersao-card animate-on-scroll" id="proximaImersaoCard">
+                <!-- Preenchido via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendário de Eventos Village -->
+    <section class="section calendario-section">
+        <div class="container">
+            <div class="section-title">
+                <span class="section-label">Agenda 2026</span>
+                <h2>Calendário<br><span>Village</span></h2>
+            </div>
+            <div class="calendario-grid animate-on-scroll" id="calendarioGrid">
+                <!-- Preenchido via JS -->
             </div>
         </div>
     </section>
@@ -2787,7 +3710,7 @@
             <div class="quiz-container">
                 <div class="quiz-header">
                     <h2>Qual é o seu perfil?</h2>
-                    <p>3 perguntas rápidas para a gente entender melhor o que você busca</p>
+                    <p>3 perguntas pra gente entender onde você tá e pra onde quer ir.</p>
                 </div>
 
                 <div class="quiz-progress" id="quizProgress">
@@ -2890,7 +3813,7 @@
                     <h3 class="result-title">Que ótimo!</h3>
                     <p class="result-description" id="resultDesc">Manda um oi pra gente no WhatsApp — a gente monta a melhor proposta pro seu perfil.</p>
 
-                    <a href="https://wa.me/5548996271507?text=Olá! Fiz o quiz no site da Village Summer. Gostaria de saber mais!" class="btn btn-whatsapp" target="_blank" rel="noopener" id="resultCta" style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:0.75rem;">
+                    <a href="https://wa.me/554896899856?text=Olá! Fiz o quiz no site da Village Summer. Gostaria de saber mais!" class="btn btn-whatsapp" target="_blank" rel="noopener" id="resultCta" style="margin-top:1.5rem;display:inline-flex;align-items:center;gap:0.75rem;">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         Falar com a gente no WhatsApp
                     </a>
@@ -2941,19 +3864,62 @@
     <!-- Final CTA Section -->
     <section class="section final-cta" id="contato">
         <div class="container">
-            <h2 data-i18n="ctaTitle">Sua Onda Está Esperando</h2>
-            <p data-i18n="ctaDesc">Agende sua aula individual e comece sua jornada de transformação através do surf.</p>
+            <div class="cta-bento">
+                <!-- Título -->
+                <div class="ctab-title">
+                    <h2 data-i18n="ctaTitle">A sua próxima<br>onda começa<br>aqui.</h2>
+                    <p data-i18n="ctaDesc">Fala com a gente. Sem compromisso. A gente entende o que você busca e indica o melhor caminho.</p>
+                </div>
 
-            <div class="cta-buttons">
-                <a href="https://wa.me/5548996271507?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-whatsapp" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    <span data-i18n="ctaWhatsapp">Agendar pelo WhatsApp</span>
-                </a>
-                <a href="https://instagram.com/villagesummersurf" class="btn btn-secondary" target="_blank" rel="noopener">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    <span data-i18n="ctaInstagram">Seguir no Instagram</span>
-                </a>
+                <!-- Botões + stats -->
+                <div class="ctab-cta">
+                    <div class="ctab-stat">
+                        <div class="ctab-stat-item">
+                            <span class="ctab-stat-num">20+</span>
+                            <span class="ctab-stat-label">Anos no Mar</span>
+                        </div>
+                        <div class="ctab-stat-item">
+                            <span class="ctab-stat-num">1.000+</span>
+                            <span class="ctab-stat-label">Alunos Formados</span>
+                        </div>
+                        <div class="ctab-stat-item">
+                            <span class="ctab-stat-num">100%</span>
+                            <span class="ctab-stat-label">Salva-Vidas</span>
+                        </div>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." class="btn btn-whatsapp" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            <span data-i18n="ctaWhatsapp">Agendar pelo WhatsApp</span>
+                        </a>
+                        <a href="https://instagram.com/villagesummersurf" class="btn btn-secondary" target="_blank" rel="noopener">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            <span data-i18n="ctaInstagram">Seguir no Instagram</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section class="insta-section" id="instagram">
+        <div class="insta-header animate-on-scroll">
+            <div class="insta-handle">
+                <img src="logo-village-summer.jpeg" alt="Village Summer" class="insta-avatar">
+                <div>
+                    <span class="insta-name">@villagesummersurf</span>
+                    <span class="insta-sub">Florianópolis · Sul da Ilha</span>
+                </div>
+            </div>
+            <a href="https://instagram.com/villagesummersurf" class="insta-follow" target="_blank" rel="noopener">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                Seguir no Instagram
+            </a>
+        </div>
+
+        <div class="insta-widget">
+            <div class="elfsight-app-05637d8f-8096-4668-a09f-33d1e73cb22c" data-elfsight-app-lazy></div>
         </div>
     </section>
 
@@ -2965,12 +3931,12 @@
                     <a href="#" class="logo">
                         <img src="logo-village-summer.jpeg" alt="Village Summer Logo" class="logo-img" style="height: 70px;">
                     </a>
-                    <p data-i18n="footerDesc">20+ anos conectando pessoas ao mar. Somos a Village Summer Surf.</p>
+                    <p data-i18n="footerDesc">Escola de surf em Florianópolis. 20 anos conectando pessoas ao mar, do jeito certo.</p>
                 </div>
 
                 <div class="footer-contact">
                     <h4 data-i18n="footerContact">Contato</h4>
-                    <a href="https://wa.me/5548996271507" target="_blank" rel="noopener">
+                    <a href="https://wa.me/554896899856" target="_blank" rel="noopener">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         (48) 99627-1507
                     </a>
@@ -2985,7 +3951,7 @@
                         <a href="https://instagram.com/villagesummersurf" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         </a>
-                        <a href="https://wa.me/5548996271507" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <a href="https://wa.me/554896899856" class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         </a>
                     </div>
@@ -3000,12 +3966,152 @@
 
     <!-- Floating WhatsApp Button -->
     <div class="whatsapp-float">
-        <a href="https://wa.me/5548996271507?text=Olá! Gostaria de agendar uma aula de surf individual." target="_blank" rel="noopener" aria-label="Contato WhatsApp">
+        <a href="https://wa.me/554896899856?text=Olá! Gostaria de agendar uma aula de surf individual." target="_blank" rel="noopener" aria-label="Contato WhatsApp">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </a>
     </div>
 
     <!-- JavaScript -->
+    <script>
+        // ===== PRÓXIMA IMERSÃO EM DESTAQUE =====
+        // EDITE AQUI para atualizar a próxima imersão em destaque
+        const proximaImersao = {
+            dateLabel: "04 a 07 Jun",
+            title: "Imersão Matinhos, PR",
+            location: "Matinhos, PR",
+            description: "Uma das ondas mais longas e consistentes do Sul do Brasil. Com a Ju, o Kelvin e o Método Desbloqueia Surf. Quatro dias de surf intenso, teoria e muita conexão com o mar.",
+            vagasRestantes: 6,
+            totalVagas: null,
+            ctaLabel: "Ver detalhes da imersão",
+            ctaLink: "imersao-parana.html"
+        };
+
+        // ===== CALENDÁRIO DE EVENTOS VILLAGE =====
+        // EDITE AQUI para adicionar, atualizar ou remover eventos do calendário
+        // Tipos disponíveis: "imersao" | "cafe" | "trip" | "outro"
+        // Status disponíveis: "confirmado" | "em_breve" | "esgotado"
+        const eventos = [
+            {
+                type: "imersao",
+                dateLabel: "04 a 07 Jun",
+                date: "2026-06-04",
+                title: "Imersão Matinhos, PR",
+                location: "Matinhos, PR",
+                description: "Matinhos, uma das ondas mais longas e consistentes do Sul do Brasil.",
+                status: "confirmado",
+                ctaLabel: "Ver detalhes",
+                ctaLink: "imersao-parana.html"
+            },
+            {
+                type: "cafe",
+                dateLabel: "Jun 2026",
+                date: "2026-06-15",
+                title: "Café com Surf",
+                location: "Sul da Ilha, Florianópolis",
+                description: "Encontro mensal da comunidade Village. Café, papo de surf e muito mar.",
+                status: "confirmado",
+                ctaLabel: null,
+                ctaLink: null
+            },
+            {
+                type: "imersao",
+                dateLabel: "13 a 16 Ago",
+                date: "2026-08-13",
+                title: "Imersão Campeche, Floripa",
+                location: "Campeche, Florianópolis",
+                description: "Sul da ilha em pleno inverno. Ondas consistentes e turmas pequenas.",
+                status: "em_breve",
+                ctaLabel: "Quero ser avisado",
+                ctaLink: "https://wa.me/554896899856?text=Olá! Tenho interesse na imersão de Agosto em Floripa."
+            },
+            {
+                type: "imersao",
+                dateLabel: "Out a Dez",
+                date: "2026-10-08",
+                title: "Imersões Outubro e Dezembro, Floripa",
+                location: "Campeche, Florianópolis",
+                description: "Encerrando o ano no Campeche. Detalhes em breve.",
+                status: "em_breve",
+                ctaLabel: "Quero ser avisado",
+                ctaLink: "https://wa.me/554896899856?text=Olá! Tenho interesse nas imersões de Outubro ou Dezembro em Floripa."
+            }
+        ];
+
+        function renderProximaImersao() {
+            const el = document.getElementById('proximaImersaoCard');
+            if (!el) return;
+            const p = proximaImersao;
+            const urgente = p.vagasRestantes <= 5;
+            const vagasClass = urgente ? 'urgente' : 'normal';
+            el.innerHTML = `
+                <div class="pi-inner">
+                    <div class="pi-info">
+                        <div>
+                            <span class="pi-badge-date">${p.dateLabel}</span>
+                            <h3 class="pi-title">${p.title}</h3>
+                            <p class="pi-location">${p.location}</p>
+                            <p class="pi-desc">${p.description}</p>
+                        </div>
+                        <div>
+                            <div class="pi-vagas ${vagasClass}">
+                                <span class="pi-vagas-dot"></span>
+                                Restam ${p.vagasRestantes} vagas
+                            </div>
+                            <a href="${p.ctaLink}" class="btn btn-primary">${p.ctaLabel}</a>
+                        </div>
+                    </div>
+                    <div class="pi-visual">
+                        <img src="https://images.unsplash.com/photo-1504872578540-b000ad8e2b96?w=900&q=80" alt="${p.title}" loading="lazy">
+                    </div>
+                </div>
+            `;
+        }
+
+        function tipoLabel(type) {
+            const map = { imersao: 'Imersão', cafe: 'Café com Surf', trip: 'Surf Trip', outro: 'Evento' };
+            return map[type] || 'Evento';
+        }
+
+        function renderCalendario() {
+            const el = document.getElementById('calendarioGrid');
+            if (!el) return;
+            const sorted = [...eventos].sort((a, b) => a.date.localeCompare(b.date));
+            el.innerHTML = sorted.map(ev => {
+                const esgotado = ev.status === 'esgotado';
+                const emBreve = ev.status === 'em_breve';
+                const cardClass = `evento-card tipo-${ev.type}${esgotado ? ' esgotado' : ''}`;
+                const tipoTagClass = `evento-tag ${ev.type}`;
+                let statusTag = '';
+                if (emBreve) statusTag = `<span class="evento-tag status-em-breve">Em breve</span>`;
+                if (esgotado) statusTag = `<span class="evento-tag status-esgotado">Esgotado</span>`;
+                const ctaHtml = ev.ctaLabel && ev.ctaLink && !esgotado
+                    ? `<a href="${ev.ctaLink}" class="btn btn-primary evento-cta" style="padding:14px 28px;font-size:13px;"${ev.ctaLink.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}>${ev.ctaLabel}</a>`
+                    : '';
+                const locationHtml = ev.location ? `<p class="evento-location">${ev.location}</p>` : '';
+                return `
+                    <div class="${cardClass}">
+                        <div class="evento-date">${ev.dateLabel}</div>
+                        <div class="evento-body">
+                            <div class="evento-tags">
+                                <span class="${tipoTagClass}">${tipoLabel(ev.type)}</span>
+                                ${statusTag}
+                            </div>
+                            ${locationHtml}
+                            <h4 class="evento-title">${ev.title}</h4>
+                            <p class="evento-desc">${ev.description}</p>
+                        </div>
+                        ${ctaHtml}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProximaImersao();
+            renderCalendario();
+        });
+    </script>
+
     <script>
         // ===== TRANSLATIONS =====
         const translations = {
@@ -3019,11 +4125,11 @@
                 navCta: 'Agendar Aula',
 
                 // Hero
-                badge1: '+10 Anos de Experiência',
+                badge1: '+20 Anos de Experiência',
                 badge2: '+1.000 Alunos',
                 badge3: 'Sul de Florianópolis',
-                heroTitle: 'Aula de Surf Individual<br>em Florianópolis',
-                heroSubtitle: 'Evolução técnica real com metodologia exclusiva e vídeo-análise profissional',
+                heroTitle: 'Você não vai só aprender a surfar. Você vai se desbloquear.',
+                heroSubtitle: 'A Ju cresceu no surf, o Kelvin dedicou mais de uma década ao mar. A Village nasceu dessa história.',
                 heroLocation: 'Aulas particulares em Campeche, Armação e Matadeiro',
                 heroCta: 'AGENDAR MINHA AULA INDIVIDUAL',
                 heroCtaSecondary: 'Conheça no Instagram',
@@ -3038,16 +4144,16 @@
                 safetyDesc: 'Todos os nossos instrutores são certificados como salva-vidas profissionais',
 
                 // Individual Lesson
-                lessonTitle: 'Sua Aula, Seu Ritmo, Sua Evolução',
-                lessonDesc: 'Na Village Summer, cada aula individual é uma experiência única, desenhada especialmente para você. Nossos instrutores dedicam 100% da atenção ao seu desenvolvimento.',
+                lessonTitle: 'Sua aula, seu ritmo, sua evolução.',
+                lessonDesc: 'Na Village, cada sessão é desenhada pra você: seu nível, seu corpo, seu objetivo. Seja em aula individual ou em pequenos grupos, a gente garante atenção real ao seu desenvolvimento, do começo ao fim.',
                 lessonDescSeo: 'Como a melhor <strong>escola de surf em Florianópolis</strong>, oferecemos <strong>aulas de surf no Campeche</strong>, Armação e Matadeiro. Seja você iniciante buscando sua primeira <strong>surf lesson em Florianopolis</strong> ou surfista experiente, nossa metodologia se adapta ao seu nível para garantir evolução real.',
-                lessonBenefit1: 'Atenção 100% focada em você durante toda a aula',
+                lessonBenefit1: 'Atenção focada em você durante toda a aula',
                 lessonBenefit2: 'Progressão personalizada no seu ritmo',
                 lessonBenefit3: 'Correção técnica imediata e feedback constante',
                 lessonBenefit4: 'Horários flexíveis para sua agenda',
                 lessonBenefit5: 'Vídeo-análise profissional inclusa',
                 lessonIncludesTitle: 'O que está incluso:',
-                lessonIncludesDesc: 'Equipamento completo (prancha, lycra, wetsuit se necessário), vídeo-análise da sua performance e acompanhamento personalizado da sua evolução.',
+                lessonIncludesDesc: 'Equipamento completo (prancha, lycra, wetsuit se necessário), fotos da sua sessão e acompanhamento personalizado da sua evolução.',
                 lessonCta: 'Quero Minha Aula Individual',
 
                 // Why Village
@@ -3063,15 +4169,15 @@
                 feature4Desc: 'Atendimento personalizado para profissionais que buscam qualidade e evolução real no surf.',
 
                 // Video Analysis
-                videoTitle: 'Vídeo-Análise Profissional',
-                videoDesc: 'Não é apenas uma aula, é evolução técnica monitorada. Gravamos sua performance e analisamos cada movimento para acelerar seu progresso.',
-                videoStep1Title: 'Gravação Profissional',
-                videoStep1Desc: 'Filmamos sua sessão com equipamento de qualidade para capturar cada detalhe.',
-                videoStep2Title: 'Análise Técnica Detalhada',
-                videoStep2Desc: 'Nossos instrutores analisam cada movimento, identificando pontos de melhoria.',
-                videoStep3Title: 'Feedback Personalizado',
-                videoStep3Desc: 'Você recebe o vídeo com comentários e dicas específicas para sua evolução.',
-                videoBadge: 'Diferencial Village',
+                videoTitle: 'Todo mundo sai com foto.',
+                videoDesc: 'Desde a primeira aula, a gente registra sua sessão. Não é só lembrança, é parte do processo. Você vê sua evolução acontecendo, sessão a sessão.',
+                videoStep1Title: 'Fotos da sua sessão',
+                videoStep1Desc: 'A gente registra suas ondas em toda aula. Você sai com as fotos no mesmo dia.',
+                videoStep2Title: 'Você vê sua evolução',
+                videoStep2Desc: 'Com o tempo, as fotos contam uma história. Dá pra ver exatamente o quanto você evoluiu.',
+                videoStep3Title: 'Vídeo-análise quando você estiver pronto',
+                videoStep3Desc: 'Quando você já tem a base, a gente filma suas ondas e analisa cada movimento junto com você, pra ir mais fundo na evolução.',
+                videoBadge: 'DIFERENCIAL VILLAGE',
 
                 // Testimonials
                 testimonialsTitle: 'O que Nossos Alunos Dizem',
@@ -3179,7 +4285,7 @@
                 ctaInstagram: 'Seguir no Instagram',
 
                 // Footer
-                footerDesc: 'Escola de surf premium em Florianópolis. +10 anos transformando vidas através da conexão com o mar.',
+                footerDesc: 'Escola de surf premium em Florianópolis. +20 anos transformando vidas através da conexão com o mar.',
                 footerContact: 'Contato',
                 footerSocial: 'Redes Sociais',
                 footerCopyright: '© 2025 Village Summer - Surf Experience. Todos os direitos reservados.'
@@ -3194,11 +4300,11 @@
                 navCta: 'Book Lesson',
 
                 // Hero
-                badge1: '+10 Years of Experience',
+                badge1: '+20 Years of Experience',
                 badge2: '+1,000 Students',
                 badge3: 'South Florianópolis',
-                heroTitle: 'Private Surf Lessons<br>in South Florianópolis',
-                heroSubtitle: 'Real technical evolution with exclusive methodology and professional video analysis',
+                heroTitle: 'Surf with those<br>who love the sea.',
+                heroSubtitle: 'One-on-one lessons with exclusive methodology and professional video analysis. Campeche, Armação and Matadeiro.',
                 heroLocation: 'Private lessons in Campeche, Armação and Matadeiro',
                 heroCta: 'BOOK MY PRIVATE LESSON',
                 heroCtaSecondary: 'Follow on Instagram',
@@ -3343,7 +4449,7 @@
                 ctaInstagram: 'Follow on Instagram',
 
                 // Footer
-                footerDesc: 'Premium surf school in Florianópolis. +10 years transforming lives through connection with the sea.',
+                footerDesc: 'Premium surf school in Florianópolis. +20 years transforming lives through connection with the sea.',
                 footerContact: 'Contact',
                 footerSocial: 'Social Media',
                 footerCopyright: '© 2025 Village Summer - Surf Experience. All rights reserved.'
@@ -3358,11 +4464,11 @@
                 navCta: 'Reservar Clase',
 
                 // Hero
-                badge1: '+10 Años de Experiencia',
+                badge1: '+20 Años de Experiencia',
                 badge2: '+1.000 Alumnos',
                 badge3: 'Sur de Florianópolis',
-                heroTitle: 'Clase de Surf Individual<br>en el Sur de Florianópolis',
-                heroSubtitle: 'Evolución técnica real con metodología exclusiva y videoanálisis profesional',
+                heroTitle: 'Surfe con quienes<br>aman el mar.',
+                heroSubtitle: 'Clases individuales con metodología exclusiva y videoanálisis profesional. Campeche, Armação y Matadeiro.',
                 heroLocation: 'Clases particulares en Campeche, Armação y Matadeiro',
                 heroCta: 'RESERVAR MI CLASE INDIVIDUAL',
                 heroCtaSecondary: 'Conocer en Instagram',
@@ -3507,7 +4613,7 @@
                 ctaInstagram: 'Seguir en Instagram',
 
                 // Footer
-                footerDesc: 'Escuela de surf premium en Florianópolis. +10 años transformando vidas a través de la conexión con el mar.',
+                footerDesc: 'Escuela de surf premium en Florianópolis. +20 años transformando vidas a través de la conexión con el mar.',
                 footerContact: 'Contacto',
                 footerSocial: 'Redes Sociales',
                 footerCopyright: '© 2025 Village Summer - Surf Experience. Todos los derechos reservados.'
@@ -3545,21 +4651,21 @@
             const seoMeta = {
                 pt: {
                     title: 'Aula de Surf Individual Florianópolis | Escola de Surf Campeche | Village Summer',
-                    description: 'Aulas de surf individuais no Sul de Florianópolis. Campeche, Armação, Matadeiro. +10 anos de experiência, +1000 alunos, instrutores salva-vidas certificados. Metodologia exclusiva com vídeo-análise profissional.',
+                    description: 'Aulas de surf individuais no Sul de Florianópolis. Campeche, Armação, Matadeiro. 20+ anos de experiência, +1000 alunos, instrutores salva-vidas certificados. Método Desbloqueia Surf com vídeo-análise profissional.',
                     ogTitle: 'Aula de Surf Individual Florianópolis | Village Summer',
-                    ogDescription: 'Aulas de surf individuais no Sul de Florianópolis. +10 anos, +1000 alunos, instrutores salva-vidas. Metodologia exclusiva com vídeo-análise profissional.'
+                    ogDescription: 'Aulas de surf individuais no Sul de Florianópolis. 20+ anos, +1000 alunos, instrutores salva-vidas. Método Desbloqueia Surf com vídeo-análise profissional.'
                 },
                 en: {
                     title: 'Private Surf Lessons Florianópolis | Surf School Brazil | Village Summer',
-                    description: 'Private surf lessons in South Florianópolis, Brazil. Campeche, Armação, Matadeiro beaches. +10 years experience, +1000 students, certified lifeguard instructors. Exclusive methodology with professional video analysis.',
+                    description: 'Private surf lessons in South Florianópolis, Brazil. Campeche, Armação, Matadeiro beaches. 20+ years experience, +1000 students, certified lifeguard instructors. Exclusive methodology with professional video analysis.',
                     ogTitle: 'Private Surf Lessons Florianópolis | Village Summer',
-                    ogDescription: 'Private surf lessons in South Florianópolis, Brazil. +10 years, +1000 students, lifeguard instructors. Exclusive methodology with video analysis.'
+                    ogDescription: 'Private surf lessons in South Florianópolis, Brazil. 20+ years, +1000 students, lifeguard instructors. Exclusive methodology with video analysis.'
                 },
                 es: {
                     title: 'Clases de Surf Individuales Florianópolis | Escuela de Surf Brasil | Village Summer',
-                    description: 'Clases de surf individuales en el Sur de Florianópolis, Brasil. Campeche, Armação, Matadeiro. +10 años de experiencia, +1000 alumnos, instructores salvavidas certificados. Metodología exclusiva con videoanálisis profesional.',
+                    description: 'Clases de surf individuales en el Sur de Florianópolis, Brasil. Campeche, Armação, Matadeiro. 20+ años de experiencia, +1000 alumnos, instructores salvavidas certificados. Metodología exclusiva con videoanálisis profesional.',
                     ogTitle: 'Clases de Surf Individuales Florianópolis | Village Summer',
-                    ogDescription: 'Clases de surf individuales en el Sur de Florianópolis, Brasil. +10 años, +1000 alumnos, instructores salvavidas. Metodología exclusiva con videoanálisis.'
+                    ogDescription: 'Clases de surf individuales en el Sur de Florianópolis, Brasil. 20+ años, +1000 alumnos, instructores salvavidas. Metodología exclusiva con videoanálisis.'
                 }
             };
 
@@ -3762,7 +4868,7 @@
             const motiv = motivMap[answers.motivation] || answers.q2 || '-';
             const commit = commitMap[answers.commitment] || answers.q3 || '-';
             const msg = encodeURIComponent(`Olá! Fiz o quiz no site da Village Summer.\n\nMeu perfil:\n• Nível: ${nivel}\n• Busco: ${motiv}\n• Frequência: ${commit}\n\nGostaria de saber mais!`);
-            document.getElementById('resultCta').href = `https://wa.me/5548996271507?text=${msg}`;
+            document.getElementById('resultCta').href = `https://wa.me/554896899856?text=${msg}`;
 
             // Simplified result — no complex scoring needed
             const level = answers.level || 0;
@@ -3914,7 +5020,7 @@
             ].join(' | ');
 
             const whatsappMsg = encodeURIComponent(`Olá! Fiz o quiz completo no site.\n\n${profileSummary}\n\nPacote recomendado: ${resultData.package}\n\nGostaria de mais informações!`);
-            document.getElementById('resultCta').href = `https://wa.me/5548996271507?text=${whatsappMsg}`;
+            document.getElementById('resultCta').href = `https://wa.me/554896899856?text=${whatsappMsg}`;
 
             // Send quiz results to email via FormSubmit
             const formData = new FormData();
